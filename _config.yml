@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: 刘一奇的个人博客
+subtitle: 何以升华，唯有沉淀
 description:
-author: John Doe
+author: 刘一奇
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://lewis617.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
