@@ -1,8 +1,7 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
-rss: /atom.xml
+  主页: /
+  归档: /archives
 
 # Content
 excerpt_link: Read More
@@ -16,6 +15,7 @@ widgets:
 - tagcloud
 - archive
 - recent_posts
+- friends
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
@@ -29,7 +29,8 @@ show_count: false
 
 # Miscellaneous
 google_analytics:
-favicon: /favicon.png
+gauges_analytics:
+favicon: /css/images/favicon.ico
 twitter:
 google_plus:
 fb_admins:
