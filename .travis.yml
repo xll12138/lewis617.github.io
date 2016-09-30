@@ -1,22 +1,22 @@
 language: node_js
 node_js:
-- stable
+  - stable
 branches:
   only:
-  - source
+    - source
 before_install:
-- npm install -g hexo-cli
+  - npm install -g hexo-cli
 install:
-- npm install
+  - npm install
 script:
-- git submodule init
-- git submodule update
-- hexo generate
+  - git submodule init
+  - git submodule update
+  - hexo generate
 after_success:
-- git config --global user.name "lewis617"
-- git config --global user.email "897473127@qq.com"
-- sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.ym
-- hexo deploy
+  - git config --global user.name "lewis617"
+  - git config --global user.email "897473127@qq.com"
+  - sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.ym
+  - hexo deploy
 env:
   global:
     secure: bT4wDjEDH7WR7WLpx7lJmSNjeS6ZkTqUHPQY+Gc31er6rCQRsz+QlFhqC4wJG/2+3EYvRnvzI2qhE0rsJCivp1F1sQCj3Sea2PtS5Aa9hfMGGxUDHGNZ9hgYLbo2ROv8xV9s4Gr/op3qWzu+wP3jH4YPcRO+5oKCbebYnj1WtmTl+LO4Jl1hkPd5JcH7jDdeeZFQzjPOx/9EuBQzUfxInxaAm561fbTMH64nWAOw3u5iix35S5lmr2NZTB2obzxWUWHVG3aK9naDhyyRJ9dmRkykrNKpEwIt/EM3sdPf6DQ+X2KG/nsZBRxWSXR6u3A0mUfXM/Wx5mi8//CDFBh0AKva0YOxILrJDmlICvDvxTTK5sH4HUKIgNLH7lSa6wZ+h5xxTwSK3TZzQI1iSJfpNePT24E3b6wjzjldhrxVQp/3NYPfJOOs6wwXlVN/379QBmDkqY0dlxrfUMD1oAvxFqPjLLKhReO9UW0NbTRGPJdplFsKe1YEiLbU2iWUHhiqiGrInErfq5nasFVefzxgzHNbaBv06CGjN+PuTulVkOdwLGmS+dpW/dK/sJboPGVxJfEZso2fTexA8ST/ZUdlX/z9MpE7uD++ZOvviZhwPFumZZ4G7xobUv2CjbTu/h8kjx95Zw+WsT7LSdlS7a77Np6O3H+iyHcxoUYCpNeFGuc=
