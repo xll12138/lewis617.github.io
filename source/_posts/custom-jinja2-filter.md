@@ -1,11 +1,11 @@
 
 ---
-title: 自定义jinja2 过滤器
+title: 自定义 Jinja2 过滤器
 date: 2016-02-07 03:31:00
 tags: [Jinja2, Flask]
 ---
 
-今天，我们要讲的是自定义jinja2 过滤器这个知识点，因为官方文档对此一代而过，讲得不够清楚，所以我们专门拿出来讲一下。
+今天，我们要讲的是自定义 Jinja2 过滤器这个知识点，因为官方文档对此一代而过，讲得不够清楚，所以我们专门拿出来讲一下。
 
 # 例子
 
@@ -15,16 +15,15 @@ tags: [Jinja2, Flask]
 
 https://github.com/lewis617/myflask/tree/master/jinja2-filter
 
-# filter是个函数
+# 过滤器是个函数
 
-filter是个函数，跟angular的过滤器几乎一模一样。参数就是管道（pipe）前面那个变量。比如 `123|myfilter`，`123`就是`myFilter`的参数。如果需要两个参数，则在`myFilter`后面加`（）`，即`123|myFilter(234)`。
+过滤器是个函数，跟 Angular 的过滤器几乎一模一样。参数就是管道（pipe）前面那个变量。比如 `123|myfilter` ，`123` 就是 `myFilter` 的参数。如果需要两个参数，则在 `myFilter` 后面加 `()`，即 `123|myFilter(234)` 。
 
-# filter函数写在哪
+# 过滤器函数写在哪
 
-这是这个是编写filter的关键。filter函数写在`app.run`前，注册在`app.jinja_env.filters`中，这是什么意思？看代码：
+这是这个是编写过滤器的关键。过滤器函数写在 `app.run` 前，注册在 `app.jinja_env.filters` 中，这是什么意思？看代码：
 
 ```py
-    
 app = Flask(__name__)
 
 # custom filter
@@ -85,9 +84,9 @@ if __name__ == '__main__':
 
 结果：
 
-![](http://ww3.sinaimg.cn/large/83900b4egw1f9xihoam32j20g408ojsr.jpg)
+![](https://ww3.sinaimg.cn/large/83900b4egw1f9xihoam32j20g408ojsr.jpg)
 
-`json_dumps`可以将dict转为字符串，这样我们用jinja渲染的对象列表之类的就可以，以字符串的形式打印出来，便于我们在开发环境下监视渲染状态。
+`json_dumps`可以将 `dict` 转为字符串，这样我们用 Jinja 渲染的对象列表之类的就可以，以字符串的形式打印出来，便于我们在开发环境下监视渲染状态。
 
 
 
