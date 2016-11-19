@@ -1,25 +1,25 @@
 
 ---
-title: angular2系列教程（三）components
+title: Angular2系列教程（三）Components
 date: 2016-02-17 06:28:00
 tags: [Angular2]
 ---
 
-今天，我们要讲的是angualr2的components。
+今天，我们要讲的是ng2的Components。
 
-# 例子
+## 例子
 
-![](data:image/png;base64,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)
+![](https://ws4.sinaimg.cn/large/83900b4egw1f9xp4nip4hj20d703gt96.jpg)
 
-这个例子是个老外写的，我将其迁移到angular2beta版本，想了解迁移的同学可以参考我的做法。
+这个例子是个老外写的，我将其迁移到ng2 beta版本，想了解迁移的同学可以参考我的做法。
 
 [源代码](https://github.com/lewis617/angular2-tutorial/tree/master/componnets)
 
-# 消失的控制器
+## 消失的控制器
 
-angular2的组件就是angual1中的指令。它包含模板、样式、注入、和选择器。
+ng2的组件就是ng1中的指令。它包含模板、样式、注入、和选择器。
 
-组件嵌套组件可以实现类似react的模块化，我曾经也用angular1做过类似的事情
+组件嵌套组件可以实现类似react的模块化，我曾经也用ng1做过类似的事情
 
 [Angular 结合RequireJs实现模块化开发](http://www.cnblogs.com/lewis617/p/4851817.html)
 
@@ -27,98 +27,96 @@ angular2的组件就是angual1中的指令。它包含模板、样式、注入�
 
 app/navbar.ts
 
-    
-    
-    import { Component} from 'angular2/core';
-    import {NgFor} from 'angular2/common'
-    
-    @Component({
-        selector: "navbar",
-        directives: [NgFor],
-        styles: [`
-            li{
-              color: gray;
-            }
-        `],
-        template: `
-            <h2>Democratic Party presidential candidates</h2>
-            <ul>
-            <li *ngFor="#item of items; #i = index">{{item}} {{i}}</li>
-            </ul>
-        `
-    })
-    export class Navbar {
-        items: Array<String>
-    
-        constructor() {
-          this.items = [
-            "Hillary Clinton",
-            "Martin O'Malley",
-            "Bernie Sanders"
-          ]
+```ts
+import { Component} from 'angular2/core';
+import {NgFor} from 'angular2/common'
+
+@Component({
+    selector: "navbar",
+    directives: [NgFor],
+    styles: [`
+        li{
+          color: gray;
         }
-    
-        ngOnInit() {
-            console.log('[Component] navbar onInit');
-        }
+    `],
+    template: `
+        <h2>Democratic Party presidential candidates</h2>
+        <ul>
+        <li *ngFor="#item of items; #i = index">{{item}} {{i}}</li>
+        </ul>
+    `
+})
+export class Navbar {
+    items: Array<String>
+
+    constructor() {
+      this.items = [
+        "Hillary Clinton",
+        "Martin O'Malley",
+        "Bernie Sanders"
+      ]
     }
 
-当组件被实例化后，ng2为这个组件创建了一个shadow DOM（Shadow
-DOM在一个web组件中提供了js,css,template的封装），然后模板和样式被注入进去。
+    ngOnInit() {
+        console.log('[Component] navbar onInit');
+    }
+}
+```
+
+当组件被实例化后，ng2为这个组件创建了一个shadow DOM（Shadow DOM在一个web组件中提供了js,css,template的封装），然后模板和样式被注入进去。
 
 这段代码做了这些事情：
 
   1. 设置选择器
-  2. 设置directives为[ngFor]
+  2. 设置`directives`为`[ngFor]`
   3. 设置样式
   4. 设置模板
-  5. 填写类的成员变量items
-  6. 在构造函数中给items添加数据
-  7. 在生命周期的钩子ngOnInit中打印信息
+  5. 填写类的成员变量`items`
+  6. 在构造函数中给`items`添加数据
+  7. 在生命周期的钩子`ngOnInit`中打印信息
 
 我们的组件就写好了。
 
-# 组件的嵌套
+## 组件的嵌套
 
-写好组件后，我们如何将这个组件放在app组件中呢？答案是directives。这里设计得没有react好，react的组件是可以直接用的，angular2的组件则需要以指令的身份注入，因为组件实质也是指令：
+写好组件后，我们如何将这个组件放在`app`组件中呢？答案是`directives`。这里设计得没有react好，react的组件是可以直接用的，ng2的组件则需要以指令的身份注入，因为组件实质也是指令：
 
 app/app.ts
 
-    
-    
-    import {Component} from 'angular2/core';
-    import {bootstrap} from 'angular2/platform/browser';
-    import {Navbar} from './navbar';
-    
-    @Component({
-        selector: "app",
-        directives:[Navbar],
-        template: `
-          <navbar></navbar>
-        `
-    })
-    export class App {
-      constructor() {
-       
-      }
-    }
-    
-    bootstrap(App, [])
-      .catch(err => console.error(err));
-    
-                    
+```ts
+import {Component} from 'angular2/core';
+import {bootstrap} from 'angular2/platform/browser';
+import {Navbar} from './navbar';
 
-ng2中组件和指令都是注入在directives中，directives包含三种类型：
+@Component({
+    selector: "app",
+    directives:[Navbar],
+    template: `
+      <navbar></navbar>
+    `
+})
+export class App {
+  constructor() {
+   
+  }
+}
+
+bootstrap(App, [])
+  .catch(err => console.error(err));
+```    
+                    
+ng2中组件和指令都是注入在`directives`中，`directives`包含三种类型：
 
   1. Components
   2. Structural directives
   3. Attribute directives
 
- 关于指令，我们会单独拿出来讲解。
 
-# 生命周期钩子
+关于指令，我们会单独拿出来讲解。
 
-本例中，我们使用了ngOnInit这个类方法去打印一个信息，这个方法会在组件初始化时候调用。组件存在很多声明周期钩子函数
+## 生命周期钩子
+
+本例中，我们使用了`ngOnInit`这个类方法去打印一个信息，这个方法会在组件初始化时候调用。组件存在很多声明周期钩子函数
 
   * `ngOnChanges`   
 
@@ -132,14 +130,11 @@ ng2中组件和指令都是注入在directives中，directives包含三种类型
   * `ngAfterViewInit`
   * `ngAfterViewChecked`
 
-[Official docs](https://angular.io/docs/ts/latest/api/lifecycle_hooks
-/OnChanges-interface.html)
+[Official docs](https://angular.io/docs/ts/latest/api/lifecycle_hooks/OnChanges-interface.html)
 
 * * *
 
-
-
-# 教程源代码及目录
+## 教程源代码及目录
 
 如果您觉得本博客教程帮到了您，就赏颗星吧！
 
