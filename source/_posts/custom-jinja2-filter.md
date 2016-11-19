@@ -13,38 +13,38 @@ tags: [Jinja2, Flask]
 
 源代码：
 
-<https://github.com/lewis617/myflask/tree/master/jinja2-filter>
+https://github.com/lewis617/myflask/tree/master/jinja2-filter
 
 # filter是个函数
 
-filter是个函数，跟angular的过滤器几乎一模一样。参数就是管道（pipe）前面那个变量。比如
-123|myfilter，123就是myFilter的参数。如果需要两个参数，则在myFilter后面加（），即123|myFilter(234)。
+filter是个函数，跟angular的过滤器几乎一模一样。参数就是管道（pipe）前面那个变量。比如 `123|myfilter`，`123`就是`myFilter`的参数。如果需要两个参数，则在`myFilter`后面加`（）`，即`123|myFilter(234)`。
 
 # filter函数写在哪
 
-这是这个是编写filter的关键。filter函数写在app.run前，注册在app.jinja_env.filters中，这是什么意思？看代码：
+这是这个是编写filter的关键。filter函数写在`app.run`前，注册在`app.jinja_env.filters`中，这是什么意思？看代码：
 
+```py
     
-    
-    app = Flask(__name__)
-    
-    # custom filter
-    # convert dict to string
-    def json_dumps(dict):
-            result = json.dumps(dict)
-            return result
-    # return type of arg
-    def typeFilter(arg):
-            result = type(arg)
-            return result
-    
-    env = app.jinja_env
-    env.filters['json_dumps'] = json_dumps
-    env.filters['typeFilter'] = typeFilter
+app = Flask(__name__)
 
-  1. 实例化一个Flask对象app
+# custom filter
+# convert dict to string
+def json_dumps(dict):
+        result = json.dumps(dict)
+        return result
+# return type of arg
+def typeFilter(arg):
+        result = type(arg)
+        return result
+
+env = app.jinja_env
+env.filters['json_dumps'] = json_dumps
+env.filters['typeFilter'] = typeFilter
+```
+
+  1. 实例化一个Flask对象`app`
   2. 编写两个函数
-  3. 将函数挂在app.jinja_env.filters上
+  3. 将函数挂在`app.jinja_env.filters`上
 
 就是这么简单！
 
@@ -54,43 +54,40 @@ filter是个函数，跟angular的过滤器几乎一模一样。参数就是管�
 
 我们在index.html中编写：
 
+```html
+<body>
+dict is {{ dict|typeFilter}}
+<hr>
+ dict | json_dumps is{{ dict|json_dumps |typeFilter}}
+<hr>
+you can use json_dumps filter to send dict to js,remember to add safe filter,<br>
+press f12 to test it
+</body>
+<script>
+    //you can use json_dumps filter to send dict to js,remember to add safe filter
+    console.log({{ dict |json_dumps|safe}})
+</script>
 
-
-    
-    
-    <body>
-    dict is {{ dict|typeFilter}}
-    <hr>
-     dict | json_dumps is{{ dict|json_dumps |typeFilter}}
-    <hr>
-    you can use json_dumps filter to send dict to js,remember to add safe filter,<br>
-    press f12 to test it
-    </body>
-    <script>
-        //you can use json_dumps filter to send dict to js,remember to add safe filter
-        console.log({{ dict |json_dumps|safe}})
-    </script>
-
-
+```
 
 然后在app.py中渲染这个html
 
-    
-    
-    @app.route('/')
-    def hello_world():
-        dict={'name':'lewis','age':24}
-        return render_template('index.html',dict=dict)
-    
-    
-    if __name__ == '__main__':
-        app.run()
+```py 
+@app.route('/')
+def hello_world():
+    dict={'name':'lewis','age':24}
+    return render_template('index.html',dict=dict)
+
+
+if __name__ == '__main__':
+    app.run()
+```
 
 结果：
 
-![](http://images2015.cnblogs.com/blog/814069/201602/814069-20160207112723522-1653925353.png)
+![](http://ww3.sinaimg.cn/large/83900b4egw1f9xihoam32j20g408ojsr.jpg)
 
-json_dumps可以将dict转为字符串，这样我们用jinja渲染的对象列表之类的就可以，以字符串的形式打印出来，便于我们在开发环境下监视渲染状态。
+`json_dumps`可以将dict转为字符串，这样我们用jinja渲染的对象列表之类的就可以，以字符串的形式打印出来，便于我们在开发环境下监视渲染状态。
 
 
 
