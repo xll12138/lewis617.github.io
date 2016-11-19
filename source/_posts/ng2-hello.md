@@ -7,7 +7,7 @@ tags: [Angular2]
 
 今天我们要讲的是Angular2系列教程的第一篇，主要是学习Angular2的运行，以及感受Angular2的Components以及模板语法。
 
-# 例子
+## 例子
 
 ![](https://ws3.sinaimg.cn/large/83900b4egw1f9xppvhc43j208g052t92.jpg)
 
@@ -32,7 +32,7 @@ http-server
 
 也可以直接看我的[github pages](http://lewis617.github.io/angular2-tutorial/hellowold/) 。
 
-# 公共部分
+## 公共部分
 
 公共部分就是你可以直接复制粘贴拿去用的部分，包括
 
@@ -46,7 +46,7 @@ http-server
 
 这个文件必须导出App组件。其他文件都是需要自己编写的。
 
-# lib简介
+## lib简介
 
   1. 前三个文件是ie的polyfill，其他浏览器是不需要的
 	  * `<script src="lib/es6-shim.min.js"></script>` 
@@ -63,7 +63,7 @@ http-server
   5.  最后是ng2的库文件
 	  * `<script src="lib/angular2.dev.js"></script>`
 
-# 组件
+## 组件
 
 其实这个程序就一个ts文件，还特别短！
 
@@ -88,7 +88,7 @@ export class App {
 
 这里我不得不夸一下ng2，实在改进太多了，所有的东西包括组件、服务、过滤器等都是一个类，然后用各自相关的@装饰器，装饰一下就可以了，非常简单明了！
 
-# 模板语法
+## 模板语法
 
 我们先来感受下ng2的模板语法，后面我会单独拿出来讲这个知识点。
 
@@ -108,7 +108,7 @@ export class App {
 
 * * *
 
-# 教程源代码及目录
+## 教程源代码及目录
 
 如果您觉得本博客教程帮到了您，就赏颗星吧！
 
