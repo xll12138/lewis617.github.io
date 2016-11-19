@@ -1,6 +1,6 @@
 
 ---
-title: react+redux教程（一）connect、applyMiddleware、thunk、webpackHotMiddleware
+title: React与Redux教程（一）connect、applyMiddleware、thunk、webpackHotMiddleware
 date: 2016-01-20 07:52:00
 tags: [React, Redux]
 ---

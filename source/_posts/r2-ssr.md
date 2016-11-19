@@ -1,6 +1,6 @@
 
 ---
-title: react+redux教程（六）redux服务端渲染流程
+title: React与Redux教程（六）redux服务端渲染流程
 date: 2016-02-01 03:20:00
 tags: [React, Redux]
 ---

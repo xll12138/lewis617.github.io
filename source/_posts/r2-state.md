@@ -1,11 +1,11 @@
 
 ---
-title: react+redux教程（二）redux的单一状态树完全替代了react的状态机？
+title: React与Redux教程（二）redux的单一状态树完全替代了react的状态机？
 date: 2016-01-21 02:30:00
 tags: [React, Redux]
 ---
 
-上篇react+redux教程，我们讲解了官方计数器的代码实现，[react+redux教程（一）](http://www.cnblogs.com/lewis617/p/5145073.html)。我们发现我们没有用到react组件本身的state，而是通过props来导入数据和操作的。
+上篇React与Redux教程，我们讲解了官方计数器的代码实现，[React与Redux教程（一）](http://www.cnblogs.com/lewis617/p/5145073.html)。我们发现我们没有用到react组件本身的state，而是通过props来导入数据和操作的。
 
 我们知道react本身是个状态机，也就是说组件是state的表现形式。那么redux提供了一个全局的唯一的状态树，是不是就不需要组件本身的state了呢？
 

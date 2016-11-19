@@ -1,6 +1,6 @@
 
 ---
-title: react+redux教程（八）连接数据库的redux程序
+title: React与Redux教程（八）连接数据库的redux程序
 date: 2016-02-03 09:00:00
 tags: [React, Redux]
 ---
