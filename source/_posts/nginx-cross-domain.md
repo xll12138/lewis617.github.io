@@ -8,6 +8,8 @@ tags: [nginx, 跨域, Flask]
 
 我们单位的架构是在api和js之间架构一个中间层（python编写），以实现后端渲染，登录状态判定，跨域转发api等功能。但是这样一个中间会使前端工程师的工作量乘上两倍，原本js可以直接ajax请求api，但是我们不得不ajax请求中间层，中间层再请求api。如图：
 
+<!--more-->
+
 ![](https://ws3.sinaimg.cn/large/83900b4egw1f9yh3lfuw3j20iq08caag.jpg)
 
 为了少敲代码，提高工作效率，我们当然希望将python中间层砍掉，但是如何解决以下三个问题，成为关键：

@@ -7,7 +7,9 @@ tags: [React, Redux]
 
 今天，我们要讲解的是异步、单一state树结构、componentWillReceiveProps这三个知识点。
 
-# 例子
+<!--more-->
+
+## 例子
 
 ![](https://ws2.sinaimg.cn/large/83900b4egw1f9xsvlmvplg20q50ksq8j.gif)
 
@@ -17,7 +19,7 @@ tags: [React, Redux]
 
 https://github.com/lewis617/react-redux-tutorial/tree/master/redux-examples/async
 
-# 异步
+## 异步
 
 异步本身 这个概念，本文不详细叙述，但可以简单说一下，Javascript是通过自身的"事件循环（event loop）"机制来实现异步的，将耗时的IO等操作跳过，当事件完成后再发个信号过来执行回调。这使得单线程的js变的非常高效，这也是为什么
 Nodejs在多并发场景下特别牛逼的原因。
@@ -101,7 +103,7 @@ export function fetchPostsIfNeeded(reddit) {
 ```
 异步这个概念比较简单，不再赘述了。
 
-# 单一state树结构
+## 单一state树结构
 
 单一state树结构是Redux的最大特点。我们今天主要讲解state的树结构长什么样？首先，我们可以通过React的chrome插件，来看下这个state树：
 
@@ -187,7 +189,7 @@ export default rootReducer
 
 现在明白了全局单一state树是如何构建了的吧？----通过reducer。
 
-# componentWillReceiveProps
+## componentWillReceiveProps
 
 这是React组件生命周期里面的一个时间节点的回调函数。通常在组件接收新的props时触发。我们在componentDidMount()和componentWillReceiveProps()这两个回调里面加上console.log，来追踪这两个事件的触发：
 
@@ -253,7 +255,7 @@ componentWillReceiveProps(nextProps) {
 
 * * *
 
-# 教程源代码及目录
+## 教程源代码及目录
 
 如果您觉得本博客教程帮到了您，就赏颗星吧！
 

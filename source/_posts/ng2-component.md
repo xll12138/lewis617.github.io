@@ -7,6 +7,8 @@ tags: [Angular2]
 
 今天，我们要讲的是ng2的Components。
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws4.sinaimg.cn/large/83900b4egw1f9xp4nip4hj20d703gt96.jpg)

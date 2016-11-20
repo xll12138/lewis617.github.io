@@ -6,6 +6,8 @@ tags: [RequireJs, Bootstrap]
 
 下面我将使用Requirejs结合模态框实现**三五行代码**部署表单提交操作。
 
+<!--more-->
+
 ### 传统开发思路如下：
 
 ![](https://ws2.sinaimg.cn/large/83900b4egw1f9yh3tas1qj20i208bt9d.jpg)

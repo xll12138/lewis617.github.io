@@ -8,6 +8,8 @@ tags: [Angular2]
 今天，我们要讲的是structural directives和组件生命周期这两个知识点。structural directives顾名思义就是改变dom结构的指令。著名的内建结构指令有[ngIf](https://angular.io/docs/ts/latest/guide/template-syntax.html#ngIf),
 [ngSwitch](https://angular.io/docs/ts/latest/guide/template-syntax.html#ngSwitch) 和[ngFor](https://angular.io/docs/ts/latest/guide/template-syntax.html#ngFor)。
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws2.sinaimg.cn/large/83900b4egw1f9xofl445fj20e30a4t9t.jpg)

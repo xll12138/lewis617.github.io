@@ -6,6 +6,8 @@ tags: [Angular, React, Redux]
 
 曾经看到一篇文章，写的是jQuery开发者吐槽Angular的复杂。作为一个Angular开发者，我来吐槽一下React+Redux的复杂。
 
+<!--more-->
+
 ## 例子
 
 为了让大家看得舒服，我用最简单的一个demo来展示React+Redux的“弯弯绕”，下面这个程序就是我用React和Redux写的。然而这个程序在Angular中一行js都不用写！！！

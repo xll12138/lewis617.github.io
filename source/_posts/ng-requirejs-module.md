@@ -6,6 +6,8 @@ tags: [Angular, RequireJs]
 
 Angular的指令是模块化很好的一个体现，下面我将只使用指令（不用控制器），结合Requirejs，实现模块化开发。
 
+<!--more-->
+
 模块化关系图：
 
 ![](https://ws3.sinaimg.cn/large/83900b4egw1f9yh3om8qij20bl05e0t8.jpg)

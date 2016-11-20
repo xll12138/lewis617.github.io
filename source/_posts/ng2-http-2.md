@@ -7,6 +7,8 @@ tags: [Angular2]
 
 大家好，今天我们要讲的是http模块的第二部分，主要学习ng2中Jsonp、URLSearchParams、observable中断选择数据流的用法。
 
+<!--more-->
+
 # 例子
 
 ![](https://ws1.sinaimg.cn/large/83900b4egw1f9xkroozusj20hl0mwgo5.jpg)

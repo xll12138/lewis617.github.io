@@ -6,6 +6,8 @@ tags: [Karma, 测试]
 
 学习Angularjs，都会遇到Karma单元测试，可是初学者面对复杂的测试配置往往不知从何入手，下面我们将抛开Angularjs，单独使用两个js文件，完成一次测试入门。
 
+<!--more-->
+
 ## 0，Karma原理
 
 ![](https://ws1.sinaimg.cn/large/83900b4egw1f9yh3oak07j20is08sjs6.jpg)

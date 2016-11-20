@@ -7,7 +7,9 @@ tags: [React, Redux]
 
 今天，我们通过解读官方示例代码（counter）的方式来学习React+Redux。
 
-# 例子
+<!--more-->
+
+## 例子
 
 ![](https://ws4.sinaimg.cn/large/83900b4egw1f9xu9d095sg20cy01vmzy.gif)
 
@@ -17,7 +19,7 @@ tags: [React, Redux]
 
 https://github.com/lewis617/react-redux-tutorial/tree/master/redux-examples/counter
 
-# 组件
+## 组件
 
 components/Counter.js
 
@@ -65,7 +67,7 @@ export default Counter
 
 有的同学可能会急于想知道props的方法和变量是怎么来，下面我们继续解读。
 
-# 容器
+## 容器
 
 containers/App.js
 
@@ -102,7 +104,7 @@ state就是数据，组件就是数据的呈现形式，action是动作，action
   1. 把`state`的`counter`值绑定到props上
   2. 把四个action创建函数绑定到props上
 
-# connect
+## connect
 
 那么为什么就绑定上去了呢？因为有`connect`这个方法。这个方法是如何实现的，或者我们该怎么用这个方法呢？`connect`这个方法的用法，可以直接看[api文档](http://camsong.github.io/redux-in-chinese/docs/react-redux/api.html)。我也可以简单描述一下：
 
@@ -150,7 +152,7 @@ export default connect(mapStateToProps)(Counter)
 
 后面在组件中直接使用`dispatch()`来触发action创建函数。
 
-# action和reducer两个好基友负责更新state
+## action和reducer两个好基友负责更新state
 
 actions/counter.js
 
@@ -243,7 +245,7 @@ action的方法和state的变量是不是都绑定上去了啊。state怎么看�
 
 那个`storeState`就是全局唯一的状态树。我们可以看到只有一个`counter`而已。
 
-# 注册store
+## 注册store
 
 store/configureStore.js
 
@@ -299,13 +301,13 @@ render(
   4. 将`store`放进`Provider`
   5. 将`Provider`放在组件顶层，并渲染
 
-# applyMiddleware、thunk
+## applyMiddleware、thunk
 
 `applyMiddleware`来自Redux可以包装 store 的 `dispatch()`
 
 `thunk`作用使action创建函数可以返回一个function代替一个action对象
 
-# 服务
+## 服务
 
 server.js
 
@@ -377,14 +379,14 @@ module.exports = {
   2. `HotModuleReplacementPlugin`是热替换，热替换和dev-server的`hot`有什么区别？不用刷新页面，可用于生产环境。
   3. `NoErrorsPlugin`用于保证编译后的代码永远是对的，因为不对的话会自动停掉。
 
-# webpackHotMiddleware
+## webpackHotMiddleware
 
   
 server.js中`webpackHotMiddleware`的用法是参考[官网](https://www.npmjs.com/package/webpack-hot-middleware)的，没有为什么，Express中间件就是在请求后执行某些操作。
 
 * * *
 
-# 教程源代码及目录
+## 教程源代码及目录
 
 如果您觉得本博客教程帮到了您，就赏颗星吧！
 

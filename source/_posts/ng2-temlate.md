@@ -7,6 +7,8 @@ tags: [Angular2]
 
 今天我们要讲的是ng2的模板语法，[官网](https://angular.io/docs/ts/latest/guide/template-syntax.html)写的很清楚，但我也用通俗易懂的讲法再罗列一下吧！
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws2.sinaimg.cn/large/83900b4egw1f9xp9afp7tj20dr0gd754.jpg)

@@ -9,7 +9,9 @@ reduce()、filter()、map()、some()、every()、...展开属性
 这些概念属于es5、es6中的语法，跟react+redux并没有什么联系，我们直接在<https://developer.mozilla.org/en-
 US/> 这里可以搜索到相关api文档。
 
-但是redux的官方示例中包含了这些语法的用法，我们正好可以在程序中学习这些语法。这里全部默认使用es6的写法。
+但是Redux的官方示例中包含了这些语法的用法，我们正好可以在程序中学习这些语法。这里全部默认使用es6的写法。
+
+<!--more-->
 
 ## 例子
 

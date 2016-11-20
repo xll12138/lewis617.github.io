@@ -7,6 +7,8 @@ tags: [React, Redux]
 
 前面所有的教程都是解读官方的示例代码，是时候我们自己写个连接数据库的Redux程序了！
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws2.sinaimg.cn/large/83900b4egw1f9xqsagq6bg20q50ksjwp.gif)

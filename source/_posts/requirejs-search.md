@@ -21,6 +21,8 @@ tags: [RequireJs]
 *   ability to load nested dependencies（加载嵌套的依赖文件）
 *   ease of use for developer but then backed by an optimization tool that helps deployment（简单好用，但也有助于优化部署） 
 
+<!--more-->
+
 # RequireJs简介
 
 ## 作用 

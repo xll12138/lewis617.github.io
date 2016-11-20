@@ -6,6 +6,8 @@ tags: [React, Reflux]
 
 为了简化React的Flux带来的冗余操作，社区的同仁们给我们带来了很多优秀的轮子，诸如Redux，Reflux等。今天我们就通过逐行讲解代码实例的方法，感受一番Reflux的设计之美。
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws4.sinaimg.cn/large/83900b4egw1f9yh3uabt1g2073049diu.gif)

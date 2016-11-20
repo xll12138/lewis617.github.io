@@ -7,6 +7,8 @@ tags: [Angular2]
 
 今天我们要讲的是 ng2 的路由系统。
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws2.sinaimg.cn/large/83900b4egw1f9xkkfl4kwj20bc0a8dgz.jpg)

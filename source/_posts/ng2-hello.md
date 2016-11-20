@@ -7,6 +7,8 @@ tags: [Angular2]
 
 今天我们要讲的是Angular2系列教程的第一篇，主要是学习Angular2的运行，以及感受Angular2的Components以及模板语法。
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws3.sinaimg.cn/large/83900b4egw1f9xppvhc43j208g052t92.jpg)

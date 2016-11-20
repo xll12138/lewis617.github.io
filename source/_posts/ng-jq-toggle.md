@@ -6,6 +6,8 @@ tags: [Angular, jQuery]
 
 之前使用jQuery的`slidetoggle`方法，可以轻易的实现元素的收缩展开；使用Angularjs后，没有找到相关的方法，通过多方面查资料，自己写了个demo，展示`slidetoggle`的Angularjs写法：
 
+<!--more-->
+
 html
 
 ```html

@@ -7,6 +7,8 @@ tags: [Angular2]
 
 今天，我们要讲的是ng2的pipe这个知识点。
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws4.sinaimg.cn/large/83900b4egw1f9xnty3er1j20em06st9b.jpg)

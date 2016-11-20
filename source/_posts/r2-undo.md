@@ -9,6 +9,8 @@ tags: [React, Redux]
 
 今天我们通过解读redux-undo的官方示例代码来学习，在Redux中使用撤销功能、devtools功能、以及router。
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws3.sinaimg.cn/large/83900b4egw1f9xt46iemmg20q50ks41w.gif)

@@ -13,6 +13,8 @@ index.html
 <script src="lib/http.dev.js"></script>
 ```
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws3.sinaimg.cn/large/83900b4egw1f9xmuxndz8j20hl0mwgo5.jpg)

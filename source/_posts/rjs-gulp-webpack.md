@@ -6,6 +6,8 @@ tags: [RequireJs, r.js, Gulp, Webpack]
 
 本人大学时玩Dojo，开始了AMD模块化的不归路，工作后一直使用Requirejs，感觉非常好。但是，近来随着React的火热，Webpack成为了天下无敌的模块化工具，能做模块化，合并压缩，监视等，当我看见Webpack甚至还能做反向代理的时候，我整个人都不好了。我已经打算从Requirejs转向Webpack了，在重构以前老代码的时候，我想记录下历史。使用r.js结合gulp同样可以实现Webpack的绝大部分功能。
 
+<!--more-->
+
 ## 例子
 
 源代码地址：[https://github.com/lewis617/daily-task](https://github.com/lewis617/daily-task)

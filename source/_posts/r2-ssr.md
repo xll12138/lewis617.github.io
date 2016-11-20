@@ -7,6 +7,8 @@ tags: [React, Redux]
 
 今天，我们要讲解的是React与Redux服务端渲染。个人认为，React击败Angular1的真正"杀手锏"就是服务端渲染。我们为什么要实现服务端渲染，主要是为了首屏渲染速度和SEO。
 
+<!--more-->
+
 ## 例子
 
 ![](https://ws4.sinaimg.cn/large/83900b4egw1f9xs2gkuhsg20cy01vmzy.gif)
