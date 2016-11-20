@@ -1,5 +1,5 @@
 ---
-title: 使用karma测试平时写的小demo（arguments为例）
+title: 使用Karma测试平时写的小demo（arguments为例）
 date: 2015-12-09 01:51:00
 tags: [Karma, 测试]
 ---
@@ -18,15 +18,15 @@ tags: [Karma, 测试]
 
 ## 自动化demo（使用karma）
 
-假设已经安装好karma，如果不会，请看本人的这篇博客 [karma单元测试入门](http://www.cnblogs.com/lewis617/p/4872996.html)
+假设已经安装好Karma，如果不会，请看本人的这篇博客 [Karma单元测试入门](http://www.cnblogs.com/lewis617/p/4872996.html)
 
 1，在根目录运行
 
-```
+```sh
 karma init
 ```
 
-一路空格选择默认，在What is the location of your source and test files ?这一项输入 *.js，其他默认
+一路空格选择默认，在`What is the location of your source and test files ?`这一项输入 `*.js`，其他默认
 
 ![](https://ws3.sinaimg.cn/large/83900b4egw1f9yh3r64jdj20j00io42x.jpg)
 
@@ -34,7 +34,7 @@ karma init
 
 如网友某个例子：
 
-```
+```sh
 function f(a, b, c){
     alert(arguments.length); // result: "2"
     a = 100;
@@ -51,7 +51,7 @@ f(1, 2);
 
 3，运行
 
-```
+```sh
 karma start
 ```
 
@@ -63,6 +63,6 @@ karma start
 
 这是我在教学，所以写的比较罗嗦，我自己在测试时候各种快捷！
 
-## jasmine的语法你怎么不用？
+## Jasmine的语法你怎么不用？
 
 那些describe的语法当然可以用，这个例子只是为了教学，所以尽量避免干扰因素。
