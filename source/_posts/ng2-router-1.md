@@ -65,26 +65,23 @@ bootstrap(AppComponent, [ROUTER_PROVIDERS,
 
 这种启动方法采取默认的 [HTML 5 pushState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries) 风格，没有#号，但是存在一个弊端。就是当我们在子路经刷新浏览器时候，会出现404的错误。解决办法可以将所有的路由都指向根目录，但是我们使用了http-server，显然不太方便设置。所以还有另外一种风格，就是老式风格，和ng1一样的，带有#的路由风格，它的启动方法是：
 
+```ts
+import {bootstrap}        from 'angular2/platform/browser';
+import {ROUTER_PROVIDERS} from 'angular2/router';
 
+import {AppComponent}     from './app.component';
 
-    
-    
-    import {bootstrap}        from 'angular2/platform/browser';
-    import {ROUTER_PROVIDERS} from 'angular2/router';
-    
-    import {AppComponent}     from './app.component';
-    
-    // Add these symbols to override the `LocationStrategy`
-    import {provide}           from 'angular2/core';
-    import {LocationStrategy,
-            HashLocationStrategy} from 'angular2/router';
-    
-    bootstrap(AppComponent, [ROUTER_PROVIDERS,
-      provide(LocationStrategy,
-             {useClass: HashLocationStrategy}) // .../#/crisis-center/
-     ]);
+// Add these symbols to override the `LocationStrategy`
+import {provide}           from 'angular2/core';
+import {LocationStrategy,
+    HashLocationStrategy} from 'angular2/router';
 
+bootstrap(AppComponent, [ROUTER_PROVIDERS,
+provide(LocationStrategy,
+     {useClass: HashLocationStrategy}) // .../#/crisis-center/
+]);
 
+```
 
 如此一来，我们的app的路由就全部带上#了，当你刷新页面时候，也不会出现404的错误了，但是url的可读性没有 [HTML 5 pushState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries) 风格好看。
 
