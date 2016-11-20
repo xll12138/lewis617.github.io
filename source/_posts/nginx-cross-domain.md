@@ -28,7 +28,7 @@ tags: [nginx, 跨域, Flask]
 
 client.py
 
-```
+```python
 from flask import Flask
 
 app = Flask(__name__)
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     app.run(port=5000)
 ```
 
- server.py
+ server.py
 
 ```
 from flask import Flask
@@ -68,13 +68,13 @@ if __name__ == '__main__':
 
 打开nginx默认的配置文件：
 
-```
+```sh
 sudo gedit /etc/nginx/sites-available/default
 ```
 
 在文件末尾添加如下命令：
 
-```
+```test
 ## demo listen 5017 proxy 5000 and 5001 ##
 server {
     listen 5017; 
@@ -128,7 +128,7 @@ server {
 
 运行nginx:
 
-```
+```sh
 sudo /etc/init.d/nginx restart 
 ```
 
