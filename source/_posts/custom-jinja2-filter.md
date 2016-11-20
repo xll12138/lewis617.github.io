@@ -63,7 +63,8 @@ you can use json_dumps filter to send dict to js,remember to add safe filter,<br
 然后在app.py中渲染这个html
 
 ```python
-@app.route('/') def hello_world():
+@app.route('/') 
+def hello_world():
     dict={'name':'lewis','age':24} return render_template('index.html',dict=dict) if __name__ == '__main__':
     app.run()
 ```
