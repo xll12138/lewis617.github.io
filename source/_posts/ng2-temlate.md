@@ -13,7 +13,7 @@ tags: [Angular2]
 
 ![](https://ws2.sinaimg.cn/large/83900b4egw1f9xp9afp7tj20dr0gd754.jpg)
 
-[源代码](https://github.com/lewis617/angular2-tutorial/tree/master/template-syntax)
+[源代码](https://github.com/lewis617/angular2-tutorial/tree/gh-pages/template-syntax)
 
 ## 属性绑定
 

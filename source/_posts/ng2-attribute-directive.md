@@ -15,7 +15,7 @@ tags: [Angular2]
 
 这个例子共两个指令，第一个是redify指令，能使元素的color属性变红。另外一个直接复制官网的highlight指令，但是我自己做了很多变化，来讲解写法的多样化。
 
-[源代码](https://github.com/lewis617/angular2-tutorial/tree/master/directives)
+[源代码](https://github.com/lewis617/angular2-tutorial/tree/gh-pages/directives)
 
 ## @Directive
 

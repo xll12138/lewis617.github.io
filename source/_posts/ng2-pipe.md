@@ -15,7 +15,7 @@ tags: [Angular2]
 
 这个例子包含两个pipe，一个是stateful，一个是stateless，是直接复制官方的例子。
 
-[源代码](https://github.com/lewis617/angular2-tutorial/tree/master/pipes)
+[源代码](https://github.com/lewis617/angular2-tutorial/tree/gh-pages/pipes)
 
 ## stateless pipe
 

@@ -15,7 +15,7 @@ tags: [Angular2]
 
 这个例子是个老外写的，我将其迁移到ng2 beta版本，想了解迁移的同学可以参考我的做法。
 
-[源代码](https://github.com/lewis617/angular2-tutorial/tree/master/componnets)
+[源代码](https://github.com/lewis617/angular2-tutorial/tree/gh-pages/componnets)
 
 ## 消失的控制器
 

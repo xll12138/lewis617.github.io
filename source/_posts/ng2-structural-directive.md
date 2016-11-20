@@ -16,7 +16,7 @@ tags: [Angular2]
 
 例子是我自己改写的，编写一个structural directives，然后通过这个指令实例化和注销组件，在此同时监视组件生命周期。
 
-[源代码](https://github.com/lewis617/angular2-tutorial/tree/master/lifecycle)
+[源代码](https://github.com/lewis617/angular2-tutorial/tree/gh-pages/lifecycle)
 
 ## UnlessDirective
 

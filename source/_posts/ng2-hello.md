@@ -15,7 +15,7 @@ tags: [Angular2]
 
 这个例子非常简单，是个双向数据绑定。我使用了官网上最简单的方法来启动这个程序，并且去除 CDN 使用本地加载，保证长期可以运行（因为文件都在本地，我们不用担心版本更新的问题。）
 
-[源代码](https://github.com/lewis617/angular2-tutorial/tree/master/hellowold)
+[源代码](https://github.com/lewis617/angular2-tutorial/tree/gh-pages/hellowold)
 
 运行方法：
 

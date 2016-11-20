@@ -15,7 +15,7 @@ tags: [Angular2]
 
 ![](https://ws1.sinaimg.cn/large/83900b4egw1f9xnap2tp0j20700k8abd.jpg)
 
-[源代码](https://github.com/lewis617/angular2-tutorial/tree/master/service)
+[源代码](https://github.com/lewis617/angular2-tutorial/tree/gh-pages/service)
 
 # Injectable
 
