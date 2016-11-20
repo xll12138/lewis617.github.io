@@ -4,7 +4,7 @@ date: 2015-10-01 16:56:00
 tags: [Angular, RequireJs]
 ---
 
-angular的指令是模块化很好的一个体现，下面我将只使用指令（不用控制器），结合requirejs，实现模块化开发。
+Angular的指令是模块化很好的一个体现，下面我将只使用指令（不用控制器），结合Requirejs，实现模块化开发。
 
 模块化关系图：
 
@@ -12,7 +12,7 @@ angular的指令是模块化很好的一个体现，下面我将只使用指令�
 
 # 传统开发方式
 
-```
+```html
 <!--aaa模块-->
 <div>
     <h3>this is aaa</h3>
@@ -37,7 +37,7 @@ angular的指令是模块化很好的一个体现，下面我将只使用指令�
 
 index.html:
 
-```
+```html
 <aaa></aaa>
 <bbb>
     <ccc></ccc>
@@ -52,7 +52,7 @@ aaa模块包括aaa.js和aaa.html
 
 aaa.html
 
-```
+```html
 <div>
     <h3>this is aaa</h3>
     <input type="text" ng-model="asd">{{asd}} <button ng-click="submit()">submit</button>
@@ -61,7 +61,7 @@ aaa.html
 
 aaa.js（引入aaa.html，放入模板中，在link中写业务逻辑，service是用来通信的）
 
-```
+```js
 define(['app','text!./aaa.html'],function(app,aaa){
     app.directive("aaa", function(service) { return {
             restrict: 'AE',
@@ -82,7 +82,7 @@ define(['app','text!./aaa.html'],function(app,aaa){
 
 ![](https://ws1.sinaimg.cn/large/83900b4egw1f9yh3p0f0kj202y01zmx0.jpg)
 
-require(['./aaa/aaa'])即可调用aaa模块;
+`require(['./aaa/aaa'])`即可调用aaa模块;
 
 ## bbb
 
@@ -90,7 +90,7 @@ bbb模块也是两个文件：
 
 bbb.html
 
-```
+```html
 <div>
     <h3>this is bbb</h3>
     <ul>
@@ -102,7 +102,7 @@ bbb.html
 
 bbb.js
 
-```
+```js
 define(['app','text!./bbb.html'],function(app,bbb){
     app.directive('bbb',function(service){ return{
             restrict:'AE',
@@ -129,7 +129,7 @@ ccc模块也是两个文件：
 
 ccc.html
 
-```
+```html
 <div>
     <h3>this is ccc</h3>
 </div>
@@ -137,7 +137,7 @@ ccc.html
 
 ccc.js
 
-```
+```js
 define(['app','text!./ccc.html'],function(app,ccc){
     app.directive('ccc',function(){ return{
             restrict:'AE',
@@ -155,7 +155,7 @@ define(['app','text!./ccc.html'],function(app,ccc){
 
 最后一起调用（只调用了aaa,bbb，ccc已经在bbb里调用过了），并启动app：
 
-```
+```js
 require(['angular','./aaa/aaa','./bbb/bbb','./ccc/ccc','service'],function(angular){
         angular.bootstrap(document,['app']);
     });
@@ -164,5 +164,3 @@ require(['angular','./aaa/aaa','./bbb/bbb','./ccc/ccc','service'],function(angul
 最后看下总体目录：
 
 ![](https://ws3.sinaimg.cn/large/83900b4egw1f9yh3p8mnoj203m08iaae.jpg)
-
-[源代码地址](https://github.com/lewis617/myAngular/tree/master/%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91)
