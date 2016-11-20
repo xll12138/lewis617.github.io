@@ -1,4 +1,10 @@
----title: win7下串口通信date: 2015-04-28 02:58:00tags: [串口通信]---最近做个串口开发，在PC上调试需要用虚拟串口调程序，而常用的VSPM貌似对win7不兼容，看到个VSPD，可以在win7上建虚拟串口，简单方便，网址[http://www.qiujicai.com/?post=42](http://www.qiujicai.com/?post=42 "http://www.qiujicai.com/?post=42")上有简单使用说明和文件下载。
+---
+title: win7下串口通信
+date: 2015-04-28 02:58:00
+tags: [串口通信]
+---
+
+最近做个串口开发，在PC上调试需要用虚拟串口调程序，而常用的VSPM貌似对win7不兼容，看到个VSPD，可以在win7上建虚拟串口，简单方便，网址[http://www.qiujicai.com/?post=42](http://www.qiujicai.com/?post=42 "http://www.qiujicai.com/?post=42")上有简单使用说明和文件下载。
 
 安装方法：
 

@@ -1,4 +1,10 @@
----title: AngularJs与jQuery特效slidetoggle结合date: 2015-09-29 17:10:00tags: [Angular, jQuery]---之前使用jquery的slidetoggle方法，可以轻易的实现元素的收缩展开；使用angularjs后，没有找到相关的方法，通过多方面查资料，自己写了个demo，展示slidetoggle的angularjs写法：
+---
+title: AngularJs与jQuery特效slidetoggle结合
+date: 2015-09-29 17:10:00
+tags: [Angular, jQuery]
+---
+
+之前使用jquery的slidetoggle方法，可以轻易的实现元素的收缩展开；使用angularjs后，没有找到相关的方法，通过多方面查资料，自己写了个demo，展示slidetoggle的angularjs写法：
 
 html
 

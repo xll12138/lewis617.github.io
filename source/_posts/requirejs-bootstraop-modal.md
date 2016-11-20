@@ -1,4 +1,10 @@
----title: 使用RequireJs和Bootstrap模态框实现表单提交date: 2015-09-26 09:59:00tags: [RequireJs, Bootstrap]---下面我将使用requirejs结合模态框实现**三五行代码**部署表单提交操作。
+---
+title: 使用RequireJs和Bootstrap模态框实现表单提交
+date: 2015-09-26 09:59:00
+tags: [RequireJs, Bootstrap]
+---
+
+下面我将使用requirejs结合模态框实现**三五行代码**部署表单提交操作。
 
 ### 传统开发思路如下：
 

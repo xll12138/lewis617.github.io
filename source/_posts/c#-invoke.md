@@ -1,4 +1,10 @@
----title: C#中的Invokedate: 2015-04-28 03:47:00tags: [C#]---在用.NET Framework框架的WinForm构建GUI程序界面时，如果要在控件的事件响应函数中改变控件的状态，例如：某个按钮上的文本原先叫“打开”，单击之后按钮上的文本显示“关闭”，初学者往往会想当然地这么写：
+---
+title: C#中的Invoke
+date: 2015-04-28 03:47:00
+tags: [C#]
+---
+
+在用.NET Framework框架的WinForm构建GUI程序界面时，如果要在控件的事件响应函数中改变控件的状态，例如：某个按钮上的文本原先叫“打开”，单击之后按钮上的文本显示“关闭”，初学者往往会想当然地这么写：
 
 void ButtonOnClick(object sender,EventArgs e)
 

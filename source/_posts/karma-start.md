@@ -1,4 +1,10 @@
----title: karma单元测试入门date: 2015-10-12 14:07:00tags: [Karma, 测试]---学习angularjs，都会遇到karma单元测试，可是初学者面对复杂的测试配置往往不知从何入手，下面我们将抛开angularjs，单独使用两个js文件，完成一次测试入门。
+---
+title: karma单元测试入门
+date: 2015-10-12 14:07:00
+tags: [Karma, 测试]
+---
+
+学习angularjs，都会遇到karma单元测试，可是初学者面对复杂的测试配置往往不知从何入手，下面我们将抛开angularjs，单独使用两个js文件，完成一次测试入门。
 
 ## 0，karma原理
 

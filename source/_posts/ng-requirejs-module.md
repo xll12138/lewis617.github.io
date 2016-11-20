@@ -1,4 +1,10 @@
----title: Angular 结合RequireJs实现模块化开发date: 2015-10-01 16:56:00tags: [Angular, RequireJs]---angular的指令是模块化很好的一个体现，下面我将只使用指令（不用控制器），结合requirejs，实现模块化开发。
+---
+title: Angular 结合RequireJs实现模块化开发
+date: 2015-10-01 16:56:00
+tags: [Angular, RequireJs]
+---
+
+angular的指令是模块化很好的一个体现，下面我将只使用指令（不用控制器），结合requirejs，实现模块化开发。
 
 模块化关系图：
 

@@ -1,4 +1,10 @@
----title: react+reflux入门教程date: 2016-01-14 03:26:00tags: [React, Reflux]---为了简化react的flux带来的冗余操作，社区的同仁们给我们带来了很多优秀的轮子，诸如redux，reflux等。今天我们就通过逐行讲解代码实例的方法，感受一番reflux的设计之美。
+---
+title: react+reflux入门教程
+date: 2016-01-14 03:26:00
+tags: [React, Reflux]
+---
+
+为了简化react的flux带来的冗余操作，社区的同仁们给我们带来了很多优秀的轮子，诸如redux，reflux等。今天我们就通过逐行讲解代码实例的方法，感受一番reflux的设计之美。
 
 ## 例子
 

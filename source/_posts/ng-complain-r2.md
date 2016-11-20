@@ -1,4 +1,10 @@
----title: angular开发者吐槽react+redux的复杂：“一个demo证明你的开发效率低下”date: 2016-01-13 04:02:00tags: [Angular, React, Redux]---曾经看到一篇文章，写的是jquery开发者吐槽angular的复杂。作为一个angular开发者，我来吐槽一下react+redux的复杂。
+---
+title: angular开发者吐槽react+redux的复杂：“一个demo证明你的开发效率低下”
+date: 2016-01-13 04:02:00
+tags: [Angular, React, Redux]
+---
+
+曾经看到一篇文章，写的是jquery开发者吐槽angular的复杂。作为一个angular开发者，我来吐槽一下react+redux的复杂。
 
 ## 例子
 

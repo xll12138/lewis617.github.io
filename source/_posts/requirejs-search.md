@@ -1,4 +1,10 @@
----title: RequireJs调研date: 2015-09-26 11:02:00tags: [RequireJs]---# 背景
+---
+title: RequireJs调研
+date: 2015-09-26 11:02:00
+tags: [RequireJs]
+---
+
+# 背景
 
 ## Problem（问题）
 

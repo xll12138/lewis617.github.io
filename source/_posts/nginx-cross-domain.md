@@ -1,4 +1,10 @@
----title: 使用nginx解决跨域问题（flask为例）date: 2015-12-18 03:56:00tags: [nginx, 跨域, Flask]---## 背景
+---
+title: 使用nginx解决跨域问题（flask为例）
+date: 2015-12-18 03:56:00
+tags: [nginx, 跨域, Flask]
+---
+
+## 背景
 
 我们单位的架构是在api和js之间架构一个中间层（python编写），以实现后端渲染，登录状态判定，跨域转发api等功能。但是这样一个中间会使前端工程师的工作量乘上两倍，原本js可以直接ajax请求api，但是我们不得不ajax请求中间层，中间层再请求api。如图：
 
