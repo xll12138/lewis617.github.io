@@ -4,9 +4,9 @@ date: 2015-10-12 14:07:00
 tags: [Karma, 测试]
 ---
 
-学习angularjs，都会遇到karma单元测试，可是初学者面对复杂的测试配置往往不知从何入手，下面我们将抛开angularjs，单独使用两个js文件，完成一次测试入门。
+学习Angularjs，都会遇到Karma单元测试，可是初学者面对复杂的测试配置往往不知从何入手，下面我们将抛开Angularjs，单独使用两个js文件，完成一次测试入门。
 
-## 0，karma原理
+## 0，Karma原理
 
 ![](https://ws1.sinaimg.cn/large/83900b4egw1f9yh3oak07j20is08sjs6.jpg)
 
@@ -20,13 +20,13 @@ tags: [Karma, 测试]
 
 （1）生成package.json，在文件夹下运行
 
-```
+```sh
 npm init
 ```
 
 （2）安装karma依赖，在文件夹下运行
 
-```
+```sh
 npm install karma karma-jasmine karma-chrome-launcher --save-dev
 ```
 
@@ -36,13 +36,13 @@ npm install karma karma-jasmine karma-chrome-launcher --save-dev
 
 全局安装命令
 
-```
+```sh
 npm install -g karma karma-jasmine karma-chrome-launcher 
 ```
 
 （3）配置karma，在文件夹下运行
 
-```
+```sh
  karma init karma.conf.js
 ```
 
@@ -50,7 +50,7 @@ npm install -g karma karma-jasmine karma-chrome-launcher
 
 （4），编写demo.js
 
-```
+```js
 describe('A spec suite', function() {
     it('contains a passing spec', function() {
         expect(true).toBe(true);
@@ -70,7 +70,7 @@ expect(a).tobe(b)负责测试a是否等于b，测试时候会在console中打印
 
 在根目录下运行
 
-```
+```sh
 karma start karma.conf.js
 ```
 
