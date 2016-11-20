@@ -57,7 +57,7 @@ js文件不仅可以调用js，还能调用css和html页面，所以毫不夸张
 
 ### 使用多选插件
 
-```
+```js
  require(['jquery.shiftcheckbox'], function () {
             $(function () {
                 $('#demo2 :checkbox').shiftcheckbox();
@@ -67,7 +67,7 @@ js文件不仅可以调用js，还能调用css和html页面，所以毫不夸张
 
 ### 使用'bootstrap', 'jquery.form', 'jquery.validate'三个插件
 
-```
+```js
 require(['bootstrap', 'jquery.form', 'jquery.validate'], function () {
     $(function () {
         jQuery.validator.addMethod("isZipCode", function (value, element) { var tel = /^[0-9]{6}$/; return this.optional(element) || (tel.test(value));
@@ -113,7 +113,7 @@ require(['bootstrap', 'jquery.form', 'jquery.validate'], function () {
 
 ### 调用日期方法类
 
-```
+```js
 /**
  * Created by lewis on 15-9-15. */
 //自定义的命名空间，用来对日期进行操作
@@ -151,7 +151,7 @@ define([],{ //输入json日期获取年
 
 a.js
 
-```
+```js
 function myFunctionA(){
     console.log('a');
 };
@@ -159,7 +159,7 @@ function myFunctionA(){
 
 b.js
 
-```
+```js
 function myFunctionB(){
     console.log('b');
 };
@@ -167,7 +167,7 @@ function myFunctionB(){
 
 调用：
 
-```
+```js
 require(['js/ab/a','ab/b.js'],function(){
     myFunctionA();
     myFunctionB();
