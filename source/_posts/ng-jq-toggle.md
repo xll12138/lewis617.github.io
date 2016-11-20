@@ -4,11 +4,11 @@ date: 2015-09-29 17:10:00
 tags: [Angular, jQuery]
 ---
 
-之前使用jquery的slidetoggle方法，可以轻易的实现元素的收缩展开；使用angularjs后，没有找到相关的方法，通过多方面查资料，自己写了个demo，展示slidetoggle的angularjs写法：
+之前使用jQuery的`slidetoggle`方法，可以轻易的实现元素的收缩展开；使用Angularjs后，没有找到相关的方法，通过多方面查资料，自己写了个demo，展示`slidetoggle`的Angularjs写法：
 
 html
 
-```
+```html
 <div ng-controller="ctrl_main">
     <li ng-repeat-start="el in list" ng-click="$index=!$index">{{el.name}}</li>
     <li ng-repeat-end slide-toggle="$index">{{$index}}</li>
@@ -17,7 +17,7 @@ html
 
 控制器ctrl_main
 
-```
+```js
 app.controller('ctrl_main', function ($scope) {
         $scope.list=[{name:'lewis'},{name:'susan'},{name:'alice'},{name:'jay'}]
     });
@@ -25,7 +25,7 @@ app.controller('ctrl_main', function ($scope) {
 
 指令drtv_slidetoggle
 
-```
+```js
  app.directive('slideToggle', function() { return {
             restrict: 'A',
             scope:{
@@ -48,13 +48,13 @@ app.controller('ctrl_main', function ($scope) {
 
 总体思路就是编写指令，通过改变指令的值![](https://ws2.sinaimg.cn/large/83900b4egw1f9yh3pdvz6j204800jweb.jpg)，来控制当前元素的收缩展开。
 
-===不用requirejs的同学就可以不往下看了===
+===不用Requirejs的同学就可以不往下看了===
 
-【ps】将该指令用requirejs封装成指令模块，引用就可以在你的项目中使用了；
+【PS】将该指令用Requirejs封装成指令模块，引用就可以在你的项目中使用了；
 
-requirejs封装的指令模块，新建js,命名为drtv_slidetoggle.js：
+Requirejs封装的指令模块，新建js, 命名为drtv_slidetoggle.js：
 
-```
+```js
 define(['app','jquery'], function (app) {
     app.directive('slideToggle', function() { return {
             restrict: 'A',
@@ -73,8 +73,8 @@ define(['app','jquery'], function (app) {
 
 在启动app时候调用：
 
-```
- require(['angular', 'domReady!','ctrl_main','drtv_slidetoggle'], function (angular) {
+```js
+ require(['angular','domReady!','ctrl_main','drtv_slidetoggle'], function (angular) {
             angular.bootstrap(document, ['app'])
         });
 ```
