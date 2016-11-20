@@ -1,10 +1,10 @@
 ---
-title: react+reflux入门教程
+title: React+Reflux入门教程
 date: 2016-01-14 03:26:00
 tags: [React, Reflux]
 ---
 
-为了简化react的flux带来的冗余操作，社区的同仁们给我们带来了很多优秀的轮子，诸如redux，reflux等。今天我们就通过逐行讲解代码实例的方法，感受一番reflux的设计之美。
+为了简化React的Flux带来的冗余操作，社区的同仁们给我们带来了很多优秀的轮子，诸如Redux，Reflux等。今天我们就通过逐行讲解代码实例的方法，感受一番Reflux的设计之美。
 
 ## 例子
 
@@ -16,7 +16,7 @@ tags: [React, Reflux]
 
 components/todo.js
 
-```
+```js
 import React from 'react' import Reflux from 'reflux' import ReactMixin from 'react-mixin' import store from '../stores/store' import actions from '../actions/actions' export default class Todo extends React.Component{ //组件渲染完成后，通过action获取所有的数组，刷新绑定到this.state上
  componentDidMount() {
     actions.getAll();
@@ -50,17 +50,17 @@ ReactMixin.onClass(Todo, Reflux.connect(store));
 
 上述代码，我们干了3件事：
 
-1.  渲染了一个组件，这个组件包括一个input，一个add按钮，一个列表，列表每项包含名称和remove按钮
-2.  给这个组件添加了几个方法，其中componentDidMount()在组件渲染完成后触发，componentDidMount()、add()和remove()方法分别调用actions的方法去更新状态
+1.  渲染了一个组件，这个组件包括一个`input`，一个add按钮，一个列表，列表每项包含名称和remove按钮
+2.  给这个组件添加了几个方法，其中`componentDidMount()`在组件渲染完成后触发，`componentDidMount()`、`add()`和`remove()`方法分别调用actions的方法去更新状态
 3.  最后一行代码，使用es6的mixin写法，使得组件监听store带来的state变化，并刷新界面。
 
-看到这里，很多没有接触过reflux的同学可能已经晕了，我来图解下reflux的功能流程吧！
+看到这里，很多没有接触过Reflux的同学可能已经晕了，我来图解下Reflux的功能流程吧！
 
 ![](https://ws3.sinaimg.cn/large/83900b4egw1f9yh3l0f47j206u05xjrl.jpg)
 
 组件就是用户界面，actions就是组件的动作，store用于执行actions的命令，并返回一个state对象给组件。组件通过state来更新界面。
 
-这里我想说说react和angular的某个相同之处，就是将数据和界面绑定起来，通过操作数据来更新界面（不用苦逼的操作dom了）。我们把数据和界面的规则建好后，更新数据，界面自动就变化了。在这里，数据指的是this.state，界面指的是组件。
+这里我想说说React和Angular的某个相同之处，就是将数据和界面绑定起来，通过操作数据来更新界面（不用苦逼的操作dom了）。我们把数据和界面的规则建好后，更新数据，界面自动就变化了。在这里，数据指的是`this.state`，界面指的是组件。
 
 那么为何要用actions和store这么多层去更新state呢？为了以后项目业务逻辑变复杂后便于管理。为什么便于管理，因为actions有很多钩子，钩子就是“触发之前，触发之后的回调什么的”，这些钩子我们以后会用得上。
 
@@ -68,7 +68,7 @@ ReactMixin.onClass(Todo, Reflux.connect(store));
 
 actions/actions.js
 
-```
+```js
 import Reflux from 'reflux' export default Reflux.createActions(['getAll','add','remove']);
 ```
 
@@ -108,7 +108,7 @@ export default Reflux.createStore({
 
 index.js
 
-```
+```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Todo from './components/todo';
@@ -123,7 +123,7 @@ ReactDOM.render( <Todo>
 
 webpack.config.js
 
-```
+```js
 var path = require('path'); var webpack = require('webpack');
 
 module.exports = {
@@ -153,14 +153,14 @@ module.exports = {
 
 ## 总结
 
-相比较redux而言，
+相比较Redux而言，
 
-1.  reflux没有reducer的概念，取而代之，和action做基友的是store
-2.  reflux没有把状态的一部分值绑定在组件的props上，而是将状态绑定在组件的state上，我们来看react dev tool的截图![](https://ws2.sinaimg.cn/large/83900b4egw1f9yh3lm0fgj203z047748.jpg)
-3.  reflux可以直接调用action的方法，而redux必须将方法绑定在组件的props上，或者使用props的dispatch方法来执行actions的方法
+1.  Reflux没有reducer的概念，取而代之，和action做基友的是store
+2.  Reflux没有把状态的一部分值绑定在组件的props上，而是将状态绑定在组件的state上，我们来看react dev tool的截图![](https://ws2.sinaimg.cn/large/83900b4egw1f9yh3lm0fgj203z047748.jpg)
+3.  Reflux可以直接调用action的方法，而Redux必须将方法绑定在组件的props上，或者使用props的dispatch方法来执行actions的方法
 4.  ……
 
-有此看来，reflux好理解的多，但是redux的单一state是实际项目中是非常好用的，所以，redux在github上的星星比reflux多得多！两个都是社区同仁智慧的结晶，都是优秀的值得学习的轮子！
+由此看来，Reflux好理解的多，但是Redux的单一state是实际项目中是非常好用的，所以，Redux在Github上的星星比Reflux多得多！两个都是社区同仁智慧的结晶，都是优秀的值得学习的轮子！
 
 源代码：
 
@@ -168,10 +168,11 @@ module.exports = {
 
 运行方法：
 
+```sh
 npm install
 
 npm run build
-
+```
 手动打开index.html
 
 * * *
