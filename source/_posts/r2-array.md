@@ -4,9 +4,7 @@ date: 2016-01-21 09:23:00
 tags: [React, Redux]
 ---
 
-reduce()、filter()、map()、some()、every()、...展开属性
-这些概念属于es5、es6中的语法，跟react+redux并没有什么联系，我们直接在<https://developer.mozilla.org/en-
-US/> 这里可以搜索到相关api文档。
+reduce()、filter()、map()、some()、every()、...展开属性这些概念属于es5、es6中的语法，跟React+Redux并没有什么联系，我们直接在<https://developer.mozilla.org/en-US/> 这里可以搜索到相关api文档。
 
 但是Redux的官方示例中包含了这些语法的用法，我们正好可以在程序中学习这些语法。这里全部默认使用es6的写法。
 
@@ -14,8 +12,7 @@ US/> 这里可以搜索到相关api文档。
 
 ## 例子
 
-这是官方的todomvc的例子（<https://github.com/lewis617/react-redux-tutorial/tree/master
-/redux-examples/todomvc>）：
+这是官方的todomvc的例子（<https://github.com/lewis617/react-redux-tutorial/tree/master/redux-examples/todomvc>）：
 
 ![](https://ws1.sinaimg.cn/large/83900b4egw1f9xtk41cryj208h04zt8o.jpg)
 
@@ -56,7 +53,7 @@ return state.filter(todo =>
       )
 ```
 
-state是个任务数组，`filter()`里面只有一个参数，就是个箭头函数，该函数只有一个参数是`todo`，也就是数组的每一项元素，箭头后面那个判断语句，如果返回`true`则保留当前项，反之移除当前项。
+`state`是个任务数组，`filter()`里面只有一个参数，就是个箭头函数，该函数只有一个参数是`todo`，也就是数组的每一项元素，箭头后面那个判断语句，如果返回`true`则保留当前项，反之移除当前项。
 
 有的同学会问，`todo.id !==action.id`前为什么没有`return`，这是箭头函数的语法，箭头两端就是输入输出，不用写`return`。如果用es5的写法就是：
 
@@ -123,11 +120,11 @@ return [
       ]
 ```
 
-展开state数组的每一项到当前的数组
+展开`state`数组的每一项到当前的数组
 
 components/MainSection.js  72 行
 
-```js
+```jsx harmony
 <TodoItem key={todo.id} todo={todo} {...actions} />
 ```
 
