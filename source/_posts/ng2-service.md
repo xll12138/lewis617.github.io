@@ -1,4 +1,3 @@
-
 ---
 title: Angular2系列教程（七）Injectable、Promise、Interface、使用服务
 date: 2016-02-29 05:29:00

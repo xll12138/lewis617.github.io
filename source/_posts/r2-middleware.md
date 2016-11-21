@@ -1,4 +1,3 @@
-
 ---
 title: React与Redux教程（七）自定义Redux中间件
 date: 2016-02-02 08:20:00

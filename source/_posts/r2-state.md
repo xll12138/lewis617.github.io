@@ -1,4 +1,3 @@
-
 ---
 title: React与Redux教程（二）Redux的单一状态树完全替代了React的状态机？
 date: 2016-01-21 02:30:00

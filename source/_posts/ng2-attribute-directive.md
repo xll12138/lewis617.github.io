@@ -1,4 +1,3 @@
-
 ---
 title: Angular2系列教程（四）Attribute directives
 date: 2016-02-18 03:05:00

@@ -1,4 +1,3 @@
-
 ---
 title: 使用 React、Redux 和 Bootstrap 实现 Alert
 date: 2016-11-17 02:56:00

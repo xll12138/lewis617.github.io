@@ -1,4 +1,3 @@
-
 ---
 title: React与Redux教程（五）异步、单一state树结构、componentWillReceiveProps
 date: 2016-01-30 04:18:00
