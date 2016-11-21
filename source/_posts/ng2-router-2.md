@@ -147,17 +147,11 @@ http://localhost:63342/angular2-tutorial/router/index.html/crisis-center/;id=1;f
 
 `;id=1;foo=foo` 这个参数是我们没有见过的，我们知道query string一般都是`?`加`&`，而这个参数则使用了`;`，这叫做 _matrix URL_ notation。  
 
-> _Matrix URL_ notation is an idea first floated in a [1996 proposal](http://www.w3.org/DesignIssues/MatrixURIs.html) by the founder of
-the web, Tim Berners-Lee.
+> _Matrix URL_ notation is an idea first floated in a [1996 proposal](http://www.w3.org/DesignIssues/MatrixURIs.html) by the founder of the web, Tim Berners-Lee.
 
-> Although matrix notation never made it into the HTML standard, it is legal
-and it became popular among browser routing systems as a way to isolate
-parameters belonging to parent and child routes. The Angular Component Router
-is such a system.
+> Although matrix notation never made it into the HTML standard, it is legal and it became popular among browser routing systems as a way to isolate parameters belonging to parent and child routes. The Angular Component Router is such a system.
 
-> The syntax may seem strange to us but users are unlikely to notice or care
-as long as the URL can be emailed and pasted into a browser address bar as
-this one can.
+> The syntax may seem strange to us but users are unlikely to notice or care as long as the URL can be emailed and pasted into a browser address bar as this one can.
 
 这是 ng2 官方文档对这个概念的解释，我们从中得知，这个概念用区分参数属于父视图还是子视图。
 
@@ -170,6 +164,3 @@ this one can.
 如果您觉得本博客教程帮到了您，就赏颗星吧！
 
 https://github.com/lewis617/angular2-tutorial
-
-
-

@@ -22,7 +22,7 @@ ng2的组件就是ng1中的指令。它包含模板、样式、注入、和选�
 
 组件嵌套组件可以实现类似react的模块化，我曾经也用ng1做过类似的事情
 
-[Angular 结合RequireJs实现模块化开发](http://www.cnblogs.com/lewis617/p/4851817.html)
+[Angular 结合RequireJs实现模块化开发](https://lewis617.github.io/2015/10/01/ng-requirejs-module/)
 
 我当时就想，既然有了指令（ng1）还要什么控制器（ng1）啊！果不其然ng2中移除了控制器，直接用指令也就是ng2的组件来展示界面：
 

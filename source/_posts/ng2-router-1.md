@@ -28,12 +28,11 @@ http-server
 
 ## 引入库文件设置base href  
 
-路由并不在ng2中，需要我们额外引入，另外我们需要设置base href，这是个什么东西呢？相当于我们后续所有 URL 的"前缀"，因为我们的app默认是基于[HTML 5 pushState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries)
-风格的路由，所以我们需要加上base href，来保证当我们导航到深层次的 URL 时候，资源可以被正确加载：
+路由并不在ng2中，需要我们额外引入，另外我们需要设置base href，这是个什么东西呢？相当于我们后续所有 URL 的"前缀"，因为我们的app默认是基于[HTML 5 pushState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries) 风格的路由，所以我们需要加上base href，来保证当我们导航到深层次的 URL 时候，资源可以被正确加载：
 
 index.html
 
-```ts    
+```html   
 <!-- Add the router library -->
 <script src="lib/router.dev.js"></script>
 
@@ -151,7 +150,7 @@ http://localhost:63342/angular2-tutorial/router/index.html/heroes
 
 ## 温习promise
 
-当我们导航到heroes视图的时候，我们就进入了另一个子组件，这个组件需要一个heroes服务，里面用到了Promise，我们在[Angular2系列教程（七）Injectable、Promise、Interface、使用服务](http://www.cnblogs.com/lewis617/p/5227183.html)讲过Promise，然我们来温习Promise：
+当我们导航到heroes视图的时候，我们就进入了另一个子组件，这个组件需要一个heroes服务，里面用到了Promise，我们在[Angular2系列教程（七）Injectable、Promise、Interface、使用服务](https://lewis617.github.io/2016/02/28/ng2-service/)讲过Promise，然我们来温习Promise：
 
 app/heroes/hero.service.ts
 
@@ -201,7 +200,7 @@ var heroesPromise = Promise.resolve(HEROES);
 
 ![](https://ws2.sinaimg.cn/large/83900b4egw1f9xkkfarv9j20k602l74v.jpg)
 
-更详细的的用法，可以看我之前讲的Promise：[Angular2系列教程（七）Injectable、Promise、Interface、使用服务](http://www.cnblogs.com/lewis617/p/5227183.html) 。
+更详细的的用法，可以看我之前讲的Promise：[Angular2系列教程（七）Injectable、Promise、Interface、使用服务](https://lewis617.github.io/2016/02/28/ng2-service/) 。
 
 ## 两个服务：Router、RouteParams
 

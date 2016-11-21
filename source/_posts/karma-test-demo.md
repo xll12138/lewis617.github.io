@@ -20,7 +20,7 @@ tags: [Karma, 测试]
 
 ## 自动化demo（使用karma）
 
-假设已经安装好Karma，如果不会，请看本人的这篇博客 [Karma单元测试入门](http://www.cnblogs.com/lewis617/p/4872996.html)
+假设已经安装好Karma，如果不会，请看本人的这篇博客 [Karma单元测试入门](https://lewis617.github.io/2015/10/12/karma-start/)
 
 1，在根目录运行
 

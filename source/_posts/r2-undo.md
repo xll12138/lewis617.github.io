@@ -4,7 +4,7 @@ date: 2016-01-27 03:39:00
 tags: [React, Redux]
 ---
 
-上节课，我们介绍了一些es6的新语法：[React与Redux教程（三）reduce()、filter()、map()、some()、every()、...展开属性](http://www.cnblogs.com/lewis617/p/5149006.html)
+上节课，我们介绍了一些es6的新语法：[React与Redux教程（三）reduce()、filter()、map()、some()、every()、...展开属性](https://lewis617.github.io/2016/01/21/r2-array/)
 
 今天我们通过解读redux-undo的官方示例代码来学习，在Redux中使用撤销功能、devtools功能、以及router。
 
@@ -199,7 +199,7 @@ export default function configureStore (initialState) {
 
 有的同学会问，`enforceImmutableMiddleware`是什么？干嘛用的？这个使用禁止你改变state的。什么？不改变state，我们如何更新状态，Redux不允许你改变state，在reducer中我们必须要返回一个新的state，而不是修改原来的state！
 
-那个`thunk`是什么？`thunk`我们已经在[React与Redux教程（一）connect、applyMiddleware、thunk、webpackHotMiddleware](http://www.cnblogs.com/lewis617/p/5145073.html)里面讲过了。
+那个`thunk`是什么？`thunk`我们已经在[React与Redux教程（一）connect、applyMiddleware、thunk、webpackHotMiddleware](https://lewis617.github.io/2016/01/19/r2-counter/)里面讲过了。
 
 那么什么是`promiseMiddleware`？这也是个中间件，和`thunk`一样，使得你的action可以具备异步的功能。不过，我们可以发现，本例中我们并没有用到`thunk`和`promiseMiddleware`这两个中间件，本例子是个种子文件，可以在这个基础上拓展，所以作者提前写好了两个常用中间件，便于我们日后使用！
 

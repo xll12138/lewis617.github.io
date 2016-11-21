@@ -23,7 +23,7 @@ https://github.com/lewis617/react-redux-tutorial/tree/master/redux-examples/asyn
 异步本身 这个概念，本文不详细叙述，但可以简单说一下，Javascript是通过自身的"事件循环（event loop）"机制来实现异步的，将耗时的IO等操作跳过，当事件完成后再发个信号过来执行回调。这使得单线程的js变的非常高效，这也是为什么
 Nodejs在多并发场景下特别牛逼的原因。
 
-Redux只能实现同步操作，但是可以通过thunk中间件实现异步。thunk的作用看[React与Redux教程（一）connect、applyMiddleware、thunk、webpackHotMiddleware](http://www.cnblogs.com/lewis617/p/5145073.html)
+Redux只能实现同步操作，但是可以通过thunk中间件实现异步。thunk的作用看[React与Redux教程（一）connect、applyMiddleware、thunk、webpackHotMiddleware](https://lewis617.github.io/2016/01/19/r2-counter/)
 
 **_主要的异步操作（ajax请求）均在action中进行。_**
 
