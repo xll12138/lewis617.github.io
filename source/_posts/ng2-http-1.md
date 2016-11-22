@@ -92,10 +92,11 @@ export class HeroData {
 ```
 那个`createDB`是webapi里提供的方法用于创建虚拟的数据库。
 
-那么什么是provider？provider就是服务，provide是ng2给我们提供的创建服务的api，这个可以参考官网，比较简单不再赘述：
+那么什么是provider？~~provider就是服务，provide是ng2给我们提供的创建服务的api~~，这个可以参考官网，比较简单不再赘述：
 
-https://angular.io/docs/ts/latest/api/core/provide-function.html
+~~https://angular.io/docs/ts/latest/api/core/provide-function.html~~
 
+provider 是依赖注入中的一个概念，它决定了服务的实例化方式。
 到此为止，我们的虚拟api就配置好了，我们可以在`app/heroes`这个url上进行get和post请求，用于获取和新增数据了。为什么是这个url？因为我们在创建数据库时候定义了这个节点：
 
 app/hero-data.ts
