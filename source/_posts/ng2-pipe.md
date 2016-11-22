@@ -12,7 +12,7 @@ tags: [Angular2]
 
 ![](https://ws4.sinaimg.cn/large/83900b4egw1f9xnty3er1j20em06st9b.jpg)
 
-这个例子包含两个pipe，一个是stateful，一个是stateless，是直接复制官方的例子。
+这个例子包含两个pipe，~~一个是stateful，一个是stateless~~，是直接复制官方的例子。（最新的官网文档已经将其改为了pure和impure，并移除了面向对象的比喻，个人认为较为准确，请以最新的官网文档为参考！）
 
 [源代码](https://github.com/lewis617/angular2-tutorial/tree/gh-pages/pipes)
 
