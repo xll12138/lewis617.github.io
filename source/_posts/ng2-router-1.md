@@ -61,7 +61,7 @@ bootstrap(AppComponent, [ROUTER_PROVIDERS,
  ]);
 ```
 
-这种启动方法采取默认的 [HTML 5 pushState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries) 风格，没有#号，但是存在一个弊端。就是当我们在子路经刷新浏览器时候，会出现404的错误。解决办法可以将所有的路由都指向根目录，但是我们使用了http-server，显然不太方便设置。所以还有另外一种风格，就是老式风格，和ng1一样的，带有#的路由风格，它的启动方法是：
+这种启动方法采取默认的 [HTML 5 pushState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries) 风格，没有#号，但是存在一个弊端。就是当我们在子路经刷新浏览器时候，会出现404的错误。~~解决办法可以将所有的路由都指向根目录，但是我们使用了http-server，显然不太方便设置。~~ （可以通过设置base href为“/“来解决！）所以还有另外一种风格，就是老式风格，和ng1一样的，带有#的路由风格，它的启动方法是：
 
 ```ts
 import {bootstrap}        from 'angular2/platform/browser';
