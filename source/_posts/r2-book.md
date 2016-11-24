@@ -6,7 +6,7 @@ tags: [React, Redux, Babel, Webpack, Node, Universal, 大型项目, 函数式编
 
 《React 与 Redux 开发实例精解》出版了！
 
-![](https://raw.githubusercontent.com/lewis617/react-redux-book/master/front-cover.jpg)
+![](https://ws1.sinaimg.cn/large/83900b4egw1fa3f51f6jyj20h00m8jv0.jpg)
 
 ## 关于 React 与 Redux
 
