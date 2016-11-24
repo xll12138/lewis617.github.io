@@ -6,7 +6,7 @@ branches:
   - source
 before_install:
   # Decrypt the private key
-  - openssl aes-256-cbc -K $encrypted_8e945db8c448_key -iv $encrypted_8e945db8c448_iv -in id_rsa.enc -out id_rsa -d
+  - openssl aes-256-cbc -K $encrypted_8e945db8c448_key -iv $encrypted_8e945db8c448_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
   # Set the permission of the key
   - chmod 600 ~/.ssh/id_rsa
   # Start SSH agent
