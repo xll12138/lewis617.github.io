@@ -6,7 +6,7 @@ tags: [React, Redux, Babel, Webpack, Node, Universal, 大型项目, 函数式编
 
 《React 与 Redux 开发实例精解》出版了！
 
-![](https://ws1.sinaimg.cn/large/83900b4egw1fa3f51f6jyj20h00m8jv0.jpg)
+![](https://ws3.sinaimg.cn/large/83900b4ejw1fa0odq5dymj20h00m8jv0.jpg)
 
 ## 关于 React 与 Redux
 
@@ -15,6 +15,311 @@ React 与 Redux， 一个快如鬼魅，一个清晰明了，各个巨头在生�
 ## 关于这本书
 
 《React 与 Redux 开发实例精解》这本书不仅讲解了 React 与 Redux 的基础和实战，更注重 Universal 渲染、函数式编程和大型项目架构的介绍。笔者一直在360的生产环境中使用这本书上的技术，感觉非常靠谱。希望读者可以喜欢这本书，也希望这本书能帮到更多的人，更希望国内有更多的基于 React 与 Redux 搭建的优秀项目出现！
+
+## 目录
+
+- 致读者
+- 第一部分　基础篇
+    - 第1章　技术简介
+        - React
+        - Redux
+        - Node与Universal渲染
+        - Babel
+        - Webpack
+        - 总结
+    - 第2章　在Node.js中运行 React
+        - 例子
+        - 编写React组件
+        - 在Node.js中渲染组件
+        - 使用Babel编译运行Node.js程序
+            - Require Hook 简介
+            - 使用Require Hook的步骤
+        - 总结
+    - 第3章　在浏览器中运行React
+        - 例子
+        - 组件复用
+        - 在浏览器中渲染React组件
+        - 使用Webpack打包编译
+        - 在浏览器中运行
+        - 总结
+    - 第4章　开发服务器和热替换
+        - 例子
+        - 安装
+        - 配置Babel
+            - 使用react-hmre预设
+            - react-hmre的功能
+        - 配置Webpack
+        - 配置Express服务器
+        - 总结
+    - 第5章　React的创新语法：JSX
+        - 例子
+        - JSX简介
+        - JSX常用语法
+            - 类似HTML
+            - JavaScript表达式
+            - 样式
+            - 注释
+            - 数组
+            - HTML标签 vs. React组件
+        - 总结
+    - 第6章　React的数据载体：state、props与context
+        - 例子
+        - State
+        - Props
+            - 使用props
+            - 验证props
+            - 组合使用state与props
+        - Context
+            - 使用props传递数据
+            - 使用context传递数据
+            - Props与context的适用场景
+        - 在React开发者工具中查看
+        - 总结
+    - 第7章　React的两个对象：ReactElement与组件实例
+        - 例子
+        - ReactElement
+            - JSX中的闭合标签是ReactElement
+            - ReactElement是什么
+            - ReactElement的两种类型
+            - React组件的渲染流程
+        - 组件实例
+            - 组件实例简介
+            - 组件、ReactElement与组件实例的区别
+            - 组件实例的生灭：生命周期函数
+            - React组件中的this
+        - 总结
+    - 第8章　初识Redux
+        - 例子
+        - Action
+        - Reducer
+            - 定义
+            - 纯函数
+            - 不能修改参数state
+        - Store
+            - 职能
+            - 创建
+            - 获取与监听
+            - 发起action
+        - 总结
+    - 第9章　Action创建函数与Redux Thunk中间件
+        - 例子
+        - Action创建函数
+            - 编写
+            - 发起
+            - 意义
+        - Redux Thunk中间件
+            - 功能
+            - 安装激活
+        - 总结
+- 第二部分　进阶篇
+    - 第10章　React与Redux的连接：手动连接
+        - 例子
+        - 手动连接的步骤
+            - 编写React组件
+            - 编写Redux
+            - 将Redux手动连接到React组件
+        - 手动连接的缺点
+        - 总结
+    - 第11章　React与Redux的连接：使用react-redux连接
+        - 例子
+        - 连接步骤
+        - 多种写法
+        - 连接原理
+            - Provider工作原理
+            - connect工作原理
+        - 展示组件与容器组件
+        - 总结
+    - 第12章　实现撤销/重做
+        - 例子
+        - 撤销/重做
+        - Redux开发者工具
+            - 安装
+            - 使用
+        - Redux并不“低效”
+        - 总结
+    - 第13章　测试
+        - 例子
+        - 测试工具
+            - Mocha
+            - Enzyme
+            - Expect
+        - 测试action创建函数
+        - 测试React组件
+        - 测试容器组件
+        - 测试reducer纯函数
+        - 运行测试脚本
+        - 总结
+    - 第14章　Redux的全局状态与React组件的内部状态
+        - 例子
+        - 全局状态与内部状态的定义
+        - 全局状态完全替代了内部状态？
+        - 全局状态与内部状态的适用场景
+        - 总结
+    - 第15章　React与Redux中的数组处理
+        - 例子
+        - reduce()
+            - 概述
+            - 语法
+            - 示例
+        - filter()
+            - 概述
+            - 语法
+            - 示例
+        - map()
+            - 概述
+            - 语法
+            - 示例
+        - every()
+            - 概述
+            - 语法
+            - 示例
+        - some()
+            - 概述
+            - 语法
+            - 示例
+        - 展开运算符
+            - 概述
+            - 语法
+            - 示例
+        - 总结
+    - 第16章　Redux的大舞台：异步
+        - 例子
+        - JavaScript事件驱动编程
+        - Promise
+        - Redux中的异步
+            - 异步action创建函数
+            - 异步请求前后的state变化
+        - State tree结构
+            - 查看state tree
+            - 如何构建state tree
+        - 异步与变化
+            - 准备工作
+            - 追踪异步与变化
+        - 总结
+    - 第17章　自定义Redux中间件
+        - 例子
+        - 中间件的功能
+        - 中间件的编写
+        - 中间件的执行
+        - 自定义API中间件
+        - 总结
+    - 第18章　Universal渲染
+        - 例子
+        - 公用一套代码
+        - 服务端渲染
+        - 客户端渲染
+        - 总结
+- 第三部分　拓展篇
+    - 第19章　Universal渲染神器：Webpack同构工具
+        - 例子
+        - Webpack同构工具的功能
+        - 服务端调用
+        - 客户端调用
+        - 真实场景
+            - 配置服务器的入口
+            - 独立开发服务器
+            - 配置Webpack
+            - 配置Webpack同构工具
+            - 在服务端和客户端使用require()
+        - 总结
+    - 第20章　多页面的实现：路由
+        - 例子
+        - 路由也是组件
+        - 路由匹配
+        - 使用Link和IndexLink导航
+        - 服务端路由
+        - 总结
+    - 第21章　多页面下的异步操作
+        - 例子
+        - redux-amrc
+            - 功能
+            - 配置
+            - 使用
+            - Action与state
+            - API
+        - 多页面下的异步操作
+            - 编写测试API
+            - 预载数据
+            - 手动加载数据
+            - 操作数据
+        - 总结
+    - 第22章　使用Bootstrap
+        - 例子
+        - bootstrap-loader
+            - 基本用法
+            - 配置
+        - PostCSS与Autoprefixer
+            - 简介
+            - 用法
+        - React-Bootstrap
+        - 总结
+- 第四部分　实战篇
+    - 第23章　搭建大型项目
+        - 例子
+        - 开发服务器
+            - 开发环境下的Webpack配置
+            - Webpack同构工具的配置
+            - 独立的开发服务器
+            - 启动开发服务器
+        - 前端服务器
+            - 配置前端服务器
+            - 使用组件渲染HTML页面
+            - 启动前端服务器
+        - API服务器
+            - 配置API服务器
+            - 启动API服务器
+        - 生产环境下的构建编译
+            - 编译运行Node.js
+            - 生产环境下的Webpack配置
+        - 公用代码
+            - 工具集
+            - 路由与页面
+        - 质量保证
+            - 测试
+            - Airbnb编码规范
+            - 去毛机
+            - EditorConfig
+        - 总结
+    - 第24章　表单
+        - 例子
+        - 高阶组件ReduxForm
+        - 设置
+        - 简单表单
+        - 同步验证表单
+        - 异步失焦验证表单
+        - 提交表单到服务器
+        - 总结
+    - 第25章　图表与表格
+        - 例子
+        - 图表组件
+        - 表格组件
+        - 从服务器获取数据
+        - 总结
+    - 第26章　用户认证
+        - 例子
+        - 编写认证API
+            - Express-session中间件
+            - 加载当前认证状态
+            - 登录与登出
+            - API权限保护
+        - 发送cookie
+        - 编写用于认证的action创建函数
+        - 登录页面和导航栏
+        - 前端路由保护
+        - 总结
+    - 第27章　部署
+        - 例子
+        - Heroku平台
+            - 安装工具并登录
+            - 准备程序
+            - 部署程序
+            - 其他操作
+        - 持续集成
+        - 与生产相关的问题
+        - 总结
+    - 第28章　其他资源
+        - 在线文档
+        - 参与社区活动
 
 ## 售书链接
 
