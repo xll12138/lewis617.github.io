@@ -1,5 +1,5 @@
 ---
-title: 《React 与 Redux 开发实例精解》出版了
+title: 《React 与 Redux 开发实例精解》出版了！
 date: 2016-11-20 16:14:00
 tags: [React, Redux, Babel, Webpack, Node, Universal, 大型项目, 函数式编程, 图书]
 ---
