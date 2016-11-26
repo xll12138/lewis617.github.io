@@ -21,6 +21,8 @@ Universal 渲染非常复杂，需要权衡的东西很多。不过这都是值�
 >  According to research at Google, the difference of just 200 milliseconds in page load performance has an impact on user behavior. 
 > 
 > 根据 Google 的调查，在一个页面的加载过程中，仅仅200毫秒的差异就可以影响用户的行为。
+ 
+另外，Universal 也能保证 SEO，毕竟搜索引擎无法和 JavaScript 通信。
 
 ## 延迟渲染
 
