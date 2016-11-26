@@ -6,8 +6,6 @@ tags: [React, Redux, 大型项目, Universal]
 
 前段时间使用 React 与 Redux 重构了我们360网络安全研究院的 [开放数据平台](http://data.netlab.360.com/)。现将其中一些技术实践经验总结如下：
 
-<!--more-->
-
 ## Universal 渲染
 
 Universal （“同构”现在是公认的不准确的叫法）渲染是指在服务端与客户端使用一套代码进行渲染的技术。它所带来的优势如下：
@@ -347,4 +345,8 @@ export default ScrollLink;
 
 ```
 
-实践中的经验还有很多，比如测试中的一些技巧，不过就先介绍这些吧！
+React 与 Redux 的实践经验还有很多，由于篇幅原因，在后续的博文中我们再一一介绍。
+
+---
+
+欢迎关注我的[微博](http://www.weibo.com/u/2207255374)和[博客](https://lewis617.github.io/)，一起探讨技术，共同进步！
