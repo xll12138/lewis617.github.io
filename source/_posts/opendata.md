@@ -338,4 +338,8 @@ React 与 Redux 的实践经验还有很多，由于篇幅原因，在后续的�
 
 ---
 
-欢迎关注我的[微博](http://www.weibo.com/u/2207255374)和[博客](https://lewis617.github.io/)，一起探讨技术，共同进步！
+## 教程源代码及目录
+
+*如果您觉得本博客教程帮到了您，就赏颗星吧！*
+
+https://github.com/lewis617/react-redux-tutorial
