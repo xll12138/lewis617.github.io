@@ -138,7 +138,7 @@ class Chart extends Component {
 
 ### 启用 gzip 压缩
 
-启用 gzip 压缩的效果更加明显，往往能减少 70% 的重量，最终我们项目的代码重量一共只有130kb（包含了React Bootstrap、React Rouer、Highcharts在内的N多重量级第三方库，另外还有所有的页面代码在里面）。这个方法比较常见，不再赘述。
+启用 gzip 压缩的效果更加明显，往往能减少 70% 的重量，最终我们项目的代码重量一共只有130kb（包含了React Bootstrap、React Rouer 在内的N多重量级第三方库，另外还有所有的页面代码在里面）。这个方法比较常见，不再赘述。
 
 减小重量的方法就先聊到这吧！
 
