@@ -6,6 +6,8 @@ tags: [Redux, redux-amrc]
 
 很多人说 Redux 代码多，开发效率低。其实 Redux 是可以灵活使用以及拓展的，经过充分定制的 Redux 其实写不了几行代码。今天先介绍一个很好用的 Redux 拓展—— [redux-amrc](https://github.com/lewis617/redux-amrc)。它可以帮助我们使用更少的样板代码发起异步action。
 
+<!--more-->
+
 ## 低效的过去
 
 一般情况下，为了清楚地记录异步的过程，我们需要使用 三个 action 来记录状态变化。通常，我们的代码会是这样：
