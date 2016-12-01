@@ -1,10 +1,10 @@
 ---
-title: 用更少的代码发起异步action
+title: 用更少的代码发起异步 action
 date: 2016-12-1 04:18:00
 tags: [Redux, redux-amrc]
 ---
 
-很多人说 Redux 代码多，开发效率低。其实 Redux 是可以灵活使用以及拓展的，经过充分定制的 Redux 其实写不了几行代码。今天先介绍一个很好用的 Redux 拓展—— [redux-amrc](https://github.com/lewis617/redux-amrc)。它可以帮助我们使用更少的样板代码发起异步action。
+很多人说 Redux 代码多，开发效率低。其实 Redux 是可以灵活使用以及拓展的，经过充分定制的 Redux 其实写不了几行代码。今天先介绍一个很好用的 Redux 拓展—— [redux-amrc](https://github.com/lewis617/redux-amrc)。它可以帮助我们使用更少的样板代码发起异步 action。
 
 <!--more-->
 
@@ -96,7 +96,7 @@ function fail() {
 }
 ```
 
-没有 action，没有 reducer，就是这么简单！当然，在享受这一切之前，你需要进行简单的配置。更详细的用法，请参考redux-amrc的文档（https://lewis617.github.io/redux-amrc/）。
+没有 action，没有 reducer，就是这么清爽！当然，在享受这一切之前，你需要进行简单的配置。更详细的用法，请参考redux-amrc的文档（https://lewis617.github.io/redux-amrc/）。
 
 另外，附一张使用 redux-amrc 的程序截图，那些 LOAD、LOAD_SUCCESS、LOAD_FAIL 就是 redux-amrc 帮你自动生成的！
 
