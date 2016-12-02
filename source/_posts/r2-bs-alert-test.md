@@ -60,7 +60,7 @@ npm test
 
 ### 测试 action creator
 
-测试未经中间件加工的 action creator 还是比较简单的。它们的测试方法是直接使用 Jest 提供的全局函数，判断这些 action creator 的返回值即可。
+测试未经中间件加工的 action creator 还是比较简单的。它们的测试方法是直接使用断言判断这些 action creator 的返回值即可。
 
 如果使用了中间件，就比较麻烦了，因为中间件加工了 `dispatch`，action creator 的执行过程会变得复杂。但所幸有工具可以帮我们模拟这个过程，进而降低测试 action creator 的难度，这个工具就是 redux-mock-store。我们应该先用 redux-mock-store 模拟一个 store，连入需要的中间件（本例是 thunk ）然后使用不同的 initial state 作为前提条件，来测试 action creator。
 
