@@ -257,3 +257,9 @@ describe('AlertList', () => {
 很多新手开发者不愿意写测试，对此，我的建议是：
 
 > 如果你不想写测试，那就不要逼自己学习测试。等你被无聊反复的手动测试折磨到忍无可忍，或着，等你觉得运行一个小型的独立功能模块却要非常麻烦的时候，你自然就愿意学了！
+
+## 教程源代码及目录
+
+如果您觉得本博客教程帮到了您，就赏颗星吧！
+
+[https://github.com/lewis617/react-redux-tutorial](https://github.com/lewis617/react-redux-tutorial)
