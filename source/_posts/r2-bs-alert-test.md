@@ -62,7 +62,7 @@ npm test
 
 测试未经中间件加工的 action creator 还是比较简单的。它们的测试方法是直接使用断言判断这些 action creator 的返回值即可。
 
-如果使用了中间件，就比较麻烦了，因为中间件加工了 `dispatch`，action creator 的执行过程会变得复杂。但所幸有工具可以帮我们模拟这个过程，进而降低测试 action creator 的难度，这个工具就是 redux-mock-store。我们应该先用 redux-mock-store 模拟一个 store，连入需要的中间件（本例是 thunk ）然后使用不同的 initial state 作为前提条件，来测试 action creator。
+如果使用了中间件，就比较麻烦了，因为中间件加工了 `dispatch`，action creator 的执行过程会变得复杂。但所幸有工具可以帮我们模拟这个过程，进而降低测试 action creator 的难度，这个工具就是 redux-mock-store。我们应该先用 redux-mock-store 模拟一个 store，然后连入需要的中间件（本例是 thunk ），最后使用不同的 initial state 作为前提条件，来测试 action creator。
 
 src/alert/\__tests__/redux.test.js
 
@@ -157,12 +157,12 @@ describe('reducer test', () => {
 
 ```
 
-## 测试 React 组件（容器）
+## 测试 React 组件
 
-测试 React 主要包括：
+测试 React 组件主要包括：
 
  - 测试 React 组件的渲染结果
- - 模拟用户行为，测试 React 组件的变化
+ - 模拟用户行为，测试 React 组件的反应变化
 
 为此，我们需要使用工具将组件渲染出来，然后这个工具还得能模拟用户行为。enzyme 就是专门为此设计的测试工具。下面，我们将会使用它来测试 React 组件。
 
@@ -177,7 +177,7 @@ describe('reducer test', () => {
  2. 从渲染后的结果中提取需要测试的部分。
  3. 根据 AlertList 的两个功能编写测试用例。
 
-> `mount` 是 enzyme 提供的深度渲染的函数。“深度渲染”是指渲染出完整的DOM的方法，它相对于“浅渲染”，更多的细节请参考 enzyme 的官网文档。
+> `mount` 是 enzyme 提供的深度渲染的函数。“深度渲染”是指渲染出完整的DOM的方法，它是相对于“浅渲染”的一个概念，关于“深度渲染”和“浅渲染”的更多的细节请参考 enzyme 的官网文档。
 
 > 另外，由于我们测试逻辑中包含一个5000ms的异步过程，因此，编写测试用例前，需要将超时时间设置为大于5000ms的值 ，否则我们的测试程序将会显示超时错误。
 
