@@ -6,6 +6,8 @@ tags: [React, Redux, Bootstrap, 测试]
 
 上节课我们学习了如何 [使用 React、Redux 和 Bootstrap 实现 Alert](https://lewis617.github.io/2016/11/16/r2-bs-alert/) 。今天，我们学习如何测试它们！
 
+<!--more-->
+
 ## 例子
 
 这个例子实现了弹出不同类型信息的功能，这些信息默认会在5秒后消失，你也可以手动点击使其消失。如果你在服务端有信息要提示，还可以通过 Redux 的单一数据源传到客户端在渲染页面时显示出来。
