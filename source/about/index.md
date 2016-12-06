@@ -11,9 +11,8 @@ date: 2016-12-06 17:41:50
 
 ## 演奏录音
 
-<embed src="http://www.ximalaya.com/swf/sound/yellow.swf?id=26422399" quality="high" width="480" height="150" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
-
-<embed src="http://www.ximalaya.com/swf/sound/yellow.swf?id=12024255" quality="high" width="480" height="150" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
+- [《It could have been》](http://www.ximalaya.com/21864313/sound/12024255)
+- [《淡水海边》](http://www.ximalaya.com/21864313/sound/26422399)
 
 ## 其他链接
 
