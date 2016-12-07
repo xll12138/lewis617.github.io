@@ -4,7 +4,7 @@ date: 2016-02-18 03:05:00
 tags: [Angular2]
 ---
 
-今天我们要讲的是ng2的Attribute directives。顾名思义，就是操作dom属性的指令。这算是指令的第二课了，因为上节课的components实质也是指令。
+今天我们要讲的是ng2的Attribute directives。顾名思义，就是拓展dom属性的指令。这算是指令的第二课了，因为上节课的components实质也是指令。
 
 <!--more-->
 
