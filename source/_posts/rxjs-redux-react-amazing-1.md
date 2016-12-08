@@ -69,8 +69,8 @@ export default function counter(state = 0, action) {
 
  - Ajax取消／组合（组合的意思是，比如你发起了一个Ajax，然后你又发起了另外一个Ajax，后一个的发起用到了前一个的响应数据）
  - Debounce／throttle／buffer等这些与时间相关的操作
- - Drag and drop 
- - Web Sockets
+ - Drag and Drop 
+ - Web Sockets, Web Workers, etc
 
 在Redux世界里，人们经常使用中间件来处理这些操作。所有action在你发起后，和到达reducer前，都必须穿过中间件。现在已经有很多中间件使用回调和Promise来做这些事了（指那些复杂的异步操作）。下面就让我们看看这两种最常用的异步处理方法吧！
 
