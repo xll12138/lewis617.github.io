@@ -1,5 +1,5 @@
 ---
-title: RxJS + Redux + React = Amazing!（听译一）
+title: RxJS + Redux + React = Amazing!（译一）
 date: 2016-12-8 10:37:00
 tags: [RxJS, Redux, React]
 ---
