@@ -4,13 +4,13 @@ date: 2016-12-8 10:37:00
 tags: [RxJS, Redux, React]
 ---
 
-今天，我将Youtube上的《RxJS + Redux + React = Amazing!》听译（+机译）了下来，以供国内的同学学习，英文听力好的同学可以直接看原版视频：
+今天，我将Youtube上的《RxJS + Redux + React = Amazing!》翻译（+机译）了下来，以供国内的同学学习，英文听力好的同学可以直接看原版视频：
 
 https://www.youtube.com/watch?v=AslncyG8whg
 
 想第一时间获取我写的最新的文章，可以关注[我的博客](https://lewis617.github.io)。也欢迎买我的新书——[《React与Redux开发实例精解》](https://lewis617.github.io/2016/11/20/r2-book/)。
 
-**技术视频听译对英文水平和编程知识要求都非常高！没有经过作者允许，禁止转载！**
+**技术视频翻译对英文水平和编程知识要求都非常高！没有经过作者允许，禁止转载！**
 
 <!--more-->
 
