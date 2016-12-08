@@ -118,7 +118,7 @@ export default function counter(state = 0, action) {
 
 下篇文章我们将听他：
 
- - 吹Obervable的牛
+ - 吹Observable的牛
  - 讲述他和他搭档造redux-obserable这个轮子背后的故事！
 
 
