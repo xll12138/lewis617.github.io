@@ -1,10 +1,10 @@
 ---
-title: RxJS + Redux + React = Amazing!（听译一）
+title: RxJS + Redux + React = Amazing!（听译+机译一）
 date: 2016-12-8 10:37:00
 tags: [RxJS, Redux, React]
 ---
 
-今天，我将Youtube上的《RxJS + Redux + React = Amazing!》听译了下来，以供国内的同学学习，英文听力好的同学可以直接看原版视频：
+今天，我将Youtube上的《RxJS + Redux + React = Amazing!》听译（+机译）了下来，以供国内的同学学习，英文听力好的同学可以直接看原版视频：
 
 https://www.youtube.com/watch?v=AslncyG8whg
 
