@@ -121,6 +121,8 @@ redux-observable是一个Redux中间件，用来管理副作用，包括异步�
 - 自动补全（他先是演示了使用普通JavaScript的写法，代码特别长，过程特别繁琐，然后演示了使用Epic的写法，只用了debounce、switchMap和map三个操作符，代码特别短，而且非常声明式和易读）
 - 双向多重的WebSockets（他还是先演示使用普通JavaScript代码的写法，代码特别多，而且容易引入bug。然后他演示了Epic的写法，功能一样不少，但是代码特别少而且非常声明式）
 
+![](https://ws1.sinaimg.cn/large/83900b4ejw1faku828ck7j20dw08p75i.jpg)
+
 让我们来快速总结下redux-observable吧：
 
 - 让跨时间的复杂异步任务的组合和控制变得简单，当然如果只是做请求-响应这种简单的Ajax，那么学习RxJS是多余的。
@@ -129,9 +131,13 @@ redux-observable是一个Redux中间件，用来管理副作用，包括异步�
 
 但是在你尝试使用redux-observable之前，**你应该提前学习Redux和RxJS**。当然，这应该是业余时间做的事，或是在你特别想挑战自己的情况下才要做的事。我不是打击大家的积极性，只是不想让在座的各位产生一个错误观念，就是即便我的应用很小很简单，我仍然应该使用redux-observable。 但是，如果你觉得我今天描述的问题，也正好是你的问题，那么你一定愿意学习RxJS、Redux和redux-observable。 
 
+![](https://ws2.sinaimg.cn/large/83900b4ejw1faku9kr2h5j20dw08pab6.jpg)
+
 另外，RxJS拥有非常陡峭的学习曲线。 最近有个新流行词叫响应式编程（Reactive Programing ），RxJS做的就是这个。响应式编程是个令人发狂的编程范式，不过你可以这么理解它：就像是你先安装好管道，但还没有水流过管道，等到将来某个人发起了一个action，然后潺潺流水就来了，你的管道就开始运作了。（他之所以用流水这个比喻，主要是为了突出响应式编程，自动响应和变化传播的特性，如果你还不能理解，可以参考[维基百科](https://zh.wikipedia.org/wiki/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B)）。响应式编程是一种完全不同的编程风格。
 
 （然后他介绍了他的联合作者，展示了redux-observable的官网以及目前有哪些公司在用，最后致谢。）
+
+![](https://ws2.sinaimg.cn/large/83900b4ejw1fakubrwyb6j20dw08pdgx.jpg)
 
 ## 总结
 
