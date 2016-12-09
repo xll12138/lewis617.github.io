@@ -66,7 +66,7 @@ RxJS是Observable的一种引用实现，它提供了一些定制的功能，比
 
 ## RxJS和Redux的结合——redux-observable
 
-我们非常喜欢RxJS，也非常喜欢Redux，所以我们想，把这两个技术结合一下吧！我们实验了几种模式，经过了一些迭代，最后有了一个稳定的解决方案。如果你之前开源过什么东西，那么你一定知道，最重要的事情是——先搞个好的logo。不是写测试，不是保证它正常工作，也不是写文档，而是要先搞个logo，这是最重要的事情，关乎你能拿多少star（场下有人笑了，然后他讲了他们logo的来历，大概就是，本来想结合RxJS的logo和Redux的logo，但是Redux当时还没有logo，他们就用Redux的谐音“three ducks”，三只鸭子做为logo，在经历了压扁、合并以及添加旋转动画后，终于得到了他们满意的logo，也就是现在redux-observable的logo）。
+我们非常喜欢RxJS，也非常喜欢Redux，所以我们想，把这两个技术结合一下吧！我们实验了几种模式，经过了一些迭代，最后有了一个稳定的解决方案。如果你之前开源过什么东西，那么你一定知道，最重要的事情是——先做个好logo。不是写测试，不是保证它正常工作，也不是写文档，而是要先做个logo，这是最重要的事情，关乎你能拿多少star（场下有人笑了，然后他讲了他们logo的来历，大概就是，本来想结合RxJS的logo和Redux的logo，但是Redux当时还没有logo，他们就用Redux的谐音“three ducks”，三只鸭子做为logo，在经历了压扁、合并以及添加旋转动画后，终于得到了他们满意的logo，也就是现在redux-observable的logo）。
 
 ![](https://ws1.sinaimg.cn/large/83900b4ejw1faknp217eaj20dw0an74v.jpg)
 
