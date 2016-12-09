@@ -14,18 +14,6 @@ https://www.youtube.com/watch?v=AslncyG8whg
 
 <!--more-->
 
-## 上篇回顾
-
-在上篇文章中，我们听Jay Phelps：
-
-- 讲了Redux和异步  
-- 黑了回调和Promise
-
-这篇文章我们将听他：
-
- - 吹Observable的牛
- - 讲述他和他搭档造redux-obserable这个轮子背后的故事！
-
 ## Observable
 
 什么是Observable？让我们快速来了解一下它吧！
@@ -110,7 +98,7 @@ redux-observable是一个Redux中间件，用来管理副作用，包括异步�
 	     .map(action => ({ type: 'PONG'}));
 	}
 	```
-这就是世界上最简单的Epic，它的第一个参数是个流式的action，然后这个流式的action进行了类型过滤，最后被映射为新的流式的action。这就像个管道一样，所有action都会进来，然后进行匹配并输出。
+这就是世界上最简单的Epic，它的第一个参数是个流式的action。首先，这个Epic函数对流式的action进行了类型过滤，然后将其映射为新的流式的action。这就像个管道一样，所有action都会进来，然后进行匹配并输出。
 
 3. 如果想等待一秒后，就像打乒乓球那样，“乒-乓-乒-乓”，只需要加一行代码：
 
