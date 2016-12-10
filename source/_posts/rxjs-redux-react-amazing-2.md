@@ -148,3 +148,5 @@ Jay Phelps的这个talk还是很不错的，而且比较客观。从这个talk�
 - redux-observable的工作原理以及适用场景。
 - 在复杂的异步场景下，回调和Promise捉襟见肘，而Observable则应对自如。
 - 在简单的异步场景下，没必要使用Observable。
+
+*最后，安利一下我写的[redux-amrc](https://github.com/lewis617/redux-amrc)，可以让你用更少的代码发起异步action，已经迭代到稳定版本了，欢迎使用和star。*
