@@ -13,12 +13,12 @@ fancybox: true
 sidebar: right
 widgets:
 - notice
+- follow_me
 - category
 - tag
 - tagcloud
 - archive
 - recent_posts
-- follow_me
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
