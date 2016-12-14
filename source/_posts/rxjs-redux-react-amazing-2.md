@@ -147,4 +147,11 @@ Jay Phelps的这个talk还是很不错的，而且比较客观。从这个talk�
 - 在复杂的异步场景下，回调和Promise捉襟见肘，而Observable则应对自如。
 - 在简单的异步场景下，没必要使用Observable。
 
-[查看更多的技术博文，点这里。](https://lewis617.github.io/)
+---
+
+## 教程源代码及目录
+
+如果您觉得本博客教程帮到了您，就赏颗星吧！
+
+https://github.com/lewis617/react-redux-tutorial
+
