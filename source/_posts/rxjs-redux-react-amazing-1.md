@@ -118,6 +118,3 @@ export default function counter(state = 0, action) {
 
  - 吹Observable的牛
  - 讲述他和他搭档造redux-obserable这个轮子背后的故事！
-
-[查看更多的技术博文，点这里。](https://lewis617.github.io/)
-
