@@ -8,8 +8,6 @@ tags: [RxJS, Redux, React]
 
 https://www.youtube.com/watch?v=AslncyG8whg
 
-想第一时间获取我写的最新文章，可以关注[我的微博](http://www.weibo.com/lewis617)。也欢迎买我的新书——[《React与Redux开发实例精解》](https://lewis617.github.io/2016/11/20/r2-book/)。
-
 **技术视频翻译对英文水平和编程知识要求都非常高！没有经过作者允许，禁止转载！**
 
 <!--more-->
@@ -120,6 +118,3 @@ export default function counter(state = 0, action) {
 
  - 吹Observable的牛
  - 讲述他和他搭档造redux-obserable这个轮子背后的故事！
-
-
-
