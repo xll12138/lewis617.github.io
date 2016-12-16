@@ -8,8 +8,6 @@ tags: [RxJS, Redux, React]
 
 https://www.youtube.com/watch?v=AslncyG8whg
 
-**技术视频翻译对英文水平和编程知识要求都非常高！没有经过作者允许，禁止转载！**
-
 <!--more-->
 
 ## 开场白

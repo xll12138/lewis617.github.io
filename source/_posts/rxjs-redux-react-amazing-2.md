@@ -8,8 +8,6 @@ tags: [RxJS, Redux, React]
 
 https://www.youtube.com/watch?v=AslncyG8whg
 
-**技术视频翻译对英文水平和编程知识要求都非常高！没有经过作者允许，禁止转载！**
-
 <!--more-->
 
 ## Observable
@@ -150,8 +148,6 @@ Jay Phelps的这个talk还是很不错的，而且比较客观。从这个talk�
 ---
 
 ## 教程源代码及目录
-
-如果您觉得本博客教程帮到了您，就赏颗星吧！
 
 https://github.com/lewis617/react-redux-tutorial
 
