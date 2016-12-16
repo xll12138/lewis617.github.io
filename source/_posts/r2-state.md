@@ -83,7 +83,5 @@ React组件就像是个婴儿，Redux就像是奶妈：
 
 ## 教程源代码及目录
 
-如果您觉得本博客教程帮到了您，就赏颗星吧！
-
 https://github.com/lewis617/react-redux-tutorial
 

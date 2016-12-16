@@ -137,7 +137,5 @@ ng2中组件和指令都是注入在`directives`中，`directives`包含三种�
 
 ## 教程源代码及目录
 
-如果您觉得本博客教程帮到了您，就赏颗星吧！
-
 <https://github.com/lewis617/angular2-tutorial>
 
