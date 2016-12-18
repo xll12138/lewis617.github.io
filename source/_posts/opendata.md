@@ -1,7 +1,7 @@
 ---
 title: React 与 Redux 在生产环境中的实践总结
 date: 2016-11-26 14:36:00
-tags: [React, Redux, 大型项目, Universal] 
+tags: [React, Redux, Universal] 
 ---
 
 前段时间使用 React 与 Redux 重构了我们360网络安全研究院的 [开放数据平台](http://data.netlab.360.com/)。现将其中一些技术实践经验总结如下：
