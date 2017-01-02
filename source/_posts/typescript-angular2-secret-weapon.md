@@ -128,7 +128,13 @@ TypeScript中有个很酷的特性就是工具支持，因为我们可以以此�
 ![](https://ws3.sinaimg.cn/mw690/83900b4ejw1fbcmk6ll6aj20ws0pwwhq.jpg)
 
 很感谢你们听我的演讲，希望你们可以用TypeScript编写App，谢谢！
- 
+
+---
+
+## 教程源代码及目录
+
+https://github.com/lewis617/angular2-tutorial
+
 
 
 
