@@ -1,5 +1,5 @@
 ---
-title: TypeScript: Angular 2 的秘密武器（译）
+title: "TypeScript: Angular 2 的秘密武器（译）"
 date: 2016-12-24 03:24:00
 tags: [TypeScript, Angular2]
 ---
