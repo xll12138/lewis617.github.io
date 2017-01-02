@@ -22,7 +22,7 @@ https://www.youtube.com/watch?v=e3djIqAGqZo
 
 ## 类型支持（Type Support）
 
-让我们来聊下类型支持吧！先打开TypeScript Playground（https://www.typescriptlang.org/play/），我们会看到一个非常简单的例子。
+让我们来聊下类型支持吧！先打开[TypeScript Playground](https://www.typescriptlang.org/play/)，我们会看到一个非常简单的例子。
 
 ![](https://ws3.sinaimg.cn/large/83900b4ejw1fb1xoydep9j21im0w4ahe.jpg)
 
