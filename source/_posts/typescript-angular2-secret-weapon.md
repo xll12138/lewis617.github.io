@@ -8,6 +8,8 @@ tags: [TypeScript, Angular2]
 
 https://www.youtube.com/watch?v=e3djIqAGqZo
 
+<!--more-->
+
 ## 开场白
 
 开场白主要分为三部分：
