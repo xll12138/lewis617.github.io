@@ -118,7 +118,7 @@ TypeScript中有个很酷的特性就是工具支持，因为我们可以以此�
 
 让我们做个回顾吧！我们讲解了TypeScript的这几个方面：类型支持、工具支持、接口、泛型以及提前使用未来特性。
 
-![](https://ws3.sinaimg.cn/mw690/83900b4ejw1fbcmhvrquzj21eo0o6djc.jpg)
+![](https://ws2.sinaimg.cn/mw690/83900b4ejw1fbd9sh6fltj20wa0j0acb.jpg)
 
 很感谢你们听我的演讲，希望你们可以用TypeScript编写App，谢谢！
 
