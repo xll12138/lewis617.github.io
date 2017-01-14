@@ -98,6 +98,6 @@ function fail() {
 
 没有 action，没有 reducer，就是这么清爽！当然，在享受这一切之前，你需要进行简单的配置。更详细的用法，请参考 redux-amrc 的[官网文档](https://lewis617.github.io/redux-amrc/)。
 
-另外，附一张使用 redux-amrc 的程序截图，那些 LOAD、LOAD_SUCCESS、LOAD_FAIL 就是 redux-amrc 帮你自动生成的！
+另外，附一张使用 redux-amrc 的程序截图，看到 async 那颗树了吗，就是这个插件自动帮你构建的，你可以获取 value、error、loading、loaded、loadingNumber，应有尽有，而且全自动生成！
 
 ![](http://ww1.sinaimg.cn/large/83900b4egw1fabfc1z4kwj210s0nsaem.jpg)
