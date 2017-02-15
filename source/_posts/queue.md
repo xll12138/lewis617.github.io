@@ -22,7 +22,24 @@ tags: [数据结构与算法]
 
 和[《JavaScript 版数据结构与算法（一）栈》](https://lewis617.github.io/2017/02/15/stack/)中编写栈类的方法类似，编写队列类也使用了构造器函数。
 
-Queue.js
+编写一个队列类，可以跑通如下测试：
+
+```js
+var queue = new Queue();
+expect(queue.isEmpty()).toBeTruthy();
+queue.enqueue('张三');
+queue.enqueue('李四');
+queue.enqueue('王五');
+expect(queue.front()).toBe('张三');
+expect(queue.toString()).toBe('张三,李四,王五');
+expect(queue.size()).toBe(3);
+expect(queue.isEmpty()).toBeFalsy();
+queue.dequeue();
+queue.dequeue();
+expect(queue.toString()).toBe('王五');
+```
+
+队列类比较简单，直接上代码：
 
 ```js
 function Queue() {
@@ -58,7 +75,7 @@ function Queue() {
 module.exports = Queue;
 ```
 
-上述类方法都比较简单，但是请注意数组增删的四个方法，别搞混淆了：
+请注意数组增删的四个方法，别搞混淆了：
 
 - push：在尾部添加新元素
 - pop：删除并返回尾部元素
@@ -66,25 +83,6 @@ module.exports = Queue;
 - shift：删除并返回头部元素
 
 所以，出队的方法用的是 shift。另外，如果考虑时间复杂度，使用数组创建队列并不是一个好方法，因为出队时，所有的元素都会移动位置，造成较差的性能。而使用链表则会更好，因为链表不是连续存储的，增删元素只需要改变相关的指向即可。
-
-## 测试队列类
-
-测试代码如下，比较简单，不再详述。
-
-```js
-var queue = new Queue();
-expect(queue.isEmpty()).toBeTruthy();
-queue.enqueue('张三');
-queue.enqueue('李四');
-queue.enqueue('王五');
-expect(queue.front()).toBe('张三');
-expect(queue.toString()).toBe('张三,李四,王五');
-expect(queue.size()).toBe(3);
-expect(queue.isEmpty()).toBeFalsy();
-queue.dequeue();
-queue.dequeue();
-expect(queue.toString()).toBe('王五');
-```
 
 ## 优先队列：加队就是这么任性
 
