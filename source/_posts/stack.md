@@ -107,7 +107,7 @@ Stack.js
 module.exports = Stack;
 ```
 
-最后，编写一个测试文件 Stack.test.js，导入 Stack，并进行测试：
+接下来，编写一个测试文件 Stack.test.js：
 
 Stack.test.js
 
@@ -142,7 +142,41 @@ test('Stack', function () {
 });
 ```
 
-在实际开发中，应该用 describe、test 和 it 等方法打包编写所有的测试用例，但是在这里我偷懒将其写在一个 test 中。更多的 Jest 用法可以参考它的官网文档：
+在实际开发中，应该用 describe、test 和 it 等方法打包编写所有的测试用例，但是在这里我偷懒将其写在一个 test 中。
+
+然后，在 package.json 中添加：
+
+```json
+"scripts": {
+  "test": "jest"
+}
+```
+
+最后，打开命令行运行：
+
+```sh
+npm test
+```
+
+或以 watch 模式运行：
+
+```sh
+npm test -- --watch
+```
+
+结果会在命令行中生成测试报告：
+
+```sh
+PASS  Stack/Stack.test.js
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.386s
+Ran all test suites.
+
+```
+更多的 Jest 用法可以参考它的官网文档：
 
 https://facebook.github.io/jest/
 
