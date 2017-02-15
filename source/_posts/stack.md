@@ -39,7 +39,7 @@ module.exports = Stack;
 
 栈类的私有变量是个数组 `items`，用于记录栈的元素。栈类实例化生成的对象不能直接操作 `items`，因为 `items` 在函数外面是不可见的，你只能通过一些类方法沿着作用域链来间接操作 `items`。
 
-```
+```js
 function Stack() {
   // 私有变量 items，用于记录数组，对象不能直接操作
   var items = [];
