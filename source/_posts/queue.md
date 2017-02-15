@@ -65,7 +65,7 @@ module.exports = Queue;
 - unshift：在头部添加新元素
 - shift：删除并返回头部元素
 
-所以，出队的方法用的是shift。
+所以，出队的方法用的是 shift。
 
 ## 测试队列类
 
@@ -74,17 +74,83 @@ module.exports = Queue;
 ```js
 var queue = new Queue();
 expect(queue.isEmpty()).toBeTruthy();
-queue.enqueue('John');
-queue.enqueue('Jack');
-queue.enqueue('Susan');
-expect(queue.front()).toBe('John');
-expect(queue.toString()).toBe('John,Jack,Susan');
+queue.enqueue('张三');
+queue.enqueue('李四');
+queue.enqueue('王五');
+expect(queue.front()).toBe('张三');
+expect(queue.toString()).toBe('张三,李四,王五');
 expect(queue.size()).toBe(3);
 expect(queue.isEmpty()).toBeFalsy();
 queue.dequeue();
 queue.dequeue();
-expect(queue.toString()).toBe('Susan');
+expect(queue.toString()).toBe('王五');
 ```
+
+## 优先队列：加队就是这么任性
+
+普通的队列类就是调用原生 Array 对象的方法，比较简单，但是还有一种队列叫优先队列。在优先队列里面，有些人比较霸道，可以加队。不过，如果遇到比他更霸道的人，他也得老实在后面排着。举个例子吧！假设有三个人：张三、李四、王五。王五是个没本事的老实人。张三是个小流氓，经常欺负王五。李四呢？是个官老爷。他们三个排队，小流氓张三先来，官老爷李四第二个来，老实人王五最后来。结果，张三给李四让道，王五还是排在最后。在优先队列里，我们使用优先级（priority）来描述霸道程度。
+
+```js
+var priorityQueue = new PriorityQueue();
+priorityQueue.enqueue('张三', 2);
+priorityQueue.enqueue('李四', 1);
+priorityQueue.enqueue('王五', 3);
+expect(priorityQueue.toString()).toBe('李四-1,张三-2,王五-3');
+```
+
+上述代码中，名字后面的数字就是优先级。排队结果就如最后一个断言所示：`'李四-1,张三-2,王五-3'`。
+
+为了实现上述测试用例，我们需要改写 `enqueue` 方法和`toString`方法：
+
+```js
+function PriorityQueue() {
+  var items = [];
+
+  // 利用构造器函数创建队列元素
+  var QueueElement = function (element, priority) {
+    this.element = element;
+    this.priority = priority;
+  };
+
+  this.enqueue = function (element, priority) {
+    var queueElement = new QueueElement(element, priority);
+
+    // 张三的情况
+    if (this.isEmpty()) {
+      items.push(queueElement);
+    } else {
+      var added = false;
+      for (var i = 0; i < items.length; i++) {
+        if (queueElement.priority < items[i].priority) {
+          // 李四的情况
+          items.splice(i, 0, queueElement);
+          added = true;
+          break;
+        }
+      }
+      // 王五的情况
+      if (!added) {
+        items.push(queueElement);
+      }
+    }
+  };
+
+  ...
+  
+  this.toString = function () {
+    var string = '';
+    for (var i = 0; i < items.length; i++) {
+      string += items[i].element + '-' + items[i].priority + (items.length - i > 1 ? ',' : '');
+    }
+    return string;
+  };
+}
+
+module.exports = PriorityQueue;
+```
+
+因为这三个人正好代表了所有的情况，所以只要将测试用例跑通，逻辑就写完了。为何会如此？其实我当时在写测试用例时，故意将代码覆盖率刷到100%。也就是说，测试用例涵盖了所有的情况。`toString`方法则是则是多打印了一个优先级而已，其他方法与普通队列一样，不再赘述。
+
 
 ## 教程源代码及目录
 
