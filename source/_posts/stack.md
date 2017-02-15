@@ -25,7 +25,7 @@ tags: [数据结构与算法]
 
 对于 JavaScript 工程师来说，没必要在开发中实现一个栈。因为 JavaScript 的内置对象 Array 已经实现了栈的相关方法。不过，好的程序员不能光用别人设计好的方法，而不理解为啥这么设计，所以我们还是自己设计一个栈玩玩吧！
 
-我们使用构造器函数来模拟类，不了解构造器函数的同学可以看[《使用构造器函数模拟类》](https://lewis617.github.io/2017/02/15/construcor-function-create-class/)这篇博客。
+我们使用构造器函数来模拟类，不了解构造器函数的同学可以看[《在 JavaScript 中使用构造器函数模拟类》](https://lewis617.github.io/2017/02/15/construcor-function-create-class/)这篇博客。
 
 下面就是栈的实现代码：
 
