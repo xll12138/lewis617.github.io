@@ -78,6 +78,16 @@ function Stack() {
 
 上述栈类中，有个私有变量 `items` ，为何它就不能直接操作呢？为何挂在 this 上的方法可以直接调用？因为 **new 操作符会将构造器函数中的 this 指向生成的对象**，也就是说挂在 this 上的方法或属性将来会成为生成对象的方法或属性，所以可以直接调用。而 **`items` 则是函数内部的一个局部变量，它在函数外部是不可见的**，生成对象只能通过调用自身的方法，沿着作用域链来操作 `items`。
 
+```js
+var stack = new Stack();
+
+// stack 对象不能直接操作items，结果是 undefined
+console.log(stack.items) 
+ 
+// stack 对象可以直接操作构造器函数中挂在 this 上的属性和方法
+console.log(stack.peek())
+```
+
 如果你不熟悉 JavaScript ，那么你应该先学习一下 JavaScript 作用域、this 和 new 操作符的相关知识。推荐阅读参考 Stoyan Stefanow 的《JavaScript 面向对象编程指南》，这本书里面有很多小的代码片段以及相关的图文解读，可以帮助你更好地理解 JavaScript 的相关特性。
 
 ## 编写测试
