@@ -27,22 +27,101 @@ tags: [数据结构与算法]
 
 我们使用构造器函数来模拟类，不了解构造器函数的同学可以看[《在 JavaScript 中使用构造器函数模拟类》](https://lewis617.github.io/2017/02/15/construcor-function-create-class/)这篇博客。
 
-下面就是栈的实现代码：
+```js
+function Stack(){
+  ...
+}
 
-Stack.js
+module.exports = Stack;
+```
+
+### 私有变量
+
+栈类的私有变量是个数组 `items`，用于记录栈的元素。栈类实例化生成的对象不能直接操作 `items`，因为 `items` 在函数外面是不可见的，你只能通过一些类方法沿着作用域链来间接操作 `items`。
+
+```
+function Stack() {
+  // 私有变量 items，用于记录数组，对象不能直接操作
+  var items = [];
+}
+```
+
+### 实现 push 、pop和 toString 方法
+
+实现 `push` 、`pop` 和 `toString` 方法，跑通如下测试：
+
+```js
+// 实例化一个 stack 对象
+var stack = new Stack();
+stack.push(5);
+stack.push(8);
+
+// 期望 stack 转化成的字符串为'5,8'
+expect(stack.toString()).toBe('5,8');
+
+// 期望 stack 删除并返回的是8
+expect(stack.pop()).toBe(8);
+// 期望 stack 转化成的字符串为'5'
+expect(stack.toString()).toBe('5');
+```
+
+> 本教程用了 Jest 来进行单元测试，如果你不了解 Jest 和单元测试，可以先看[《Jest 单元测试入门》](https://lewis617.github.io/2017/02/15/start-jest/)这篇博客。
+
+
+ `push` 、`pop` 和 `toString` 方法 与 Array 自带的  `push` 、`pop` 和 `toString`  方法一样，所以实现代码如下：
 
 ```js
 function Stack() {
   // 私有变量 items，用于记录数组，对象不能直接操作
   var items = [];
+  
   // 类方法 push，在数组末尾添加项，对象可以直接调用
   this.push = function (element) {
     items.push(element);
   };
+  
   // 删除并返回数组末尾的项
   this.pop = function () {
     return items.pop();
   };
+  
+  // 将数组转为字符串并返回
+  this.toString = function () {
+    return items.toString();
+  };
+}
+
+```
+
+### 实现 peek 、isEmpty、clear、size 方法
+
+实现 `peek` 、`isEmpty`、`clear`、`size` 方法，跑通如下测试：
+
+```js
+// 实例化一个 stack 对象
+var stack = new Stack();
+stack.push(5);
+stack.push(8);
+
+// 期望 stack 最后一项是8
+expect(stack.peek()).toBe(8);
+// 期望 stack 的长度为2
+expect(stack.size()).toBe(2);
+// 期望 stack 不为空
+expect(stack.isEmpty()).toBeFalsy();
+
+stack.clear();
+// 期望 stack 长度为0
+expect(stack.size()).toBe(0);
+```
+
+上述方法比较简单，直接上代码：
+
+```js
+function Stack() {
+  // 私有变量 items，用于记录数组，对象不能直接操作
+  var items = [];
+  
   // 查看数组最后一项
   this.peek = function () {
     return items[items.length - 1];
@@ -59,55 +138,10 @@ function Stack() {
   this.size = function () {
     return items.length;
   };
-  // 将数组转为字符串并返回
-  this.toString = function () {
-    return items.toString();
-  };
 }
 ```
 
-上述代码比较简单，不再详述。
-
-## 测试栈类
-
-写好了栈，我们来测试它。我是用了 Jest 来进行单元测试，如果你不了解 Jest 和单元测试，可以先看[《Jest 单元测试入门》](https://lewis617.github.io/2017/02/15/start-jest/)这篇博客。
-
-测试代码如下：
-
-Stack.test.js
-
-```js
-// 导入 Stack
-var Stack = require('./Stack');
-
-test('Stack', function () {
-  // 实例化一个 stack 对象
-  var stack = new Stack();
-
-  // 期望 stack 为空
-  expect(stack.isEmpty()).toBeTruthy();
-
-  stack.push(5);
-  stack.push(8);
-  // 期望 stack 最后一项是8
-  expect(stack.peek()).toBe(8);
-  // 期望 stack 的长度为2
-  expect(stack.size()).toBe(2);
-  // 期望 stack 不为空
-  expect(stack.isEmpty()).toBeFalsy();
-
-  stack.pop();
-  // 期望 stack 长度为1
-  expect(stack.size()).toBe(1);
-  // 期望 stack 转化成的字符串为'5'
-  expect(stack.toString()).toBe('5');
-  stack.clear();
-  // 期望 stack 长度为0
-  expect(stack.size()).toBe(0);
-});
-```
-
-至此，栈的编写和测试就完成了。
+至此，栈的编写就完成了。
 
 ## 教程源代码及目录
 
