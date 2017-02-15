@@ -1,5 +1,5 @@
 ---
-title:  JavaScript 版数据结构与算法教程（一）栈
+title:  JavaScript 版数据结构与算法（一）栈
 date:  2017-2-15 10:46:00
 tags: [数据结构与算法]
 ---
