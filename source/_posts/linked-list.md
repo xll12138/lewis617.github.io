@@ -56,12 +56,15 @@ function LinkedList() {
 
 ### 实现 append 和 toString 方法
 
-了解了私有变量，我们来实现各种类方法。我们期望链表类拥有 append 和 toString 方法，可以完成下面的测试：
+了解了私有变量，我们来实现各种类方法。我们期望链表类拥有 `append` 和 `toString` 方法，即追加元素和转为字符串，可以跑通下面的测试：
 
 ```js
 var linkedList = new LinkedList();
+// 添加15
 linkedList.append(15);
+// 添加10
 linkedList.append(10);
+// 转化为字符串
 expect(linkedList.toString()).toBe('15,10');
 ```
 
@@ -137,17 +140,23 @@ while (current) {
 
 ### 实现 removeAt 方法
 
-实现 `removeAt` 方法，跑通如下测试：
+实现 `removeAt` 方法，即删除指定位置的元素，可以跑通如下测试：
 
 ```js
 var linkedList = new LinkedList();
+// 空链表删除位置为1的元素时返回 null
 expect(linkedList.removeAt(1)).toBe(null);
 linkedList.append(15);
 linkedList.append(10);
+// 删除位置小于0的元素时返回 null
 expect(linkedList.removeAt(-1)).toBe(null);
+// 删除位置大于链表长度的元素时返回 null
 expect(linkedList.removeAt(3)).toBe(null);
+// 删除位置为1的元素并返回
 expect(linkedList.removeAt(1)).toBe(10);
+// 删除位置为0的元素并返回
 expect(linkedList.removeAt(0)).toBe(15);
+// 链表现在没有元素了
 expect(linkedList.toString()).toBe('');
 ```
 
@@ -198,7 +207,7 @@ while (index < position) {
 
 ### 实现 insert 方法
 
-实现 `insert` 方法，跑通如下测试：
+实现 `insert` 方法，即向指定位置插入指定元素，跑通如下测试：
 
 ```js
 var linkedList = new LinkedList();
@@ -247,7 +256,7 @@ this.insert = function (position, element) {
 
 ### 实现 indexOf 方法
 
-实现 `indexOf` 方法，跑通如下测试。
+实现 `indexOf` 方法，即返回指定位置的元素，跑通如下测试。
 
 ```js
 var linkedList = new LinkedList();
