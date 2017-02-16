@@ -137,6 +137,26 @@ while (current) {
   current = current.next;
 }
 ```
+看到这里，很多不熟悉 JavaScript 的同学可能会问：`current = cuuren.next` 是什么？让我慢慢解释一下。在 JavaScript 中，变量分为很多基本类型，其中对象类型是引用类型的，也就是说创建一个对象时，在内存开辟了一块地方，后续无论你将这个变量传给多少个其他变量，这些变量都指向同一块内存：
+
+```js
+var a = { name: 'lewis' };
+b = a;
+b.name = 'susan';
+console.log(a); // { name: 'susan' }
+```
+所以在链表中，我们可以使用 `head`、`current` 等变量来指向某个存在内存中的变量：
+
+```js
+{
+  element: 15,   // head 指向 element 为 15 的对象
+  next: {
+    element : 10, // current 是个临时变量，可以更改它的指向来遍历链表
+    next: null
+  }
+}
+```
+所以 `current = current.next` 就相当于 `current` 原来指向 element 为 15 的对象，后来指向了 element 为 10 的对象，因为后者挂在前者的 next 属性上，就像上述代码中的那样。现在你应该明白了吧！更详细的引用类型的知识可以自行谷歌。
 
 ### 实现 removeAt 方法
 
