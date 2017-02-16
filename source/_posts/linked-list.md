@@ -144,8 +144,6 @@ while (current) {
 
 ```js
 var linkedList = new LinkedList();
-// 空链表删除位置为1的元素时返回 null
-expect(linkedList.removeAt(1)).toBe(null);
 linkedList.append(15);
 linkedList.append(10);
 // 删除位置小于0的元素时返回 null
@@ -160,7 +158,7 @@ expect(linkedList.removeAt(0)).toBe(15);
 expect(linkedList.toString()).toBe('');
 ```
 
-前三个断言都是异常情况，应该使用条件语句来判断并跳过，第四个和第五个断言是正常情况，应该删除元素并返回。
+前两个断言都是异常情况，应该使用条件语句来判断并跳过，第三个和第四个断言是正常情况，应该删除元素并返回。
 
 > 什么是断言？在程序设计中，断言（assertion）是一种放在程序中的一阶逻辑（如一个结果为真或是假的逻辑判断式），目的是为了标示与验证程序开发者预期的结果。上述测试代码中，`expect().toBe()` 就是一个断言。本教程中使用的其他断言包括：`expect().toEqual()`、`expect().toBeFalsy()`、`expect().toBeTruthy()`等。
 
@@ -168,16 +166,16 @@ expect(linkedList.toString()).toBe('');
 
 ```js
 this.removeAt = function (position) {
-  // 异常判断，用于跳过前三个断言
-  if (head !== null && position > -1 && position < length) {
+  // 用于跳过异常情况
+  if (position > -1 && position < length) {
     var current = head,
       previous,
       index = 0;
-    // 删除头部元素，对应第五个断言
+    // 删除头部元素
     if (position === 0) {
       head = current.next;
     } else {
-      // 找出指定位置元素，并让它的前一个元素连接它的后一个元素，对应第四个断言
+      // 找出指定位置元素，并让它的前一个元素连接它的后一个元素
       while (index < position) {
         previous = current;
         current = current.next;
