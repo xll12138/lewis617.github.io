@@ -28,7 +28,18 @@ module.exports = LinkedList;
 
 ### 私有变量
 
-与栈和队列不同，链表类的私有变量不是一个数组，而是一个指针 `head`。这个指针其实就是指向某个对象的普通变量而已。除此之外，我们还要定义私有变量 `length` 来记录链表的长度，私有构造器函数 `Node` 来构建包含 next 属性的链表元素。
+与栈和队列不同，链表类的私有变量不是一个数组，而是一个指针 `head`。这个指针其实就是指向某个对象的普通变量而已。除此之外，我们还要定义私有变量 `length` 来记录链表的长度，私有构造器函数 `Node` 来构建包含 next 属性的链表元素，那么链表元素究竟在代码中长什么样呢？假设一个链表先后有 `15，10` 两个元素，那么这个链表其实就长这样：
+
+```js
+{
+  element: 15,
+  next: {
+    element : 10,
+    next: null
+  }
+}
+```
+私有变量 `head` 就指向 `element` 为 `15` 的那个对象。`length` 就是 `2`。为了创建这样的数据结构，我们的私有变量可以这么写：
 
 ```js
 function LinkedList() {
@@ -45,7 +56,7 @@ function LinkedList() {
 
 ### 实现 append 和 toString 方法
 
-我们期望链表类拥有 append 和 toString 方法，可以完成下面的测试：
+了解了私有变量，我们来实现各种类方法。我们期望链表类拥有 append 和 toString 方法，可以完成下面的测试：
 
 ```js
 var linkedList = new LinkedList();
@@ -56,18 +67,38 @@ expect(linkedList.toString()).toBe('15,10');
 
 > 单元测试有时候就是可以作为需求文档来用的，在测试驱动开发（TDD），往往都是先写测试，再写代码。
 
-我们编写的代码如下：
+如果仅仅是为了跑通上述测试，那么非常简单，只需要用数组即可，但是注意我们是给链表类实现方法，所用的数据结构必须为链表才行，所以当 `append(15)` 时，`head` 应该为：
+
+```js
+{
+  element: 15,
+  next: null
+}
+```
+当 `append(10)` 时，`head` 应该为：
+
+```js
+{
+  element: 15,
+  next: {
+    element : 10,
+    next: null
+  }
+}
+```
+
+所以，我们编写的代码如下：
 
 ```js
 this.append = function (element) {
   var node = new Node(element),
     current;
   
-  // 链表为空直接将 head 指向新元素，对应第一个 append
+  // 链表为空直接将 head 指向新元素
   if (head === null) {
     head = node;
   } else {
-    // 链表不为空需要将 current 移动到最后一个元素，对应第二个 append
+    // 链表不为空需要将 current 移动到最后一个元素
     current = head;
     while (current.next) {
       current = current.next;
@@ -120,7 +151,11 @@ expect(linkedList.removeAt(0)).toBe(15);
 expect(linkedList.toString()).toBe('');
 ```
 
-前三个断言都是异常情况，应该使用条件语句来判断并跳过，第四个和第五个断言是正常情况，应该删除元素并返回。实现代码如下：
+前三个断言都是异常情况，应该使用条件语句来判断并跳过，第四个和第五个断言是正常情况，应该删除元素并返回。
+
+> 什么是断言？在程序设计中，断言（assertion）是一种放在程序中的一阶逻辑（如一个结果为真或是假的逻辑判断式），目的是为了标示与验证程序开发者预期的结果。上述测试代码中，`expect().toBe()` 就是一个断言。本教程中使用的其他断言包括：`expect().toEqual()`、`expect().toBeFalsy()`、`expect().toBeTruthy()`等。
+
+实现代码如下：
 
 ```js
 this.removeAt = function (position) {
@@ -150,7 +185,7 @@ this.removeAt = function (position) {
 };
 ```
 
-这个方法的技巧是找出指定位置元素，但本质还是遍历链表，只是终止时间有差别而已：
+这个方法的技巧是找出指定位置元素，但本质还是遍历链表，只是终止条件有差别而已：
 
 ```js
 while (index < position) {
