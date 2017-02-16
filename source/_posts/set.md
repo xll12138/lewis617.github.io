@@ -74,17 +74,7 @@ expect(set.remove(1)).toBeFalsy(); // 断言七
 ```
 
 上述测试代码中的七个断言都需要判断元素是否存在于集合中。那么如何判断元素是否存在于集合中呢？答案是使用 `hasOwnProperty` 方法。
-> `hasOwnProperty` 这个方法可以用来检测一个对象是否含有特定的自身属性；和 in 运算符不同，该方法会忽略掉那些从原型链上继承到的属性。举个 MDN 上的例子吧：
-
-> ```js
-o = new Object();
-o.prop = 'exists';
-o.hasOwnProperty('prop');             // 返回 true
-o.hasOwnProperty('toString');         // 返回 false
-o.hasOwnProperty('hasOwnProperty');   // 返回 false
-> ```
-
->更多的用法可以参考 MDN 文档——[Object.prototype.hasOwnProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+> `hasOwnProperty` 这个方法可以用来检测一个对象是否含有特定的自身属性；和 in 运算符不同，该方法会忽略掉那些从原型链上继承到的属性。更多的用法可以参考 MDN 文档——[Object.prototype.hasOwnProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
 
 通过 `hasOwnProperty` 方法我们可以轻易实现 `has` 方法。有了 `has` 方法，`add` 和 `remove` 方法仅仅就是一个条件判断和给对象 `items` 赋值的简单问题了。实现代码如下：
 
