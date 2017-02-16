@@ -65,7 +65,6 @@ test('Stack', function () {
   expect(stack.pop()).toBe(8);
 });
 ```
-
 然后，在 package.json 中添加：
 
 ```json
@@ -92,6 +91,15 @@ Time:        0.386s
 Ran all test suites.
 
 ```
+
+## 断言简介
+
+在上面的测试代码中有个 `expect().toBe()`  来判断结果是否是预期，这叫断言。什么是断言？在程序设计中，断言（assertion）是一种放在程序中的一阶逻辑（如一个结果为真或是假的逻辑判断式），目的是为了标示与验证程序开发者预期的结果。除了`expect().toBe()` 之外，本教程中使用的其他断言包括：
+
+- `expect().toEqual()`：判断结果是否和预期等价。
+- `expect().toBeFalsy()`：判断结果是否为假。
+- `expect().toBeTruthy()`：判断结果是否为真。
+
 
 至此，Jest 的入门用法已经演示完了，更多的用法可以参考它的官网文档：
 
