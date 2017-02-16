@@ -65,7 +65,7 @@ expect(stack.pop()).toBe(8);
 expect(stack.toString()).toBe('5');
 ```
 
-> 本教程用了 Jest 来进行单元测试，如果你不了解 Jest 和单元测试，可以先看[《Jest 单元测试入门》](https://lewis617.github.io/2017/02/15/start-jest/)这篇博客。
+> 单元测试有时候就是可以作为需求文档来用的，在测试驱动开发（TDD），往往都是先写测试，再写代码。本教程用了 Jest 来进行单元测试，如果你不了解 Jest 和单元测试，可以先看[《Jest 单元测试入门》](https://lewis617.github.io/2017/02/15/start-jest/)这篇博客。
 
 
  `push` 、`pop` 和 `toString` 方法 与 Array 自带的  `push` 、`pop` 和 `toString`  方法一样，所以实现代码如下：
