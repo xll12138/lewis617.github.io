@@ -44,7 +44,7 @@ function Set(){
 }
 ```
 
-然后，将每个元素作为该对象的键和值。比如，一个包含 `1,2` 两个元素，那么集合的数据结构就应该是：
+然后，将每个元素作为该对象的键和值。比如，一个集合包含 `1,2` 两个元素，那么该集合的数据结构就应该是：
 
 ```js
 {
@@ -73,13 +73,20 @@ expect(set.remove(1)).toBeTruthy(); // 断言六
 expect(set.remove(1)).toBeFalsy(); // 断言七
 ```
 
-断言一、三是添加集合中不存在的元素，所以添加成功并返回 `true`，断言二添加已存在的元素，所以不能添加，并返回 `false`。
+上述测试代码中的七个断言都需要判断元素是否存在于集合中。那么如何判断元素是否存在于集合中呢？答案是使用 `hasOwnProperty` 方法。
+> `hasOwnProperty` 这个方法可以用来检测一个对象是否含有特定的自身属性；和 in 运算符不同，该方法会忽略掉那些从原型链上继承到的属性。举个 MDN 上的例子吧：
 
-断言四判断1是否存在，当前集合中是 `1，2`，所以存在返回 `true`。断言五判断3是否存在，显然不存在，所以返回 `false`。
+> ```js
+o = new Object();
+o.prop = 'exists';
+o.hasOwnProperty('prop');             // 返回 true
+o.hasOwnProperty('toString');         // 返回 false
+o.hasOwnProperty('hasOwnProperty');   // 返回 false
+> ```
 
-断言六移除1，因为1存在，所以可以移除并返回 `true`。断言七再次移除1，因为1已经被移除了，所以不存在，返回 `false`。
+>更多的用法可以参考 MDN 文档——[Object.prototype.hasOwnProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
 
-分析完了需求，开始写代码：
+通过 `hasOwnProperty` 方法我们可以轻易实现 `has` 方法。有了 `has` 方法，`add` 和 `remove` 方法仅仅就是一个条件判断和给对象 `items` 赋值的简单问题了。实现代码如下：
 
 ```js
 this.has = function (value) {
@@ -102,17 +109,6 @@ this.remove = function (value) {
   return false;
 };
 ```
-在上述代码中，行{1} 有个 `items.hasOwnProperty(value)`，`hasOwnProperty` 这个方法可以用来检测一个对象是否含有特定的自身属性；和 in 运算符不同，该方法会忽略掉那些从原型链上继承到的属性。举个 MDN 上的例子吧：
-
-```js
-o = new Object();
-o.prop = 'exists';
-o.hasOwnProperty('prop');             // 返回 true
-o.hasOwnProperty('toString');         // 返回 false
-o.hasOwnProperty('hasOwnProperty');   // 返回 false
-```
-
-更多的用法可以参考 MDN 文档——[Object.prototype.hasOwnProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
 
 ### 实现 size 和 values 方法
 
