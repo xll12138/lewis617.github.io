@@ -168,18 +168,18 @@ var linkedList = new LinkedList();
 linkedList.append(15);
 linkedList.append(10);
 // 删除位置小于0的元素时返回 null
-expect(linkedList.removeAt(-1)).toBe(null);
+expect(linkedList.removeAt(-1)).toBe(null); // 断言一
 // 删除位置大于链表长度的元素时返回 null
-expect(linkedList.removeAt(3)).toBe(null);
+expect(linkedList.removeAt(3)).toBe(null); // 断言二
 // 删除位置为1的元素并返回
-expect(linkedList.removeAt(1)).toBe(10);
+expect(linkedList.removeAt(1)).toBe(10); // 断言三
 // 删除位置为0的元素并返回
-expect(linkedList.removeAt(0)).toBe(15);
+expect(linkedList.removeAt(0)).toBe(15); // 断言四
 // 链表现在没有元素了
 expect(linkedList.toString()).toBe('');
 ```
 
-前两个断言都是异常情况，应该使用条件语句来判断并跳过，第三个和第四个断言是正常情况，应该删除元素并返回。
+断言一、二都是异常情况，应该使用条件语句来判断并跳过，断言三、四是正常情况，应该删除元素并返回。
 
 > 不了解断言和单元测试的同学，可以先看[《Jest 单元测试入门》](https://lewis617.github.io/2017/02/15/start-jest/)这篇博客。
 
@@ -230,15 +230,15 @@ while (index < position) {
 
 ```js
 var linkedList = new LinkedList();
-expect(linkedList.insert(0, 15));
-expect(linkedList.insert(1, 12));
-expect(linkedList.insert(0, 10));
-expect(linkedList.insert(-1, 8));
-expect(linkedList.insert(4, 8));
+expect(linkedList.insert(0, 15)); // 断言一
+expect(linkedList.insert(1, 12)); // 断言二
+expect(linkedList.insert(0, 10)); // 断言三
+expect(linkedList.insert(-1, 8)); // 断言四
+expect(linkedList.insert(4, 8)); // 断言五
 expect(linkedList.toString()).toBe('10,15,12');
 ```
 
-第一个和第三个断言是往头部插入，第二个是往非头部插入，第四个和第五个都是异常非法输入。实现代码如下：
+断言一、三是往头部插入，断言二是往非头部插入，断言四、五都是异常非法输入。实现代码如下：
 
 ```js
 this.insert = function (position, element) {
@@ -281,11 +281,11 @@ this.insert = function (position, element) {
 var linkedList = new LinkedList();
 linkedList.append(15);
 linkedList.append(10);
-expect(linkedList.indexOf(12)).toBe(2);
-expect(linkedList.indexOf(8)).toBe(-1);
+expect(linkedList.indexOf(12)).toBe(2); // 断言一
+expect(linkedList.indexOf(8)).toBe(-1); // 断言二
 ```
 
-第一个断言是正常情况，返回 `position`，第二个没有该元素返回 `-1` 。技巧还是在链表中遍历查找元素。
+断言一是正常情况，返回 `position`，断言二没有该元素返回 `-1` 。技巧还是在链表中遍历查找元素。
 
 ```js
 this.indexOf = function (element) {
