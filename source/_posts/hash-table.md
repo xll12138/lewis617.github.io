@@ -77,7 +77,7 @@ function HashTable(){
   ,
   ,
   ,
-  'lisi@email.com' // zhangsan 的 Ascii 码值之和是433，除以37余26
+  'lisi@email.com' // lisi 的 Ascii 码值之和是433，除以37余26
 ]
 ```
 散列表中的**键**就是位置或索引，查起来就是快！
