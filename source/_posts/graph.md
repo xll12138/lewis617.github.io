@@ -174,7 +174,7 @@ var dfsVisit = function (u, color, callback) {
     callback(u);
   }
   var neighbors = adjList.get(u);
-  color[u] = 'gray';
+  color[u] = 'black';
   for (var i = 0; i < neighbors.length; i++) {
     var w = neighbors[i];
     if (color[w] === 'white') {
