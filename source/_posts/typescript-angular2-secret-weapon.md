@@ -27,7 +27,7 @@ https://www.youtube.com/watch?v=e3djIqAGqZo
 ![](https://ws4.sinaimg.cn/mw690/83900b4ejw1fbd8z06pkij20wc0j2adl.jpg)
 
 
-左边是TypeScript，右边是编译后的JavaScript，它俩差异很大吗？并不是，呵呵！不过用来讲解类型支持还是不错的。我们给`x`和`y`各添加一个`number`类型，然后发现报错了：不能给number类型的参数指定string类型。
+左边是TypeScript，右边是编译后的JavaScript，它俩差异很大吗？并不是，呵呵！不过用来讲解类型支持还是不错的。我们给`x`和`y`各添加一个`number`类型，然后发现报错了：不能给`string`类型的参数指定`number`类型。
 
 ![](https://ws4.sinaimg.cn/mw690/83900b4ejw1fb1xzk7g7kj20dw086dgl.jpg)
 
