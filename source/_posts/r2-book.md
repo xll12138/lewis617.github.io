@@ -32,7 +32,7 @@ React 与 Redux， 一个快如鬼魅，一个清晰明了，各个巨头在生�
 
 温馨提示：鼠标滚轮可以缩放，鼠标拖拽可移动，点击节点可以使其居中。
 
-<iframe src="https://lewis617.github.io/books-tree/?hideMenu=true&lazy=200#react-redux-book" 
+<iframe src="https://lewis617.github.io/books-tree/?hideMenu=true&lazy=200&zooming=0&panning=0#react-redux-book" 
 	width="850" height="850"></iframe>
 
 ## 售书链接
