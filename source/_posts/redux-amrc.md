@@ -64,41 +64,24 @@ export default function reducer(state = initialState, action = {}) {
 
 ## 轻松的现在
 
-使用了 redux-amrc 后，再也不用写这么多action了，甚至连处理这些action的reducer 都不用写，你只需要把异步以 Promise 的形式传给 redux-amrc 就行了。没有 action，没有 reducer，就是这么清爽！
+使用了 redux-amrc 后，再也不用写这么多 action了，甚至连处理这些 action 的 reducer 都不用写，你只需要把异步以 Promise 的形式传给 redux-amrc 就行了。没有 action，没有 reducer，只需要编写一个 action 创建函数并发起它就可以了！就是这么清爽！
 
 ```js
+import fetch from 'isomorphic-fetch';
 import { ASYNC } from 'redux-amrc';
 
-/**
- * 这个action创建函数可以帮你自动发起 LOAD 和 LOAD_SUCCESS,
- * state.async.[key] 将会变为 'success'
- */
-function success() {
+export function load() {
   return {
     [ASYNC]: {
-      key: 'key',
-      promise: () => Promise.resolve('success')
+      key: 'counter',
+      promise: () => fetch('http://localhost:3000/api/counter')
+        .then(response => response.json())
     }
-  }
-}
-
-/**
- * 这个action创建函数可以帮你自动发起 LOAD 和 LOAD_FAIL,
- * state.async.loadState.[key].error 将会变为 'fail'
- */
-function fail() {
-  return {
-    [ASYNC]: {
-      key: 'key',
-      promise: () => Promise.reject('fail')
-    }
-  }
+  };
 }
 ```
 
-
-
-另外，附一张使用 redux-amrc 的程序截图，看到 async 那颗树了吗，就是这个插件自动帮你构建的，你可以获取 value、error、loading、loaded、loadingNumber，应有尽有，而且全自动生成！
+另外，附一张使用 redux-amrc 的程序截图，看到 async 那颗树了吗，就是这个插件自动帮你构建的，你可以获取 `value`、`error`、`loading`、`loaded`、`loadingNumber`，应有尽有，而且全自动生成！
 
 ![](http://ww1.sinaimg.cn/large/83900b4egw1fabfc1z4kwj210s0nsaem.jpg)
 
@@ -116,7 +99,7 @@ function fail() {
 
 ## 安装
 
-```
+```sh
 npm install redux-amrc --save
 ```
 
@@ -126,8 +109,6 @@ npm install redux-amrc --save
 
 第一步，将插件提供的 `asyncMiddleware` 连接到Redux的中间件列表上。
 
-store/configureStore.js
-
 ```js
 import { asyncMiddleware } from 'redux-amrc';
 	
@@ -136,8 +117,6 @@ applyMiddleware(thunk, asyncMiddleware)
 ```
 
 第二步，将插件提供的 `reducerCreator` 安装到 Redux 的单一状态树的 `async` 节点上。
-
-reducers/index.js
 
 ```js
 import { combineReducers } from 'redux';
@@ -151,8 +130,6 @@ export default rootReducer;
 ```
 
 第三步，使用插件提供的 `ASYNC` 来标记 action 创建函数（以被中间件识别），并将异步以 Promise 的形式传递进这个 action 创建函数中。
-
-actions/index.js
 
 ```js
 import { ASYNC } from 'redux-amrc';
@@ -202,7 +179,7 @@ function fail() {
 
 如果 Redux 单一状态树上某个节点的数据已经存在，你不想重复加载，你可以使用 `once` 选项，这会帮你减少异步请求，从而节约开销，提升性能。
 
-```
+```js
 function loadData() {
   return {
     [ASYNC]: {
@@ -222,7 +199,7 @@ function loadData() {
  
 如果你想使用自己编写的 reducer 更新该插件某个节点上的数据，比如 `state.async.[key]` 。那么你可以在插件的 `reducerCreator` 方法上添加你的 reducers。其实 `reducerCreator` 的用法和 Redux 的 `combineReducers` 是一样的，都是接受多个 reducer 组成的对象。
 
-```
+```js
 // 你自己的 action 类型
 const TOGGLE = 'TOGGLE';
 
