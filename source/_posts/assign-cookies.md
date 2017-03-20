@@ -65,7 +65,9 @@ expect(array.findContentChildren([1, 2, 3])).toBe(3);
 ```js
 this.findContentChildren = function (cookies) {
   this.quickSort();
-  cookies.sort();
+  cookies.sort(function (a, b) {
+    return a - b;
+  });
   var i = 0;  // 满足的孩子数量
   for (var j = 0; i < array.length && j < cookies.length; j++) {  // 遍历饼干
     if (array[i] <= cookies[j]) {
