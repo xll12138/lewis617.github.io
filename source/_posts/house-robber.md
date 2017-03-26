@@ -4,11 +4,13 @@ date: 2017-03-10 16:45:00
 tags: [数据结构与算法]
 ---
 
-今天，我们要讲的是一道动态规划算法题：打家劫舍。这道题有两个版本，后面一种版本与前面版本相比稍微复杂一些，它们都来自 LeetCode：
+今天，我们要讲的是一道动态规划算法题：打家劫舍。这道题有三个版本，它们都来自 LeetCode：
 
 https://leetcode.com/problems/house-robber
 
 https://leetcode.com/problems/house-robber-ii
+
+https://leetcode.com/problems/house-robber-iii
 
 本文将先介绍动态规划的基础知识，然后使用动态规划思想解决这个问题，所用的语言仍然是 JavaScript。
 
@@ -62,24 +64,11 @@ function fibonacci(num) {
 我们还是用单元测试来表达一下需求吧！毕竟好多程序员看机器语言要比自然语言还舒服：
 
 ```js
-function createRobArray() {
-  var array = new ArrayList();
-  array.insert(2);
-  array.insert(0);
-  array.insert(0);
-  array.insert(4);
-  array.insert(5);
-  return array;
-}
-
-// 创建一个数组为：[2, 0, 0, 4, 5]
-array = createRobArray();
-
-// 那么能打劫到的最大钱财是7
-expect(array.simpleRob()).toBe(7);
+// 对于 [2, 0, 0, 4, 5]，能打劫到的最大钱财是7
+expect(rob1([2, 0, 0, 4, 5])).toBe(7);
 ```
 
-我们还是将新的类方法 `simpleRob`写到了前面的 [ArrayList 类](https://github.com/lewis617/javascript-datastructures-algorithms/tree/master/ArrayList) 中。该方法会返回内部数组的最大的不相邻数字之和。
+我们要编写一个 `rob1` 方法，可以返回内部数组的最大的不相邻数字之和。
 
 那么如何实现这个算法呢？我们需要借助动态规划思想：
 
@@ -100,23 +89,23 @@ f(n) = max( f(n-2) + array[n], f(n-1) )
 
 所以实现代码就是：
 
-ArrayList/ArrayList.js
+LeetCode/rob1.js
 
 ```js
-var rob = function (array) {
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var rob = function (nums) {
   var last = 0,
     now = 0;
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0; i < nums.length; i++) {
     var temp = last;
     last = now;
-    now = Math.max(temp + array[i], now);
+    now = Math.max(temp + nums[i], now);
   }
 
   return now;
-};
-
-this.simpleRob = function () {
-  return rob(array);
 };
 ```
 ## 圆圈版打家劫舍
@@ -135,40 +124,32 @@ this.simpleRob = function () {
 
 所以实现代码就是：
 
-ArrayList/ArrayList.js
+LeetCode/rob2.js
 
 ```js
-this.circleRob = function () {
-  if (array.length === 1) {
-    return array[0];
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var rob = function(nums) {
+  var rob1 = require('./rob1');
+
+  if (nums.length === 1) {
+    return nums[0];
   }
-  return Math.max(rob(array.slice(1)), rob(array.slice(0, array.length - 1)));
-}
+  return Math.max(rob1(nums.slice(1)), rob1(nums.slice(0, nums.length - 1)));
+};
 ```
-上述代码中，`array.slice(1)`代表排除了第一家，`array.slice(0, array.length - 1)`代表排除了最后一家。然后运行测试，发现确实没有上次打劫的多：
+上述代码中，`nums.slice(1)`代表排除了第一家，`nums.slice(0, array.length - 1)`代表排除了最后一家。然后运行测试，发现确实没有上次打劫的多：
 
 ```js
-function createRobArray() {
-  var array = new ArrayList();
-  array.insert(2);
-  array.insert(0);
-  array.insert(0);
-  array.insert(4);
-  array.insert(5);
-  return array;
-}
-
-array = createRobArray();
-expect(array.simpleRob()).toBe(7);
-expect(array.circleRob()).toBe(6);
+expect(rob2([2, 0, 0, 4, 5])).toBe(6);
 ```
-至此，“打家劫舍问题”就讲完了！其实，“打家劫舍问题”的本质在于使用“动态规划”，而“动态规划”的本质在于将大问题分解为相互依赖的子问题。看清问题本质，才能练好算法！加油吧！
 
-<center>***************2017-03-12更新***************</center>
 
 ## 二叉树版打家劫舍
 
-今天是植树节，我们再补充一道二叉树版打家劫舍吧！题目如下：
+我们再看一道二叉树版打家劫舍吧！题目如下：
 
 > 作为专业劫匪的你又找到了一个新地方可以下手，这个地方的家舍是按二叉树形状排列的，安全系统和之前一样。在不让安全系统自动报警的前提下，求你能打劫到的钱财的最大数量。
 
@@ -185,12 +166,23 @@ expect(array.circleRob()).toBe(6);
 
 看完了题目，我们该如何编写代码呢？首先，按照动态规划，我们需要找到**子问题**！在第一版的打家劫舍问题中，子问题是“数组长度为n-2的结果+第n项”与“数组长度为n-1的结果”的较大者。那么这道题的子问题是什么呢？这道题的子问题是“打劫当前节点”和“不打劫当前节点”哪个更划算？那么如何比较哪个更划算呢？这得看“打劫子节点”和“不打劫子节点”的值各是多少。如果“打劫当前节点”，那么就不能打劫子节点，那么这时值就是“不打劫子节点”的值加上自己值。如果“不打劫当前节点”，那么就可以打劫子节点，也可以不打劫子节点，那么这时值就是“打劫子节点”和“不打劫子节点”的值的较大者。用代码表示就是：
 
-Tree/BinarySearchTree.js
+LeetCode/rob3.js
 
 ```js
-this.rob = function () {
-  var dfs = function(node){
-    if(node === null){
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(key) {
+ *     this.val = key;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var rob = function(root) {
+  var dfs = function (node) {
+    if (node === null) {
       return [null, null];
     }
     var left = dfs(node.left);
@@ -207,7 +199,31 @@ this.rob = function () {
 ```
 我们首先写一个 `dfs`来深度优先遍历节点，其实就是先序遍历。这个 `dfs` 方法返回了“打劫当前节点”和“不打劫当前节点”的值各是多少，这里用 `res` 数组来表示。由于深度优先遍历是对左右节点也进行 `dfs`，所以我们可以通过子节点的返回值（这里用 `left` 和 `right`来表示）得到当前节点的返回值，直到节点为空，就把递归终结掉！编写完了 `dfs`，我们对 `root` 入口进行 `dfs`，得到的数组就是“打劫根节点”和“不打劫根节点”的数值。最后，返回较大者即可得到答案。
 
-至此，二叉树版打家劫舍问题的 JavaScript 实现就完成了！
+测试代码如下：
+
+LeetCode/\__tests\__/rob3.test.js
+
+```js
+var rob3 = require('../rob3');
+var BinarySearchTree = require('../../Tree/BinarySearchTree');
+
+test('rob3', function () {
+  var binarySearchTree = new BinarySearchTree();
+
+  binarySearchTree.insert(11);
+  binarySearchTree.insert(7);
+  binarySearchTree.insert(13);
+  binarySearchTree.insert(5);
+  binarySearchTree.insert(3);
+  binarySearchTree.insert(9);
+
+  expect(rob3(binarySearchTree.getRoot())).toBe(27);
+});
+```
+
+这里使用了前面编写的数据结构 `BinarySearchTree`，它的实现代码和具体讲解可以参考前面的博文[《JavaScript 版数据结构与算法（七）树》](https://lewis617.github.io/2017/02/18/tree/)。
+
+至此，“打家劫舍问题”就讲完了！其实，“打家劫舍问题”的本质在于使用“动态规划”，而“动态规划”的本质在于将大问题分解为相互依赖的子问题。看清问题本质，才能练好算法！加油吧！
 
  
 ## 教程源代码及目录
