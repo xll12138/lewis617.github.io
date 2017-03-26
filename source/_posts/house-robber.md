@@ -65,10 +65,10 @@ function fibonacci(num) {
 
 ```js
 // 对于 [2, 0, 0, 4, 5]，能打劫到的最大钱财是7
-expect(rob1([2, 0, 0, 4, 5])).toBe(7);
+expect(rob([2, 0, 0, 4, 5])).toBe(7);
 ```
 
-我们要编写一个 `rob1` 方法，可以返回内部数组的最大的不相邻数字之和。
+我们要编写一个 `rob` 方法，可以返回内部数组的最大的不相邻数字之和。
 
 那么如何实现这个算法呢？我们需要借助动态规划思想：
 
@@ -143,7 +143,7 @@ var rob = function(nums) {
 上述代码中，`nums.slice(1)`代表排除了第一家，`nums.slice(0, array.length - 1)`代表排除了最后一家。然后运行测试，发现确实没有上次打劫的多：
 
 ```js
-expect(rob2([2, 0, 0, 4, 5])).toBe(6);
+expect(rob([2, 0, 0, 4, 5])).toBe(6);
 ```
 
 
@@ -204,7 +204,7 @@ var rob = function(root) {
 LeetCode/\__tests\__/rob3.test.js
 
 ```js
-var rob3 = require('../rob3');
+var rob = require('../rob3');
 var BinarySearchTree = require('../../Tree/BinarySearchTree');
 
 test('rob3', function () {
@@ -217,7 +217,7 @@ test('rob3', function () {
   binarySearchTree.insert(3);
   binarySearchTree.insert(9);
 
-  expect(rob3(binarySearchTree.getRoot())).toBe(27);
+  expect(rob(binarySearchTree.getRoot())).toBe(27);
 });
 ```
 
