@@ -31,26 +31,13 @@ https://leetcode.com/problems/assign-cookies
 
 > 假设你是一个好爸爸（妈妈），你想给你的孩子们分一些饼干。每个孩子只能得到一块饼干，但每个孩子想要的饼干大小不尽相同。你的目标就是尽量让更多的孩子满意。
 
-下面我们再用断言表示一下数据结构和需求。在前面的 ArrayList 类中编写一个新的类方法 `findContentChildren` ，它接受一个表示饼干的数组作为参数，返回能满足的孩子的最大数量。
+下面我们再用断言表示一下数据结构和需求。编写一个新的类方法 `findContentChildren` ，它接受一个表示饼干的数组作为参数，返回能满足的孩子的最大数量。
 
 ```js
-function createNonSortedArray() {
-  var array = new ArrayList();
-  array.insert(1);
-  array.insert(3);
-  array.insert(5);
-  array.insert(4);
-  array.insert(2);
-  return array;
-}
-
-// 创建一个数组：[1, 3, 5, 4, 2] 作为每个孩子想要的饼干大小
-array = createNonSortedArray();
-
-// 如果饼干为[1, 1]，最多能让1个孩子满足。
-expect(array.findContentChildren([1, 1])).toBe(1);
-// 如果饼干为[1, 2, 3]，最多能让3个孩子满足。
-expect(array.findContentChildren([1, 2, 3])).toBe(3);
+// 如果孩子的要求是 [1, 3, 5, 4, 2]，饼干是[1, 1]，最多能让1个孩子满足。
+expect(findContentChildren([1, 3, 5, 4, 2], [1, 1])).toBe(1);
+// 如果孩子的要求是 [10, 9, 8, 7, 6]，饼干是[7, 6, 5]，最多能让2个孩子满足。
+expect(findContentChildren([10, 9, 8, 7, 6], [7, 6, 5])).toBe(2);
 ```
 
 题目分析完了，让我们使用贪心算法来解决它！贪心算法的核心思想是**坚持当下的最好选择**。那么在这道题中，**当下的最好选择**是什么？答案是，先将“较小的饼干”分给“对饼干尺寸要求最小”、“最好说话”的孩子，因为他们最容易满足，这样才能最大化满足孩子的数量。那么，整个分配流程就应该是这样的：
@@ -63,19 +50,25 @@ expect(array.findContentChildren([1, 2, 3])).toBe(3);
 那么用 JavaScript 实现就是：
 
 ```js
-this.findContentChildren = function (cookies) {
-  this.quickSort();
-  cookies.sort(function (a, b) {
+/**
+ * @param {number[]} g
+ * @param {number[]} s
+ * @return {number}
+ */
+var findContentChildren = function (g, s) {
+  var sortFunc = function (a, b) {
     return a - b;
-  });
-  var i = 0;  // 满足的孩子数量
-  for (var j = 0; i < array.length && j < cookies.length; j++) {  // 遍历饼干
-    if (array[i] <= cookies[j]) {
+  };
+  g.sort(sortFunc);
+  s.sort(sortFunc);
+  var i = 0;
+  for (var j = 0; i < g.length && j < s.length; j++) {
+    if (g[i] <= s[j]) {
       i++;
     }
   }
   return i;
-}
+};
 ```
 至此，这道题就做完了！你理解贪心算法了吗？如果不理解，可以再做几道题练习一下：
 
