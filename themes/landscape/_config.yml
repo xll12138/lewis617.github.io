@@ -38,3 +38,9 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+
+donate:
+  enable: true
+  text: 如果您觉得本文帮到了您，就打赏支持一下吧！
+  wechat: http://i1.piimg.com/567571/846f2be76e14e60f.png
+  alipay: http://i4.buimg.com/567571/c65bd960784a2000.jpg
