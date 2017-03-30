@@ -85,7 +85,7 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 
 > 什么是 Flow ？Flow 是一个 JavaScript 静态类型检查工具。
 > 
-> 什么是 Flow 定义文件？它有啥作用？Flow 定义文件用于给没有使用 flow 的第三方库添加类型信息，关于 Flow 定义文件的更多细节，请看这里：https://flow.org/en/docs/libdefs/ 。
+> 什么是 Flow 定义文件？它有啥作用？Flow 定义文件用于给没有使用 Flow 的第三方库添加类型信息，关于 Flow 定义文件的更多细节，请看这里：https://flow.org/en/docs/libdefs/ 。
 
 3，`copy-typescript-definition` 命令使用了 `copyfiles` 工具复制 TypeScript 声明文件 src/preact.d.ts 到 dist 目录。
 
@@ -95,7 +95,7 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 
 > 什么是 TypeScript ？TypeScript是一种由微软开发的自由和开源的编程语言。它是JavaScript的一个严格超集，并添加了可选的静态类型和基于类的面向对象编程。
 > 
-> 什么是 TypeScript 声明文件？当一个TypeScript脚本被编译时，有一个产生作为编译后的JavaScript的组件的一个接口而起作用的声明文件（具有扩展名.d.ts）的选项。在这个过程中编译器基本上带走所有的函数和方法体而仅保留所导出类型的批注。当第三方开发者从TypeScript中使用它时，由此产生的声明文件就可以被用于描述一个JavaScript库或模块导出的虚拟的TypeScript类型。声明文件的概念类似于C/C++中头文件的概念。 
+> 什么是 TypeScript 声明文件？当一个TypeScript脚本被编译时，有一个产生作为编译后的 JavaScript 的组件的一个接口而起作用的声明文件（具有扩展名 .d.ts）的选项。在这个过程中编译器基本上带走所有的函数和方法体而仅保留所导出类型的批注。当第三方开发者从 TypeScript 中使用它时，由此产生的声明文件就可以被用于描述一个 JavaScript 库或模块导出的虚拟的 TypeScript 类型。声明文件的概念类似于 C/C++ 中头文件的概念。 
 
 
 4，`build` 命令使用 `npm-run-all` 工具（https://www.npmjs.com/package/npm-run-all） 依次执行了这些命令 `clean transpile copy-flow-definition copy-typescript-definition strip optimize minify size`。这些命令我们马上就会介绍。
