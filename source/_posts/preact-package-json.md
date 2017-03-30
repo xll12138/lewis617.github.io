@@ -1,10 +1,10 @@
 ---
 title: Preact 源码剖析（一）解读 package.json
 date: 2017-03-29 14:51:00
-tags: [Preact, 源码剖析, rimraf, copyfiles, npm-run-all, rollup, uglifyjs, jscodeshift, gzip-size-cli, Mocha, Karma, ESLint, TypeScript, Git, Greenkeeper]
+tags: [Preact, 源码剖析, rimraf, copyfiles, npm-run-all, rollup, uglifyjs, jscodeshift, gzip-size-cli, Mocha, Karma, ESLint, Flow, TypeScript, Git, Greenkeeper]
 ---
 
-今天，我们来看看 Preact 这个轮子的整体架构。
+今天，我们要讲的是 Preact 源码剖析的第一篇——解读 package.json 。
 
 <!--more-->
 
@@ -77,17 +77,27 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 "clean": "rimraf dist/ aliases.js aliases.js.map  devtools.js devtools.js.map",
 ```
 
-2，`copy-flow-definition` 命令使用了 `copyfiles` 工具（https://www.npmjs.com/package/copyfiles） 复制 flow 定义文件 src/preact.js.flow 到 dist 目录。什么是 flow 定义文件？它有啥作用？具体请看这里：https://flow.org/en/docs/libdefs/ 。
+2，`copy-flow-definition` 命令使用了 `copyfiles` 工具（https://www.npmjs.com/package/copyfiles） 复制 Flow 定义文件 src/preact.js.flow 到 dist 目录。
 
 ```js
 "copy-flow-definition": "copyfiles -f src/preact.js.flow dist",
 ```
 
-3，`copy-typescript-definition` 命令使用了 `copyfiles` 工具复制 ts 定义文件 src/preact.d.ts 到 dist 目录。什么是 TypeScript 定义文件？它有啥作用？具体请看这里：https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html 。
+> 什么是 Flow ？Flow 是一个 JavaScript 静态类型检查工具。
+> 
+> 什么是 Flow 定义文件？它有啥作用？Flow 定义文件用于给没有使用 flow 的第三方库添加类型信息，关于 Flow 定义文件的更多细节，请看这里：https://flow.org/en/docs/libdefs/ 。
+
+3，`copy-typescript-definition` 命令使用了 `copyfiles` 工具复制 TypeScript 声明文件 src/preact.d.ts 到 dist 目录。
 
 ```js
 "copy-typescript-definition": "copyfiles -f src/preact.d.ts dist",
 ```
+
+> 什么是 TypeScript ？TypeScript是一种由微软开发的自由和开源的编程语言。它是JavaScript的一个严格超集，并添加了可选的静态类型和基于类的面向对象编程。
+> 
+> 什么是 TypeScript 声明文件？当一个TypeScript脚本被编译时，有一个产生作为编译后的JavaScript的组件的一个接口而起作用的声明文件（具有扩展名.d.ts）的选项。在这个过程中编译器基本上带走所有的函数和方法体而仅保留所导出类型的批注。当第三方开发者从TypeScript中使用它时，由此产生的声明文件就可以被用于描述一个JavaScript库或模块导出的虚拟的TypeScript类型。声明文件的概念类似于C/C++中头文件的概念。 
+
+
 4，`build` 命令使用 `npm-run-all` 工具（https://www.npmjs.com/package/npm-run-all） 依次执行了这些命令 `clean transpile copy-flow-definition copy-typescript-definition strip optimize minify size`。这些命令我们马上就会介绍。
 
 ```js
