@@ -1,5 +1,5 @@
 ---
-title: Preact 源码剖析（一）整体架构
+title: Preact 源码剖析（一）解读 package.json
 date: 2017-03-29 14:51:00
 tags: [Preact, 源码剖析, rimraf, copyfiles, npm-run-all, rollup, uglifyjs, jscodeshift, gzip-size-cli, Mocha, Karma, ESLint, TypeScript, Git, Greenkeeper]
 ---
@@ -50,7 +50,7 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 下面我们来逐个解释一下：
 
 - `name`：项目名称。
-- `amdName`：AMD 模式下的项目名称（猜测，已经提交 Issue，等待回复）。
+- `amdName`：现在已经废弃：https://github.com/developit/preact/issues/613 。
 - `version`：项目版本。
 - `description`：项目描述。
 - `main`：指定了加载的入口文件，`require('preact')` 就会加载这个文件。这个字段的默认值是模块根目录下面的 index.js。
@@ -77,23 +77,23 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 "clean": "rimraf dist/ aliases.js aliases.js.map  devtools.js devtools.js.map",
 ```
 
-2，`copy-flow-definition` 命令使用了 `copyfiles` 工具（https://www.npmjs.com/package/copyfiles） 复制 flow 定义文件 src/preact.js.flow 到 dist 目录。
+2，`copy-flow-definition` 命令使用了 `copyfiles` 工具（https://www.npmjs.com/package/copyfiles） 复制 flow 定义文件 src/preact.js.flow 到 dist 目录。什么是 flow 定义文件？它有啥作用？具体请看这里：https://flow.org/en/docs/libdefs/ 。
 
 ```js
 "copy-flow-definition": "copyfiles -f src/preact.js.flow dist",
 ```
 
-3，`copy-typescript-definition` 命令使用了 `copyfiles` 工具复制 ts 定义文件 src/preact.d.ts 到 dist 目录。
+3，`copy-typescript-definition` 命令使用了 `copyfiles` 工具复制 ts 定义文件 src/preact.d.ts 到 dist 目录。什么是 TypeScript 定义文件？它有啥作用？具体请看这里：https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html 。
 
 ```js
 "copy-typescript-definition": "copyfiles -f src/preact.d.ts dist",
 ```
-4，`build` 命令使用 `npm-run-all` 工具（https://www.npmjs.com/package/npm-run-all） 依次执行了这些命令 `clean transpile copy-flow-definition copy-typescript-definition strip optimize minify size`。
+4，`build` 命令使用 `npm-run-all` 工具（https://www.npmjs.com/package/npm-run-all） 依次执行了这些命令 `clean transpile copy-flow-definition copy-typescript-definition strip optimize minify size`。这些命令我们马上就会介绍。
 
 ```js
 "build": "npm-run-all --silent clean transpile copy-flow-definition copy-typescript-definition strip optimize minify size",
 ```
-5，`transpile:main` 命令使用 `rollup` 工具（https://rollupjs.org/） 进行对 src/preact.js 进行打包编译。关于 `rollup` 的具体参数用法，这里不再详述，可自行参阅官网文档，后续我也可能会写一些关于它的博文，毕竟这也是个拥有八千多 star 的新秀。
+5，`transpile:main` 命令使用 `rollup` 工具（https://rollupjs.org/） 进行对 src/preact.js 进行打包编译。关于 `rollup` ，这里不详述，可自行参阅官网文档，后续我也可能会写一些关于它的博文，毕竟这也是个拥有八千多 star 的新秀。
 
 ```js
 "transpile:main": "rollup -c config/rollup.config.js -m dist/preact.dev.js.map -f umd -n preact src/preact.js -o dist/preact.dev.js",
