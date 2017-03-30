@@ -49,7 +49,7 @@ expect(findContentChildren([10, 9, 8, 7, 6], [7, 6, 5])).toBe(2);
 
 那么用 JavaScript 实现就是：
 
-LeetCode/assignCookies.js
+LeetCode/455-assignCookies.js
 
 ```js
 /**

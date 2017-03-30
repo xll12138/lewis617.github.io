@@ -34,7 +34,7 @@ https://leetcode.com/problems/4sum
 
 1，**借助散列表**：先构建一个散列表，存储数组每个值。然后遍历数组，查看 `target` 与每项的差是否在散列表中，如果在就返回两个值。这个方法的时间复杂度和空间复杂度均为O(n)。代码示例如下：
 
-LeetCode/twoSum.js
+LeetCode/001-twoSum.js
 
 ```js
 /**
@@ -66,7 +66,7 @@ expect(twoSum([2, 7, 11, 15], 9)).toEqual([0, 1]);
 
 2，**双指针两端扫描**：若数组无序，就先排序后扫描。扫描方法是用两个指针 `i` 和 `j`，先放在数组首尾，如果指向的两个数之和大于 `target` ，就 `j--`，否则 `i++`，直到两个数之和为 `target`，然后返回这两个数。该方法的时间复杂度最后为：有序O(n)，无序O(nlogn + n)=O(nlogn)，空间复杂度都为O(1)。代码示例如下：
 
-LeetCode/twoSum.js
+LeetCode/001-twoSum.js
 
 ```js
 /**
@@ -116,7 +116,7 @@ expect(twoSum2([-2, -1, -1, 1, 1], 0)).toEqual([[1, 4]]);
 
 当问题变为两个数的搜索时，那么我们就可以用前面介绍的方法了！示例代码如下：
 
-LeetCode/threeSum.js
+LeetCode/015-threeSum.js
 
 ```js
 /**
@@ -169,7 +169,7 @@ expect(threeSum([-2, -1, -1, 1, 1, 2, 2])).toEqual([[-2, 1, 1], [-1, -1, 2]]);
 
 如果 `N`（`N` 代表和为定值的 `N` 个数） 为更大的值，那么就使用**递归**，一直到 `N` 为2时终结掉。这里我们来求一下和为定值的四个数，示例代码如下：
 
-LeetCode/fourSum.js
+LeetCode/018-fourSum.js
 
 ```js
 /**

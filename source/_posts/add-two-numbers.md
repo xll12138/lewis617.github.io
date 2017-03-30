@@ -87,7 +87,7 @@ var addTwoNumbers = function (l1, l2) {
 
 完整代码就是：
 
-LeetCode/addTwoNumbers.js
+LeetCode/002-addTwoNumbers.js
 
 ```js
 var addTwoNumbers = function (l1, l2) {
@@ -148,7 +148,7 @@ Output: 1 -> 2
 完整代码是：
 
 
-LeetCode/addTwoNumbers2.js
+LeetCode/445-addTwoNumbers2.js
 
 ```js
 var addTwoNumbers = function (l1, l2) {
