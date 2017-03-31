@@ -1,5 +1,5 @@
 ---
-title: Preact 源码剖析（一 ）解读 package.json
+title: Preact 源码剖析（一>）解读 package.json
 date: 2017-03-29 14:51:00
 tags: [Preact, 源码剖析, rimraf, copyfiles, npm-run-all, rollup, uglifyjs, jscodeshift, gzip-size-cli, Mocha, Karma, ESLint, Flow, TypeScript, Git, Greenkeeper]
 ---
@@ -19,7 +19,7 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 - 即时生产
 - 生态系统兼容
 
-关于上述特点的具体介绍可以查看官网（https://preactjs.com/ ） 。目前为止（2017-03-29），Preact 已经有8308颗 star 了。既然 Preact 这么火，在不失去虚拟 DOM 等优秀特性的同时，还比 React 更轻量，那就让我们来学习一下它的源码吧！在开始之前，希望你应该：
+关于上述特点的具体介绍可以查看官网（<https://preactjs.com/>） 。目前为止（2017-03-29），Preact 已经有8308颗 star 了。既然 Preact 这么火，在不失去虚拟 DOM 等优秀特性的同时，还比 React 更轻量，那就让我们来学习一下它的源码吧！在开始之前，希望你应该：
 
 - 使用过 Preact 或 React
 - 看过 Preact 的使用文档
@@ -29,7 +29,7 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 
 ## 从 package.json 开始
 
-打开 Preact 的 GitHub 地址（https://github.com/developit/preact/ ） ，我们可以看到它的源码并不算太少，那我们应该从哪开始看呢？每个人都有自己的阅读源码的习惯，我个人喜欢从 package.json 文件开始，因为这个文件包含了整个项目的名称、描述、各个命令、入口、依赖等诸多信息，看完 package.json 就可以对该项目的整体架构有所了解了。
+打开 Preact 的 GitHub 地址（<https://github.com/developit/preact/>） ，我们可以看到它的源码并不算太少，那我们应该从哪开始看呢？每个人都有自己的阅读源码的习惯，我个人喜欢从 package.json 文件开始，因为这个文件包含了整个项目的名称、描述、各个命令、入口、依赖等诸多信息，看完 package.json 就可以对该项目的整体架构有所了解了。
 
 
 ## 项目名称、版本、描述和入口
@@ -71,13 +71,13 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 
 我们来逐条分析：
 
-1，`clean` 命令使用了 `rimraf` 工具（https://www.npmjs.com/package/rimraf ） 模拟 `rm -rf` 命令来删除一些目录和文件。
+1，`clean` 命令使用了 `rimraf` 工具（<https://www.npmjs.com/package/rimraf>） 模拟 `rm -rf` 命令来删除一些目录和文件。
 
 ```js
 "clean": "rimraf dist/ aliases.js aliases.js.map  devtools.js devtools.js.map",
 ```
 
-2，`copy-flow-definition` 命令使用了 `copyfiles` 工具（https://www.npmjs.com/package/copyfiles ） 复制 Flow 定义文件 src/preact.js.flow 到 dist 目录。
+2，`copy-flow-definition` 命令使用了 `copyfiles` 工具（<https://www.npmjs.com/package/copyfiles>） 复制 Flow 定义文件 src/preact.js.flow 到 dist 目录。
 
 ```js
 "copy-flow-definition": "copyfiles -f src/preact.js.flow dist",
@@ -95,15 +95,15 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 
 > 什么是 TypeScript ？TypeScript是一种由微软开发的自由和开源的编程语言。它是JavaScript的一个严格超集，并添加了可选的静态类型和基于类的面向对象编程。
 > 
-> 什么是 TypeScript 声明文件？当一个TypeScript脚本被编译时，有一个产生作为编译后的 JavaScript 的组件的一个接口而起作用的声明文件（具有扩展名 .d.ts ）的选项。在这个过程中编译器基本上带走所有的函数和方法体而仅保留所导出类型的批注。当第三方开发者从 TypeScript 中使用它时，由此产生的声明文件就可以被用于描述一个 JavaScript 库或模块导出的虚拟的 TypeScript 类型。声明文件的概念类似于 C/C++ 中头文件的概念。 
+> 什么是 TypeScript 声明文件？当一个TypeScript脚本被编译时，有一个产生作为编译后的 JavaScript 的组件的一个接口而起作用的声明文件（具有扩展名 .d.ts>）的选项。在这个过程中编译器基本上带走所有的函数和方法体而仅保留所导出类型的批注。当第三方开发者从 TypeScript 中使用它时，由此产生的声明文件就可以被用于描述一个 JavaScript 库或模块导出的虚拟的 TypeScript 类型。声明文件的概念类似于 C/C++ 中头文件的概念。 
 
 
-4，`build` 命令使用 `npm-run-all` 工具（https://www.npmjs.com/package/npm-run-all ） 依次执行了这些命令 `clean transpile copy-flow-definition copy-typescript-definition strip optimize minify size`。这些命令我们马上就会介绍。
+4，`build` 命令使用 `npm-run-all` 工具（<https://www.npmjs.com/package/npm-run-all>） 依次执行了这些命令 `clean transpile copy-flow-definition copy-typescript-definition strip optimize minify size`。这些命令我们马上就会介绍。
 
 ```js
 "build": "npm-run-all --silent clean transpile copy-flow-definition copy-typescript-definition strip optimize minify size",
 ```
-5，`transpile:main` 命令使用 `rollup` 工具（https://rollupjs.org/ ） 进行对 src/preact.js 进行打包编译。关于 `rollup` ，这里不详述，可自行参阅官网文档，后续我也可能会写一些关于它的博文，毕竟这也是个拥有八千多 star 的新秀。
+5，`transpile:main` 命令使用 `rollup` 工具（<https://rollupjs.org/>） 进行对 src/preact.js 进行打包编译。关于 `rollup` ，这里不详述，可自行参阅官网文档，后续我也可能会写一些关于它的博文，毕竟这也是个拥有八千多 star 的新秀。
 
 ```js
 "transpile:main": "rollup -c config/rollup.config.js -m dist/preact.dev.js.map -f umd -n preact src/preact.js -o dist/preact.dev.js",
@@ -127,7 +127,7 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 "transpile": "npm-run-all transpile:main transpile:aliases transpile:devtools",
 ```
 
-9，`optimize` 命令使用 `uglifyjs` 工具（https://www.npmjs.com/package/uglify-js ） 对代码进行了优化。
+9，`optimize` 命令使用 `uglifyjs` 工具（<https://www.npmjs.com/package/uglify-js>） 对代码进行了优化。
 
 ```js
 "optimize": "uglifyjs dist/preact.dev.js -c conditionals=false,sequences=false,loops=false,join_vars=false,collapse_vars=false --pure-funcs=Object.defineProperty -b width=120,quote_style=3 -o dist/preact.js -p relative --in-source-map dist/preact.dev.js.map --source-map dist/preact.js.map",
@@ -139,13 +139,13 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 "minify": "uglifyjs dist/preact.js -c collapse_vars,evaluate,screw_ie8,unsafe,loops=false,keep_fargs=false,pure_getters,unused,dead_code -m -o dist/preact.min.js -p relative --in-source-map dist/preact.js.map --source-map dist/preact.min.js.map",
 ```
 
-11，`strip` 命令使用 `jscodeshift` 工具（https://github.com/facebook/jscodeshift ） 对代码进行了重构。重构规则请看 config/codemod-strip-tdz.js 和 config/codemod-const.js。
+11，`strip` 命令使用 `jscodeshift` 工具（<https://github.com/facebook/jscodeshift>） 对代码进行了重构。重构规则请看 config/codemod-strip-tdz.js 和 config/codemod-const.js。
 
 ```js
 "strip": "jscodeshift --run-in-band -s -t config/codemod-strip-tdz.js dist/preact.dev.js && jscodeshift --run-in-band -s -t config/codemod-const.js dist/preact.dev.js",
 ```
 
-12，`size` 命令使用 `gzip-size-cli` 工具（https://www.npmjs.com/package/gzip-size-cli ） 输出了代码的 gzip 大小。
+12，`size` 命令使用 `gzip-size-cli` 工具（<https://www.npmjs.com/package/gzip-size-cli>） 输出了代码的 gzip 大小。
 
 ```js
 "strip": "jscodeshift --run-in-band -s -t config/codemod-strip-tdz.js dist/preact.dev.js && jscodeshift --run-in-band -s -t config/codemod-const.js dist/preact.dev.js",
@@ -197,7 +197,7 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 
 - `npm run build`：对代码进行构建。
 - `npm test`：测试代码。
-- `git commit -am $npm_package_version`：提交代码，信息为版本号。`-am` 的意思是添加变化代码（`-a` ），然后附带信息（`-m` ）提交。
+- `git commit -am $npm_package_version`：提交代码，信息为版本号。`-am` 的意思是添加变化代码（`-a`>），然后附带信息（`-m`>）提交。
 - `git tag $npm_package_version`：新建一个tag在当前 commit。
 - `git push`：推送到 Git 服务器。
 - `git push tags`：提交所有 tag。
@@ -267,7 +267,7 @@ Preact 没有依赖，但有开发时的依赖：
 
 ## Greenkeeper 配置
 
-Greenkeeper （https://greenkeeper.io/ ） 是一个工具，它可以通过实时监测和自动更新来帮你的项目获取安全性和一致性。最后是 Greenkeeper 的定义：
+Greenkeeper （<https://greenkeeper.io/>） 是一个工具，它可以通过实时监测和自动更新来帮你的项目获取安全性和一致性。最后是 Greenkeeper 的定义：
 
 ```js
 "greenkeeper": {
