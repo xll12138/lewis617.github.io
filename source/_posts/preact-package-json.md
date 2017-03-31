@@ -1,5 +1,5 @@
 ---
-title: Preact 源码剖析（一>）解读 package.json
+title: Preact 源码剖析（一）解读 package.json
 date: 2017-03-29 14:51:00
 tags: [Preact, 源码剖析, rimraf, copyfiles, npm-run-all, rollup, uglifyjs, jscodeshift, gzip-size-cli, Mocha, Karma, ESLint, Flow, TypeScript, Git, Greenkeeper]
 ---
@@ -95,7 +95,7 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 
 > 什么是 TypeScript ？TypeScript是一种由微软开发的自由和开源的编程语言。它是JavaScript的一个严格超集，并添加了可选的静态类型和基于类的面向对象编程。
 > 
-> 什么是 TypeScript 声明文件？当一个TypeScript脚本被编译时，有一个产生作为编译后的 JavaScript 的组件的一个接口而起作用的声明文件（具有扩展名 .d.ts>）的选项。在这个过程中编译器基本上带走所有的函数和方法体而仅保留所导出类型的批注。当第三方开发者从 TypeScript 中使用它时，由此产生的声明文件就可以被用于描述一个 JavaScript 库或模块导出的虚拟的 TypeScript 类型。声明文件的概念类似于 C/C++ 中头文件的概念。 
+> 什么是 TypeScript 声明文件？当一个TypeScript脚本被编译时，有一个产生作为编译后的 JavaScript 的组件的一个接口而起作用的声明文件（具有扩展名 .d.ts）的选项。在这个过程中编译器基本上带走所有的函数和方法体而仅保留所导出类型的批注。当第三方开发者从 TypeScript 中使用它时，由此产生的声明文件就可以被用于描述一个 JavaScript 库或模块导出的虚拟的 TypeScript 类型。声明文件的概念类似于 C/C++ 中头文件的概念。 
 
 
 4，`build` 命令使用 `npm-run-all` 工具（<https://www.npmjs.com/package/npm-run-all>） 依次执行了这些命令 `clean transpile copy-flow-definition copy-typescript-definition strip optimize minify size`。这些命令我们马上就会介绍。
@@ -197,7 +197,7 @@ Preact 是 React 的 3kb 轻量化方案，具有同样的 ES6 接口。Preact �
 
 - `npm run build`：对代码进行构建。
 - `npm test`：测试代码。
-- `git commit -am $npm_package_version`：提交代码，信息为版本号。`-am` 的意思是添加变化代码（`-a`>），然后附带信息（`-m`>）提交。
+- `git commit -am $npm_package_version`：提交代码，信息为版本号。`-am` 的意思是添加变化代码（`-a`），然后附带信息（`-m`）提交。
 - `git tag $npm_package_version`：新建一个tag在当前 commit。
 - `git push`：推送到 Git 服务器。
 - `git push tags`：提交所有 tag。
