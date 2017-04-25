@@ -7,7 +7,7 @@ tags: [Node, 爬虫, superagent, cheerio, 字符编码, 正则表达式]
 
 https://github.com/lewis617/practical-js/blob/master/rrting.js
 
-如果你是想通过本文学习 JavaScript 或 Node，那么本文丰富的知识点也将让你满载而归。阅读本文，你将学习到这些知识点：
+除此之外，阅读本文，你还会学习到这些知识点：
 
 - 如何使用 superagent 获取页面内容
 - 如何使用 superagent 获取 JS 文件的内容
@@ -153,14 +153,3 @@ https://github.com/lewis617/practical-js/blob/master/rrting.js
 ## 教程源代码及目录
 
 https://github.com/lewis617/practical-js
-
-
-
-
-
-
-
-
-
-
-
