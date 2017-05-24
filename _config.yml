@@ -74,4 +74,4 @@ deploy:
     coding: git@git.coding.net:lewis617/lewis617.git
   branch: master
 
-duoshuo_shortname: liuyiqi
+disqus_shortname: liuyiqi
