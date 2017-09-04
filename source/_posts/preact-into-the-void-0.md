@@ -1,5 +1,5 @@
 ---
-title: Preact: Into the void 0（译）
+title: Preact：Into the void 0（译）
 date: 2017-09-04 19:00:00
 tags: [Preact, JSX, 虚拟DOM, 性能]
 ---
