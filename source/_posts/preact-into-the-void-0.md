@@ -11,7 +11,7 @@ https://www.youtube.com/watch?v=LY6y3HbDVmg
 
 ## 开场白
 
-嗨，大家好，我是Jason，Github上那个developit和推特上的_developit，是串行库作者（serial library author），我喜欢甜甜圈、肉汁乳酪薯条和斧头，这意味着我是加拿大人（枫叶国的人喜欢斧头——[在加拿大把扔斧头做成15万用户的大生意](https://dushi.singtao.ca/toronto/%E8%B4%A2%E7%BB%8F-%E5%88%86%E7%B1%BB/%E5%88%9B%E4%B8%9A%E6%95%85%E4%BA%8B-%E5%88%86%E7%B1%BB/%E5%9C%A8%E5%8A%A0%E6%8B%BF%E5%A4%A7%E6%8A%8A%E6%89%94%E6%96%A7%E5%A4%B4%E5%81%9A%E6%88%9015%E4%B8%87%E7%94%A8%E6%88%B7%E7%9A%84%E5%A4%A7%E7%94%9F%E6%84%8F/)）。
+嗨，大家好，我是Jason，Github上那个developit和推特上的_developit，是一系列库的作者（serial library author），我喜欢甜甜圈、肉汁乳酪薯条和斧头，这意味着我是加拿大人（枫叶国的人喜欢斧头——[在加拿大把扔斧头做成15万用户的大生意](https://dushi.singtao.ca/toronto/%E8%B4%A2%E7%BB%8F-%E5%88%86%E7%B1%BB/%E5%88%9B%E4%B8%9A%E6%95%85%E4%BA%8B-%E5%88%86%E7%B1%BB/%E5%9C%A8%E5%8A%A0%E6%8B%BF%E5%A4%A7%E6%8A%8A%E6%89%94%E6%96%A7%E5%A4%B4%E5%81%9A%E6%88%9015%E4%B8%87%E7%94%A8%E6%88%B7%E7%9A%84%E5%A4%A7%E7%94%9F%E6%84%8F/)）。
 
 ![](https://ww1.sinaimg.cn/large/83900b4egy1fj6n75o3dfj21fm0yyk30.jpg)
 
