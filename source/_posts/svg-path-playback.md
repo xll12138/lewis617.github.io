@@ -59,13 +59,13 @@ function createCircles() {
 
 ### 二次贝塞尔曲线、三次贝塞尔曲线还是圆弧？
 
-SVG通过path可以画多种弧线主要包括：
+SVG通过path可以画多种曲线主要包括：
 
 - 二次贝塞尔曲线：需要一个控制点，用来确定起点和终点的曲线斜率。
 	![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy6fw4aeuj205a04g3yd.jpg)
 - 三次贝塞尔曲线：需要两个控制点，用来确定起点和终点的曲线斜率。
 	![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy6fi0z8pj205a04gglj.jpg)
-- 圆弧：需要两个半径、两个圆心，逆时针还是顺时针，大圆弧还是小圆弧等多个属性。
+- 圆弧：需要两个半径、旋转角度、逆时针还是顺时针、大圆弧还是小圆弧等多个属性。
 	![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy6hbu8zlj205k05kt8o.jpg)
 
 显然，二次贝塞尔曲线最为简单，所以我们决定用二次贝塞尔曲线来画两点之间的弧线。在SVG的path中，二次贝塞曲线的参数是：
