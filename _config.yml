@@ -71,7 +71,7 @@ deploy:
   type: git
   repo:
     github: git@github.com:lewis617/lewis617.github.io.git
-    coding: git@git.coding.net:lewis617/lewis617.git
+    coding: git@git.coding.net:lewis617/lewis617.coding.me.git
   branch: master
 
 ## disqus_shortname: lewis617s-blog
