@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 刘一奇的个人博客
+title: 刘一奇的博客
 subtitle: 何以升华，唯有沉淀
 description:
 author: 刘一奇
@@ -12,7 +12,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://lewis617.github.io/
+url: http://liuyiqi.cn/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
