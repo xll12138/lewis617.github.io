@@ -5,7 +5,7 @@ tags: [SVG, 贝塞尔曲线,SVG SMIL animation]
 ---
 最近做了埋点方案XTracker的轨迹回放功能，大致效果就是，在指定几个顺序的点之间形成轨迹，来模拟用户在页面上的先后行为（比如一个用户先点了啥，后点了啥）。效果图如下：
 
-![xtracker demo.gif](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/52f8f097ad67ed71ffb242199011e4c0.gif)
+![](https://wx1.sinaimg.cn/large/83900b4egy1fk1jn3atyng204h04ead8.gif)
 
 在这篇文章中，我们来聊聊轨迹回放的一些技术细节。
 
@@ -24,7 +24,7 @@ tags: [SVG, 贝塞尔曲线,SVG SMIL animation]
 </svg>
 ```
 
-![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy4xjj4aij203403g0py.jpg)
+![](https://wx3.sinaimg.cn/large/83900b4egy1fjy4xjj4aij203403g0py.jpg)
 
 
 然后根据需要多画几个红点就可以了，也可以通过js批量生成：
@@ -50,7 +50,7 @@ function createCircles() {
 }
 ```
 
-![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy50l2qlrj20dw0d8wei.jpg)
+![](https://wx3.sinaimg.cn/large/83900b4egy1fjy50l2qlrj20dw0d8wei.jpg)
 
 
 ## 两点之间的轨迹
@@ -62,11 +62,11 @@ function createCircles() {
 SVG通过path可以画多种曲线主要包括：
 
 - 二次贝塞尔曲线：需要一个控制点，用来确定起点和终点的曲线斜率。
-	![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy6fw4aeuj205a04g3yd.jpg)
+	![](https://wx3.sinaimg.cn/large/83900b4egy1fjy6fw4aeuj205a04g3yd.jpg)
 - 三次贝塞尔曲线：需要两个控制点，用来确定起点和终点的曲线斜率。
-	![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy6fi0z8pj205a04gglj.jpg)
+	![](https://wx3.sinaimg.cn/large/83900b4egy1fjy6fi0z8pj205a04gglj.jpg)
 - 圆弧：需要两个半径、旋转角度、逆时针还是顺时针、大圆弧还是小圆弧等多个属性。
-	![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy6hbu8zlj205k05kt8o.jpg)
+	![](https://wx3.sinaimg.cn/large/83900b4egy1fjy6hbu8zlj205k05kt8o.jpg)
 
 显然，二次贝塞尔曲线最为简单，所以我们决定用二次贝塞尔曲线来画两点之间的弧线。在SVG的path中，二次贝塞曲线的参数是：
 
@@ -84,7 +84,7 @@ M x1 y1 Q x2 y2 x3 y3
 
 效果：
 
-![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy6s1oe7uj203c02gq2p.jpg)
+![](https://wx3.sinaimg.cn/large/83900b4egy1fjy6s1oe7uj203c02gq2p.jpg)
 
 ### 确定控制点
 
@@ -102,7 +102,7 @@ M x1 y1 Q x2 y2 x3 y3
 
 画个图吧！
 
-![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy7sndvwjj20hy0cgjrr.jpg)
+![](https://wx3.sinaimg.cn/large/83900b4egy1fjy7sndvwjj20hy0cgjrr.jpg)
 
 - 在顺时针区域画中垂线。中垂线和垂直线的角度为`angle`
 - 规定`offset`为某个定值（比如40，或者其他比较小的定值）。
@@ -128,8 +128,7 @@ function getCtlPoint(startX, startY, endX, endY, offset) {
 
 如果起点终点相同，我们就不能使用二次贝塞尔曲线了，而是应该在该点右侧画一个小圆弧，就像这样：
 
-![xtracker demo3.gif](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/8bd15e132dd6dbae2f2f8de875af8d65.gif)
-
+![](https://wx3.sinaimg.cn/large/83900b4egy1fjy8a993prj203e032a9t.jpg)
 
 
 在Path中圆弧的参数格式为：
@@ -169,7 +168,7 @@ A rx ry x-axis-rotation large-arc-flag sweep-flag x y
 
 效果截图：
 
-![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy8a993prj203e032a9t.jpg)
+![](https://wx3.sinaimg.cn/large/83900b4egy1fjy8a993prj203e032a9t.jpg)
 
 将两种情况封装成获取d属性的函数：
 
@@ -243,7 +242,7 @@ var pointList = [
 
 那么效果图：
 
-![image](https://wx3.sinaimg.cn/large/83900b4egy1fjy8i3vmmij206w05s3yh.jpg)
+![](https://wx3.sinaimg.cn/large/83900b4egy1fjy8i3vmmij206w05s3yh.jpg)
 
 
 完整demo：
@@ -276,7 +275,7 @@ path.innerHTML= '<animate attributeName="stroke-dashoffset" to="0"  dur="7s" beg
 
 完整demo：
 
-![xtracker demo2.gif](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/b8f202df4f46a7d961ca67fb5a979055.gif)
+![](https://wx3.sinaimg.cn/large/83900b4egy1fk1jn3f98vg204h04edfz.gif)
 
 <iframe height='265' scrolling='no' title='svg：多点间的弧线回放' src='//codepen.io/lewis617/embed/vexjyp/?height=265&theme-id=0&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/lewis617/pen/vexjyp/'>svg：多点间的轨迹回放</a> by lewis liu (<a href='https://codepen.io/lewis617'>@lewis617</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -314,7 +313,7 @@ function createPathHead(pathObj, d){
 
 至此，轨迹回放的关键技术点就讲完了，再次欣赏下最终的效果：
 
-![xtracker demo.gif](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/52f8f097ad67ed71ffb242199011e4c0.gif)
+![](https://wx1.sinaimg.cn/large/83900b4egy1fk1jn3atyng204h04ead8.gif)
 
 完整的demo在这里：
 
