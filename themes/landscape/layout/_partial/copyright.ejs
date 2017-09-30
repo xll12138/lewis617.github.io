@@ -2,21 +2,21 @@
 <div class="copyright">
   <div>
     <strong>本文作者：</strong>
-    <a href="/" title="欢迎访问 <%- theme.author %> 的博客">
+    <a href="/about/" title="欢迎访问 <%- theme.author %> 的博客">
       <%- theme.author %>
     </a>
   </div>
   <div>
-    <strong>本文标题：</strong>
-    <a href="<%- url_for(post.permalink) %>" title="<%- post.title %>">
-          《<%- post.title %>》
-        </a>
+    <strong>本文出处：</strong>
+    <a href="/" title="刘一奇的个人博客">
+      刘一奇的个人博客
+    </a>
   </div>
   <div>
-    <strong>本文链接：</strong>
+    <strong>原文链接：</strong>
     <a href="<%- url_for(post.permalink) %>" title="<%- post.title %>">
-      <%- post.permalink %>
-    </a>
+          <%- post.title %>
+        </a>
   </div>
   <div>
     <strong>发布时间：</strong>
