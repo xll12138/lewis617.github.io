@@ -187,8 +187,7 @@ function getD(startX, startY, endX, endY) {
 
 完整demo：
 
-<iframe height='265' scrolling='no' title='svg：两点间的弧线：非圆弧' src='//codepen.io/lewis617/embed/JrWMBy/?height=265&theme-id=0&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/lewis617/pen/JrWMBy/'>svg：两点间的轨迹：非圆弧</a> by lewis liu (<a href='https://codepen.io/lewis617'>@lewis617</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+https://codepen.io/lewis617/pen/JrWMBy/
 
 
 ## 多点之间的轨迹
@@ -247,8 +246,7 @@ var pointList = [
 
 完整demo：
 
-<iframe height='265' scrolling='no' title='svg：多点间的弧线：非圆弧' src='//codepen.io/lewis617/embed/wrJpGY/?height=265&theme-id=0&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/lewis617/pen/wrJpGY/'>svg：多点间的轨迹：非圆弧</a> by lewis liu (<a href='https://codepen.io/lewis617'>@lewis617</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+https://codepen.io/lewis617/pen/wrJpGY/
 
 ## 让轨迹回放起来
 
@@ -277,8 +275,7 @@ path.innerHTML= '<animate attributeName="stroke-dashoffset" to="0"  dur="7s" beg
 
 ![](https://wx3.sinaimg.cn/large/83900b4egy1fk1jn3f98vg204h04edfz.gif)
 
-<iframe height='265' scrolling='no' title='svg：多点间的弧线回放' src='//codepen.io/lewis617/embed/vexjyp/?height=265&theme-id=0&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/lewis617/pen/vexjyp/'>svg：多点间的轨迹回放</a> by lewis liu (<a href='https://codepen.io/lewis617'>@lewis617</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+https://codepen.io/lewis617/pen/vexjyp/
 
 ## 给轨迹加上“圆头”
 
@@ -317,5 +314,4 @@ function createPathHead(pathObj, d){
 
 完整的demo在这里：
 
-<iframe height='359' scrolling='no' title='xtracker 动画2:其他弧线' src='//codepen.io/lewis617/embed/RLpxPj/?height=559&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/lewis617/pen/RLpxPj/'>xtracker 动画2:其他弧线</a> by lewis liu (<a href='https://codepen.io/lewis617'>@lewis617</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+https://codepen.io/lewis617/pen/RLpxPj/
