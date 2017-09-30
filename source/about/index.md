@@ -11,11 +11,8 @@ date: 2017-10-01 02:14:25
 GitHub：https://github.com/lewis617
 书籍著作：http://liuyiqi.cn/2016/11/20/r2-book/
 演奏录音：http://i.xiami.com/liuyiqi
-
-<embed src="http://www.xiami.com/widget/569674_356051136_235_346_FF8719_494949_0/collectPlayer.swf" type="application/x-shockwave-flash" width="235" height="346" wmode="opaque"></embed>
-
 阿里18周年年会演出视频：https://www.toutiao.com/i6463378499792011790/
 
-<video src="http://gslb.miaopai.com/stream/uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P~JWQ__.mp4?ssig=84141dc84266c28777411493382d24ee&time_stamp=1506800755090&cookie_id=&vend=1&os=3&partner=1&platform=2&cookie_id=&refer=miaopai&scid=uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P%7EJWQ__" controls ></video>
+<video src="http://gslb.miaopai.com/stream/uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P~JWQ__.mp4?ssig=84141dc84266c28777411493382d24ee&time_stamp=1506800755090&cookie_id=&vend=1&os=3&partner=1&platform=2&cookie_id=&refer=miaopai&scid=uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P%7EJWQ__" controls preload="auto"></video>
 
               
