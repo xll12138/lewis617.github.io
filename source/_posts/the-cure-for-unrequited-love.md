@@ -10,6 +10,7 @@ https://www.youtube.com/watch?v=HKviVOv-XGU
 
 ![](https://wx1.sinaimg.cn/large/83900b4egy1fk1unjcauvj20zk0k0x0h.jpg)
 
+<!--more-->
 
 在生命中某个时期，我们忍受强烈的单恋之苦。
 
