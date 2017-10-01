@@ -45,5 +45,3 @@ https://github.com/lewis617/javascript-datastructures-algorithms
 [贪心算法题：分饼干](http://liuyiqi.cn/2017/03/11/assign-cookies/)
 
 [链表算法题：两个数相加](http://liuyiqi.cn/2017/03/12/add-two-numbers/)
-
-*未完待续*
