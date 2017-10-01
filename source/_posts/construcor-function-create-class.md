@@ -64,3 +64,7 @@ console.log(stack.pop())
 ```
 
 如果你不熟悉 JavaScript ，那么你应该先学习一下 JavaScript 作用域、this 和 new 操作符的相关知识。推荐阅读参考 Stoyan Stefanow 的《JavaScript 面向对象编程指南》，这本书里面有很多小的代码片段以及相关的图文解读，可以帮助你更好地理解 JavaScript 的相关特性。
+
+## 教程示例代码及目录
+
+http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/

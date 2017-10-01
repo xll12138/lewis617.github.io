@@ -35,3 +35,5 @@ https://github.com/lewis617/react-redux-tutorial
  [RxJS + Redux + React = Amazing!（译一）](http://liuyiqi.cn/2016/12/08/rxjs-redux-react-amazing-1/)
   
  [RxJS + Redux + React = Amazing!（译二）](http://liuyiqi.cn/2016/12/09/rxjs-redux-react-amazing-2/)
+ 
+ [Preact：Into the void 0（译）](http://liuyiqi.cn/2017/09/04/preact-into-the-void-0/)
