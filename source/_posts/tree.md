@@ -321,4 +321,4 @@ this.preOrderTraverseUnRec = function (callback) {
  
 ## 教程示例代码及目录
 
-http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/
+<http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/>

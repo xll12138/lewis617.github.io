@@ -152,4 +152,4 @@ https://github.com/lewis617/practical-js/blob/master/rrting.js
 
 ## 教程示例代码及目录
 
-https://github.com/lewis617/practical-js
+<https://github.com/lewis617/practical-js>
