@@ -126,4 +126,4 @@ TypeScript中有个很酷的特性就是工具支持，因为我们可以以此�
 
 ## 教程示例代码及目录
 
-<http://liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>

@@ -274,4 +274,4 @@ Redux是个状态容器，只能通过发起action改变state，这种集中管�
 
 ## 教程示例代码及目录
 
-<http://liuyiqi.cn/2016/12/10/react-redux-tutorial-catalog/>
+<http://www.liuyiqi.cn/2016/12/10/react-redux-tutorial-catalog/>

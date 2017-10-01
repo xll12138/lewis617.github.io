@@ -161,4 +161,4 @@ http://localhost:63342/angular2-tutorial/router/index.html/crisis-center/;id=1;f
 
 ## 教程示例代码及目录
 
-<http://liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
