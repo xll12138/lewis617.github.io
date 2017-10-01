@@ -292,6 +292,6 @@ this.remove = function (key) {
 
 两种冲突方法知道原理即可，代码写起来挺无聊的，都是边界问题。今天就到此为止吧！
  
-## 教程源代码及目录
+## 教程示例代码及目录
 
 http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/

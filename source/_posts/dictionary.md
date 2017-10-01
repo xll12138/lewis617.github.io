@@ -134,6 +134,6 @@ this.getItems = function () {
 
 至此，字典类就写完了。
 
-## 教程源代码及目录
+## 教程示例代码及目录
 
 http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/

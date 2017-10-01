@@ -78,7 +78,7 @@ https://leetcode.com/tag/greedy/
 
 上面的网址是 LeetCode 的所有贪心算法题目，从易到难均有，祝你刷题愉快！
 
-## 教程源代码及目录
+## 教程示例代码及目录
 
 http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/
 

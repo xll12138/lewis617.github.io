@@ -193,7 +193,7 @@ console打印
 
 * * *
 
-## 教程源代码及目录
+## 教程示例代码及目录
 
 <https://github.com/lewis617/angular2-tutorial>
 

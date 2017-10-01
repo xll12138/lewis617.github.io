@@ -1,5 +1,5 @@
 ---
-title: JavaScript 版数据结构与算法目录
+title: JavaScript 版数据结构与算法示例代码及目录
 date: 2017-03-13 10:00:00
 tags: [数据结构与算法]
 ---

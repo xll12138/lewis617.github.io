@@ -435,6 +435,6 @@ this.binarySearch = function (item) {
 };
 ```
 
-## 教程源代码及目录
+## 教程示例代码及目录
 
 http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/

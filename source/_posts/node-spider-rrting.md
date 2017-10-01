@@ -150,6 +150,6 @@ var str = '听电影学英语之海上钢琴师'.replace(/听电影(MP3)?学英�
 
 https://github.com/lewis617/practical-js/blob/master/rrting.js
 
-## 教程源代码及目录
+## 教程示例代码及目录
 
 https://github.com/lewis617/practical-js

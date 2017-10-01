@@ -321,6 +321,6 @@ this.indexOf = function (element) {
 
 除了掌握上述技巧，动手写代码也是很重要的！今天，就到此为止。
 
-## 教程源代码及目录
+## 教程示例代码及目录
 
 http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/
