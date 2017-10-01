@@ -387,5 +387,5 @@ server.js中`webpackHotMiddleware`的用法是参考[官网](https://www.npmjs.c
 
 ## 教程示例代码及目录
 
-https://github.com/lewis617/react-redux-tutorial
+http://liuyiqi.cn/2016/12/10/react-redux-tutorial-catalog/
 

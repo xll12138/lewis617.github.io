@@ -149,5 +149,4 @@ Jay Phelps的这个talk还是很不错的，而且比较客观。从这个talk�
 
 ## 教程示例代码及目录
 
-https://github.com/lewis617/react-redux-tutorial
-
+http://liuyiqi.cn/2016/12/10/react-redux-tutorial-catalog/
