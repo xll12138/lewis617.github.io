@@ -1,12 +1,12 @@
 ---
 title: JavaScript 版数据结构与算法目录
-date: 2017-03-12 10: 00: 00
+date: 2017-03-12 10:00:00
 tags: [数据结构与算法]
 ---
 
 ## 示例代码
 
-https://github.com/lewis617/javascript-datastructures-algorithms
+http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/
 
 ## 预备
 

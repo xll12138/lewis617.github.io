@@ -271,4 +271,4 @@ this.subset = function (otherSet) {
 
 ## 教程源代码及目录
 
-https://github.com/lewis617/javascript-datastructures-algorithms
+http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/
