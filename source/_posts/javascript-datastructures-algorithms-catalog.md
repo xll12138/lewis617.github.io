@@ -6,7 +6,7 @@ tags: [数据结构与算法]
 
 ## 示例代码
 
-http://liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/
+https://github.com/lewis617/javascript-datastructures-algorithms
 
 <!--more-->
 
