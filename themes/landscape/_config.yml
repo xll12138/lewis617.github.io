@@ -15,10 +15,10 @@ sidebar: right
 widgets:
 - notice
 - series_tutorial
-- category
-- tag
+# - category
+# - tag
 - tagcloud
-- archive
+# - archive
 - recent_posts
 - follow_me
 
