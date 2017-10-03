@@ -47,6 +47,32 @@
 </section>
 <% } %>
 
-<% if (!index){ %>
-  <%- partial('livere') %>
+<% if (!index && post.comments && config.hashover_domain){ %>
+  <section id="comments">
+    <script type="text/javascript" src="//<%- config.hashover_domain %>/hashover/hashover.js"></script>
+    <noscript>你的浏览器需要支持JS才能加载此评论.</noscript>
+  </section>
+<% } %>
+
+<% if (!index && post.comments && config.livere_uid){ %>
+  <section id="comments">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="<%- config.livere_uid %>">
+      <script type="text/javascript">
+        (function (d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+
+          if (typeof LivereTower === 'function') { return; }
+
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+      <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+  </section>
 <% } %>

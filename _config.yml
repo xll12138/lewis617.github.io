@@ -75,3 +75,5 @@ deploy:
   branch: master
 
 ## disqus_shortname: lewis617s-blog
+hashover_domain: liuyiqi-hashover.herokuapp.com
+# livere_uid: MTAyMC8yNzg1MS80NDI4
