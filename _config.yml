@@ -74,6 +74,6 @@ deploy:
     coding: git@git.coding.net:lewis617/lewis617.coding.me.git
   branch: master
 
-## disqus_shortname: lewis617s-blog
-hashover_domain: liuyiqi-hashover.herokuapp.com
+disqus_shortname: lewis617s-blog
+# hashover_domain: liuyiqi-hashover.herokuapp.com
 # livere_uid: MTAyMC8yNzg1MS80NDI4
