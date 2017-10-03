@@ -14,10 +14,11 @@ fancybox: true
 sidebar: right
 widgets:
 - notice
-- category
-- tag
+- series_tutorial
+# - category
+# - tag
 - tagcloud
-- archive
+# - archive
 - recent_posts
 - follow_me
 

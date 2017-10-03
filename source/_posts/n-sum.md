@@ -229,6 +229,6 @@ expect(fourSum([-2, -1, -1, 1, 1, 2, 2], 0)).toEqual([[-2, -1, 1, 2], [-1, -1, 1
 ```
 当 `N` 为更大的数，只需要更改 `findSum` 的第三个参数即可。练习算法光说不练可不行，赶快打开 LeetCode 进行练习吧！
 
-## 教程源代码及目录
+## 教程示例代码及目录
 
-https://github.com/lewis617/javascript-datastructures-algorithms
+<http://www.liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/>

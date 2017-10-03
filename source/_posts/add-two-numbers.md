@@ -208,6 +208,6 @@ var addTwoNumbers = function (l1, l2) {
 
 两个数相加这道题的本质是考察链表和栈的操作，所以如果你对链表和栈的数据结构和常用操作非常熟悉，那么做这道题就是小菜一碟！
 
-## 教程源代码及目录
+## 教程示例代码及目录
 
-https://github.com/lewis617/javascript-datastructures-algorithms
+<http://www.liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/>

@@ -104,3 +104,7 @@ Ran all test suites.
 至此，Jest 的入门用法已经演示完了，更多的用法可以参考它的官网文档：
 
 https://facebook.github.io/jest/
+
+## 教程示例代码及目录
+
+<http://www.liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/>

@@ -170,9 +170,9 @@ export class FetchJsonPipe  implements PipeTransform {
 
 * * *
 
-## 教程源代码及目录
+## 教程示例代码及目录
 
-https://github.com/lewis617/angular2-tutorial
+<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
 
 
 

@@ -319,6 +319,6 @@ this.preOrderTraverseUnRec = function (callback) {
 还有搜索和移除的方法，本文不再讲解，有兴趣的同学可以自己研究示例代码。今天到此为止！
 
  
-## 教程源代码及目录
+## 教程示例代码及目录
 
-https://github.com/lewis617/javascript-datastructures-algorithms
+<http://www.liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/>

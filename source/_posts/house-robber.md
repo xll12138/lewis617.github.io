@@ -226,9 +226,6 @@ test('rob3', function () {
 至此，“打家劫舍问题”就讲完了！其实，“打家劫舍问题”的本质在于使用“动态规划”，而“动态规划”的本质在于将大问题分解为相互依赖的子问题。看清问题本质，才能练好算法！加油吧！
 
  
-## 教程源代码及目录
+## 教程示例代码及目录
 
-https://github.com/lewis617/javascript-datastructures-algorithms
-
-
-
+<http://www.liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/>
