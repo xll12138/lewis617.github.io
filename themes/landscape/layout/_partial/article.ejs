@@ -27,12 +27,7 @@
       <% } %>
     </div>
     <footer class="article-footer">
-        <% if ((page.layout == 'post'|| page.layout == 'page')){ %>
-          <div class="bdsharebuttonbox" style="float: right;"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
-          <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-          <% } else { %>
-            <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
-          <% } %>
+      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
       <% if (post.comments && config.disqus_shortname){ %>
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
@@ -46,10 +41,28 @@
 
 <% if (!index && post.comments && config.disqus_shortname){ %>
 <section id="comments">
-  <div id="disqus_proxy_thread">
+  <div id="disqus_proxy_thread"></div>
+  <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-  <div id="disqus_thread"></div>
+  <script>
+    window.disqusProxy = {
+        shortname: '<%= config.disqus_shortname %>',
+        server: 'liuyiqi-disqus-proxy.herokuapp.com',
+        port: 80,
+        defaultAvatar: '/avatars/default-avatar.png',
+        adminAvatar: '/avatars/admin-avatar.jpg',
+        identifier: '<%= page.path %>'
+      };
+      window.disqus_config = function () {
+        this.page.url = '<%= page.permalink %>';
+        this.page.identifier = '<%= page.path %>';
+      };
+      var s = document.createElement('script');
+      s.src = '/js/disqus-proxy.js';
+      s.async = true;
+      document.body.appendChild(s);
+  </script>
 </section>
 <% } %>
 
