@@ -1,7 +1,7 @@
 ---
 title: 治愈单恋（译）
 date: 2017-09-29 10:51:00
-tags: [情爱关系]
+tags: [Relationship]
 ---
 
 本文整理自Youtube视频：
