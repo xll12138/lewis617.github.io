@@ -7,9 +7,10 @@ date: 2017-10-01 02:14:25
 
 刘一奇，90后程序员、吉他手、《React与Redux开发实例精解》作者，先后在中科院计算所、360网络安全研究院学习工作，现就职于阿里巴巴，担任资深前端工程师。业余喜欢写博客、玩乐器、烧菜、练双节棍。
 
-博客地址：http://www.liuyiqi.cn/ 
-GitHub：https://github.com/lewis617/
-书籍著作：http://www.liuyiqi.cn/2016/11/20/r2-book/
+邮箱：liuyiqi.cn@gmail.com、lewis617@163.com
+博客：http://www.liuyiqi.cn
+GitHub：https://github.com/lewis617
+书籍著作：http://www.liuyiqi.cn/2016/11/20/r2-book
 演奏录音：http://music.163.com/#/artist?id=12277229
 
 <iframe frameborder="no" border="0"style="margin-left: -10px;" width="260" height=86 src="//music.163.com/outchain/player?type=2&id=508976312&auto=0&height=66"></iframe>
