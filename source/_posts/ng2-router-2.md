@@ -1,5 +1,5 @@
 ---
-title: Angular2系列教程（十一）路由嵌套、路由生命周期、matrix URL notation
+title: Angular2 系列教程（十一）路由嵌套、路由生命周期、matrix URL notation
 date: 2016-04-04 09:33:00
 tags: [Angular2]
 ---
@@ -161,4 +161,6 @@ http://localhost:63342/angular2-tutorial/router/index.html/crisis-center/;id=1;f
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/angular2-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/Angular2/>

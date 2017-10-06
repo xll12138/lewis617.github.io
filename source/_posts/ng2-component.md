@@ -1,5 +1,5 @@
 ---
-title: Angular2系列教程（三）Components
+title: Angular2 系列教程（三）Components
 date: 2016-02-17 06:28:00
 tags: [Angular2]
 ---
@@ -137,5 +137,7 @@ ng2中组件和指令都是注入在`directives`中，`directives`包含三种�
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/angular2-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/Angular2/>
 

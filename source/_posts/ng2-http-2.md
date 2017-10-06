@@ -1,5 +1,5 @@
 ---
-title: Angular2系列教程（九）Jsonp、URLSearchParams、中断选择数据流
+title: Angular2 系列教程（九）Jsonp、URLSearchParams、中断选择数据流
 date: 2016-03-21 08:54:00
 tags: [Angular2]
 ---
@@ -184,5 +184,7 @@ https://github.com/Reactive-Extensions/RxJS/tree/master/doc/api/core/operators
 
 # 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/angular2-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/Angular2/>
 

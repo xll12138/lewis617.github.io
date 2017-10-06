@@ -323,4 +323,6 @@ this.indexOf = function (element) {
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog/>
+示例代码：<https://github.com/lewis617/javascript-datastructures-algorithms>
+
+目录：<http://www.liuyiqi.cn/tags/数据结构与算法/>

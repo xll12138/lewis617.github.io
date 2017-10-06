@@ -1,5 +1,5 @@
 ---
-title: React与Redux教程（三）reduce()、filter()、map()、some()、every()、...展开属性
+title: React 与 Redux 教程（三）reduce()、filter()、map()、some()、every()、...展开属性
 date: 2016-01-21 09:23:00
 tags: [React, Redux]
 ---
@@ -134,7 +134,9 @@ components/MainSection.js  72 行
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/10/react-redux-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/react-redux-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/React/>
 
 
 

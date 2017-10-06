@@ -1,10 +1,10 @@
 ---
-title: React与Redux教程（六）redux服务端渲染流程
+title: React 与 Redux 教程（六）redux服务端渲染流程
 date: 2016-02-01 03:20:00
 tags: [React, Redux]
 ---
 
-今天，我们要讲解的是React与Redux服务端渲染。个人认为，React击败Angular1的真正"杀手锏"就是服务端渲染。我们为什么要实现服务端渲染，主要是为了首屏渲染速度和SEO。
+今天，我们要讲解的是React 与 Redux 服务端渲染。个人认为，React击败Angular1的真正"杀手锏"就是服务端渲染。我们为什么要实现服务端渲染，主要是为了首屏渲染速度和SEO。
 
 <!--more-->
 
@@ -133,4 +133,6 @@ render(
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/10/react-redux-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/react-redux-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/React/>

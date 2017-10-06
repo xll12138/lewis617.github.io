@@ -1,5 +1,5 @@
 ---
-title: Angular2系列教程（二）模板语法
+title: Angular2 系列教程（二）模板语法
 date: 2016-02-16 07:40:00
 tags: [Angular2]
 ---
@@ -125,4 +125,6 @@ app/app.html
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/angular2-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/Angular2/>

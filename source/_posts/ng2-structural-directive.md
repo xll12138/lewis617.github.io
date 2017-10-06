@@ -1,5 +1,5 @@
 ---
-title: Angular2系列教程（五）Structural directives、再谈组件生命周期
+title: Angular2 系列教程（五）Structural directives、再谈组件生命周期
 date: 2016-02-19 09:11:00
 tags: [Angular2]
 ---
@@ -195,5 +195,7 @@ console打印
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/angular2-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/Angular2/>
 

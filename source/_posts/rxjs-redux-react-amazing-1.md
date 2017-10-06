@@ -61,7 +61,7 @@ export default function counter(state = 0, action) {
  - Web Sockets 
  - Web Workers
 
-这不是个详细的列表。上述其中一些可以同步处理，尽管它们本身是异步的。React与Redux已经封装好了，你可以直接同步处理它们！（然后，他举了一个例子，React组件的点击事件，可以触发加一的action，然后reducer处理这个action）从技术角度上来说，这些事件是异步的，但你可以用同步的方式来处理它。为什么？因为React已经帮你处理了异步。但是，问题来了，如果你还想要点击，如果你想去除速率过快的事件，比如，用户点了很多次，而你不想每次都进行事件处理。这时，你通常会计算点击间隔，然后只处理间隔较大的点击事件。有时候，你需要像这样的更多的控制。这些控制包括：
+这不是个详细的列表。上述其中一些可以同步处理，尽管它们本身是异步的。React 与 Redux 已经封装好了，你可以直接同步处理它们！（然后，他举了一个例子，React组件的点击事件，可以触发加一的action，然后reducer处理这个action）从技术角度上来说，这些事件是异步的，但你可以用同步的方式来处理它。为什么？因为React已经帮你处理了异步。但是，问题来了，如果你还想要点击，如果你想去除速率过快的事件，比如，用户点了很多次，而你不想每次都进行事件处理。这时，你通常会计算点击间隔，然后只处理间隔较大的点击事件。有时候，你需要像这样的更多的控制。这些控制包括：
 
  - Ajax取消／组合（组合的意思是，比如你发起了一个Ajax，然后你又发起了另外一个Ajax，后一个的发起用到了前一个的响应数据）
  - Debounce／throttle／buffer等这些与时间相关的操作
@@ -120,4 +120,6 @@ export default function counter(state = 0, action) {
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/10/react-redux-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/react-redux-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/React/>

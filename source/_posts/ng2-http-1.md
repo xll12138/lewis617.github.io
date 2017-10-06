@@ -1,5 +1,5 @@
 ---
-title: Angular2系列教程（八）In-memory web api、HTTP服务、依赖注入、Observable
+title: Angular2 系列教程（八）In-memory web api、HTTP服务、依赖注入、Observable
 date: 2016-03-21 07:30:00
 tags: [Angular2]
 ---
@@ -228,7 +228,9 @@ this._heroService.getHeroes()
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/angular2-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/Angular2/>
 
 
 

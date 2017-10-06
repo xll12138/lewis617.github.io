@@ -1,5 +1,5 @@
 ---
-title: Angular2系列教程（十）两种启动方法、两个路由服务、引用类型和单例模式的妙用
+title: Angular2 系列教程（十）两种启动方法、两个路由服务、引用类型和单例模式的妙用
 date: 2016-04-04 08:49:00
 tags: [Angular2]
 ---
@@ -150,7 +150,7 @@ http://localhost:63342/angular2-tutorial/router/index.html/heroes
 
 ## 温习promise
 
-当我们导航到heroes视图的时候，我们就进入了另一个子组件，这个组件需要一个heroes服务，里面用到了Promise，我们在[Angular2系列教程（七）Injectable、Promise、Interface、使用服务](https://lewis617.github.io/2016/02/28/ng2-service/)讲过Promise，然我们来温习Promise：
+当我们导航到heroes视图的时候，我们就进入了另一个子组件，这个组件需要一个heroes服务，里面用到了Promise，我们在[Angular2 系列教程（七）Injectable、Promise、Interface、使用服务](https://lewis617.github.io/2016/02/28/ng2-service/)讲过Promise，然我们来温习Promise：
 
 app/heroes/hero.service.ts
 
@@ -200,7 +200,7 @@ var heroesPromise = Promise.resolve(HEROES);
 
 ![](https://ws2.sinaimg.cn/large/83900b4egw1f9xkkfarv9j20k602l74v.jpg)
 
-更详细的的用法，可以看我之前讲的Promise：[Angular2系列教程（七）Injectable、Promise、Interface、使用服务](https://lewis617.github.io/2016/02/28/ng2-service/) 。
+更详细的的用法，可以看我之前讲的Promise：[Angular2 系列教程（七）Injectable、Promise、Interface、使用服务](https://lewis617.github.io/2016/02/28/ng2-service/) 。
 
 ## 两个服务：Router、RouteParams
 
@@ -374,5 +374,7 @@ this._router.navigate(['Heroes', {id: heroId, foo: 'foo'}]);
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/angular2-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/Angular2/>
 

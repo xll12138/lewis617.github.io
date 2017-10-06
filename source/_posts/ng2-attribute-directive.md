@@ -1,5 +1,5 @@
 ---
-title: Angular2系列教程（四）Attribute directives
+title: Angular2 系列教程（四）Attribute directives
 date: 2016-02-18 03:05:00
 tags: [Angular2]
 ---
@@ -185,7 +185,9 @@ bootstrap(App, [])
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/angular2-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/Angular2/>
 
 
 

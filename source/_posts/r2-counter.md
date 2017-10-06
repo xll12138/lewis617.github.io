@@ -1,5 +1,5 @@
 ---
-title: React与Redux教程（一）connect、applyMiddleware、thunk、webpackHotMiddleware
+title: React 与 Redux 教程（一）connect、applyMiddleware、thunk、webpackHotMiddleware
 date: 2016-01-20 07:52:00
 tags: [React, Redux]
 ---
@@ -387,5 +387,7 @@ server.js中`webpackHotMiddleware`的用法是参考[官网](https://www.npmjs.c
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/10/react-redux-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/react-redux-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/React/>
 

@@ -1,10 +1,10 @@
 ---
-title: Angular2系列教程（一）hello world
+title: Angular2 系列教程（一）hello world
 date: 2016-02-15 09:38:00
 tags: [Angular2]
 ---
 
-今天我们要讲的是Angular2系列教程的第一篇，主要是学习Angular2的运行，以及感受Angular2的Components以及模板语法。
+今天我们要讲的是Angular2 系列教程的第一篇，主要是学习Angular2的运行，以及感受Angular2的Components以及模板语法。
 
 <!--more-->
 
@@ -111,4 +111,6 @@ export class App {
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/25/angular2-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/angular2-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/Angular2/>

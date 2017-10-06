@@ -1,5 +1,5 @@
 ---
-title: React与Redux教程（八）连接数据库的Redux程序
+title: React 与 Redux 教程（八）连接数据库的Redux程序
 date: 2016-02-03 09:00:00
 tags: [React, Redux]
 ---
@@ -274,4 +274,6 @@ Redux是个状态容器，只能通过发起action改变state，这种集中管�
 
 ## 教程示例代码及目录
 
-<http://www.liuyiqi.cn/2016/12/10/react-redux-tutorial-catalog/>
+示例代码：<https://github.com/lewis617/react-redux-tutorial>
+
+目录：<http://www.liuyiqi.cn/tags/React/>
