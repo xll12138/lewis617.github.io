@@ -101,7 +101,7 @@ this.getAdjList = function () {
 
 什么是广度优先遍历？简单来说就是先广后深来遍历图中的顶点。比如一个这样的图：
 
-![](https://ws1.sinaimg.cn/large/83900b4egy1fcvopomghbj20dz09ajru)
+![](https://ws1.sinaimg.cn/mw690/83900b4egy1fcvopomghbj20dz09ajru)
 
 那么如何实现广度优先遍历呢？这需要用到队列。实现思路如下：
 
@@ -154,7 +154,7 @@ this.bfs = function (v, callback) {
 
 什么是深度优先遍历？简单来说，深度优先遍历就是先深后广来遍历。如图：
 
-![](https://ws1.sinaimg.cn/large/83900b4egy1fcvp988h6bj20bu08vmxg)
+![](https://ws1.sinaimg.cn/mw690/83900b4egy1fcvp988h6bj20bu08vmxg)
  
  那么如何实现深度优先遍历？这需要用到递归。实现思路如下：
 

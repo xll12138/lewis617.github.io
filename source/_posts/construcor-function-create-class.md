@@ -6,6 +6,8 @@ tags: [面向对象编程]
 
 今天，我们要讲的是在 JavaScript 中使用构造器函数（construcor function）模拟类。
 
+![image](https://wx3.sinaimg.cn/mw690/83900b4egy1fk9hyq8ampj20f9055wen.jpg)
+
 <!--more-->
 
 ## 构造器函数简介

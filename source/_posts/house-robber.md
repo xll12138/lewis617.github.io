@@ -1,5 +1,5 @@
 ---
-title: 动态规划算法题：打家劫舍
+title: JavaScript 版动态规划算法题：打家劫舍
 date: 2017-03-10 16:45:00
 tags: [数据结构与算法, LeetCode]
 ---

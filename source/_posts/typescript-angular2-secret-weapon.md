@@ -8,6 +8,8 @@ tags: [TypeScript, Angular2]
 
 https://www.youtube.com/watch?v=e3djIqAGqZo
 
+https://wx3.sinaimg.cn/mw690/83900b4egy1fk9grrbtfuj20zk0k0wn5.jpg
+
 <!--more-->
 
 ## 开场白
@@ -61,11 +63,11 @@ TypeScript中有个很酷的特性就是工具支持，因为我们可以以此�
 
 但真正酷的是，如果我想知道HTTP里都有啥，我可以选择“Peek Definition”，然后就跳转到了定义特定类型的位置，于是我又得到了一些有用信息。
 
-![](https://ws2.sinaimg.cn/large/83900b4ejw1fbchg5mn43j20vw072tb3.jpg)
+![](https://ws2.sinaimg.cn/mw690/83900b4ejw1fbchg5mn43j20vw072tb3.jpg)
 
 我还可以知道有多少人调用了getCustomers这个方法，只需要点击“Find All References”即可。
 
-![](https://ws1.sinaimg.cn/large/83900b4ejw1fbchkxzecbj20m806mgmj.jpg)
+![](https://ws1.sinaimg.cn/mw690/83900b4ejw1fbchkxzecbj20m806mgmj.jpg)
 
 
 ## 接口（Interfaces）

@@ -1,5 +1,5 @@
 ---
-title: 链表算法题：两个数相加
+title: JavaScript 版链表算法题：两个数相加
 date: 2017-03-12 11:41:00
 tags: [数据结构与算法, LeetCode]
 ---

@@ -1,5 +1,5 @@
 ---
-title: 贪心算法题：分饼干
+title: JavaScript 版贪心算法题：分饼干
 date: 2017-03-11 11:41:00
 tags: [数据结构与算法, LeetCode]
 ---

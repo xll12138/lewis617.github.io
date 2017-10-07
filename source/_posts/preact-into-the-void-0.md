@@ -7,6 +7,8 @@ tags: [Preact, JSX, 虚拟DOM, 性能]
 
 https://www.youtube.com/watch?v=LY6y3HbDVmg
 
+![](https://ww1.sinaimg.cn/mw690/83900b4egy1fj6o29y7yvj21gk0t8gp1.jpg)
+
 <!--more-->
 
 ## 开场白
