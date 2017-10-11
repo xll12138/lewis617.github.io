@@ -20,3 +20,5 @@ before_install:
   - ssh-add ~/.ssh/id_rsa
   - git config --global user.name 'tianke.lyq'
   - git config --global user.email 'tianke.lyq@alibaba-inc.com'
+after_success:
+  - node bd-zz-send.js
