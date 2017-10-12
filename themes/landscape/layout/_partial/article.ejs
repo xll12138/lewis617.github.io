@@ -22,14 +22,14 @@
         <%- post.content %>
         <% if (post.layout == 'post'){  %>
           <%- partial('copyright') %>
-          <iframe src="//www.liuyiqi.cn/donate" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:215px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          <%- partial('donate') %>
         <% } %>
       <% } %>
     </div>
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
       <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+        <a href="<%- post.permalink %>#disqus_proxy_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
       <%- partial('post/tag') %>
     </footer>
@@ -41,57 +41,6 @@
 
 <% if (!index && post.comments && config.disqus_shortname){ %>
 <section id="comments">
-  <div id="disqus_proxy_thread"></div>
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-  <script>
-    window.disqusProxy = {
-        shortname: '<%= config.disqus_shortname %>',
-        server: 'liuyiqi-disqus-proxy.herokuapp.com',
-        port: 80,
-        defaultAvatar: '/avatars/default-avatar.png',
-        adminAvatar: '/avatars/admin-avatar.jpg',
-        identifier: '<%= page.path %>'
-      };
-      window.disqus_config = function () {
-        this.page.url = '<%= page.permalink %>';
-        this.page.identifier = '<%= page.path %>';
-      };
-      var s = document.createElement('script');
-      s.src = '/js/disqus-proxy.js';
-      s.async = true;
-      document.body.appendChild(s);
-  </script>
+  <div id="disqus_thread"></div>
 </section>
-<% } %>
-
-<% if (!index && post.comments && config.hashover_domain){ %>
-  <section id="comments">
-    <script type="text/javascript" src="//<%- config.hashover_domain %>/hashover/hashover.js"></script>
-    <noscript>你的浏览器需要支持JS才能加载此评论.</noscript>
-  </section>
-<% } %>
-
-<% if (!index && post.comments && config.livere_uid){ %>
-  <section id="comments">
-    <!-- 来必力City版安装代码 -->
-    <div id="lv-container" data-id="city" data-uid="<%- config.livere_uid %>">
-      <script type="text/javascript">
-        (function (d, s) {
-          var j, e = d.getElementsByTagName(s)[0];
-
-          if (typeof LivereTower === 'function') { return; }
-
-          j = d.createElement(s);
-          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-          j.async = true;
-
-          e.parentNode.insertBefore(j, e);
-        })(document, 'script');
-      </script>
-      <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-    <!-- City版安装代码已完成 -->
-  </section>
 <% } %>
