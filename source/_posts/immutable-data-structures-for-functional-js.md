@@ -8,10 +8,9 @@ tags: [函数式编程,不可变数据结构, 数据结构与算法,纯函数,�
 
 https://www.youtube.com/watch?v=Wo0qiGPSV-s
 
-<!--more-->
-
 ![](https://wx3.sinaimg.cn/mw690/83900b4egy1fks91iprbej20hs0a07be.jpg)
 
+<!--more-->
 
 ## 开场白
 
