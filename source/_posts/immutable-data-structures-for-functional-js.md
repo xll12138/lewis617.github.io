@@ -1,5 +1,5 @@
 ---
-title: Anjana Vakil: 函数式 JS 中的不可变数据结构（译）
+title: Anjana Vakil：函数式 JS 中的不可变数据结构（译）
 date: 2017-10-22 17:32:00
 tags: [函数式编程,不可变数据结构, 数据结构与算法,纯函数,持久化数据结构, Trie树, 路径拷贝,二叉树,哈希,Bitmapped Vector Trie,Hash Array Mapped Trie,二进制,Mori,Immutable.js,Clojure,ClojureScript]
 ---
