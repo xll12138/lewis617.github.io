@@ -1,7 +1,7 @@
 ---
-title: Preact：Into the void 0（译）
+title: Jason Miller：Preact：Into the void 0（译）
 date: 2017-09-04 19:00:00
-tags: [Preact, JSX, 虚拟DOM, 性能]
+tags: [JSConf, Preact, JSX, 虚拟DOM, 性能]
 ---
 本文整理自Jason Miller在JSConf上的talk。原视频地址：
 
