@@ -74,12 +74,3 @@ deploy:
     coding: git@git.coding.net:lewis617/lewis617.coding.me.git
   branch: master
 
-disqus_shortname: lewis617s-blog
-
-disqus_proxy:
-  shortname: lewis617s-blog
-  username: lewis617
-  host: disqus-proxy.herokuapp.com
-  port: 80
-  admin_avatar: /avatars/admin-avatar.jpg
-  default_avatar: /avatars/default-avatar.png

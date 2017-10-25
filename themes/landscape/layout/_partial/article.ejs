@@ -28,7 +28,7 @@
     </div>
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
-      <% if (post.comments && config.disqus_shortname){ %>
+      <% if (post.comments){ %>
         <a href="<%- post.permalink %>#disqus_proxy_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
       <%- partial('post/tag') %>
@@ -39,8 +39,6 @@
   <% } %>
 </article>
 
-<% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread">您的浏览器暂不支持该评论组件。</div>
-</section>
+<% if (!index && post.comments){ %>
+  <%- partial('comments') %>
 <% } %>
