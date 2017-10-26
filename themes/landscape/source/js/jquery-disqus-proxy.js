@@ -14,6 +14,7 @@ function tryToLoadDisqus(loadDisqusProxy) {
   var disqusLoaded = false;
   var s = document.createElement('script');
   var shortname = window.disqusProxy.shortname;
+  $('#disqus_thread').text('正在尝试加载 disqus ……');
   s.src = 'https://' + shortname + '.disqus.com/embed.js';
   s.async = true;
   s.setAttribute('data-timestamp', String(+new Date()));
@@ -37,14 +38,15 @@ function loadDisqusProxy() {
   if (disqusProxyIsLoading) return;
   disqusProxyIsLoading = true;
   console.warn('disqus 加载失败，开始加载 disqus-proxy');
-  document.getElementById('disqus_thread').style.display = 'none';
+  $('#disqus_thread').remove();
+  $('#disqus_proxy_thread').text('正在加载基础版 disqus ……');
 
   loadThread(function (res) {
     renderCommentBox(res.response[0].id);
     bingSubmitToCommentBox()
-  })
-  loadComments(function (res) {
-    renderComments(res.response);
+    loadComments(function (res) {
+      renderComments(res.response);
+    })
   })
 }
 
@@ -75,7 +77,7 @@ function renderCommentBox(thread) {
         </div>\
       </form>\
     </div>'.format(thread);
-  $('#disqus_proxy_thread').append(commentBox);
+  $('#disqus_proxy_thread').html(commentBox);
 }
 
 function bingSubmitToCommentBox() {
@@ -108,7 +110,8 @@ function loadComments(cb) {
   var identifier = window.disqusProxy.identifier
   var query = 'identifier=' + encodeURIComponent(identifier)
   var url = '//' + window.disqusProxy.server + ':'
-    + window.disqusProxy.port.toString() + '/api/getComments'
+    + window.disqusProxy.port.toString() + '/api/getComments';
+  $('#disqus_proxy_thread').append('<ul class="comment-list"><li>正在加载评论……</li></ul>');
   $.get(url + '?' + query)
     .success(cb)
 }
@@ -133,21 +136,21 @@ function renderComments(comments) {
   function getChildren(id) {
     if (childComments.length === 0) return null
     var list = []
-    for (var comment in childComments) {
+    childComments.forEach(function (comment) {
       if (comment.parent === id) list.unshift({
         comment: comment,
         author: comment.author.name,
         isPrimary: comment.author.username === window.disqusProxy.username || comment.author.name.indexOf(window.disqusProxy.username) !== -1,
         children: getChildren(+comment.id)
       })
-    }
+    })
     return list.length ? list : null
   }
-  $('#disqus_proxy_thread').append('<ul class="comment-list">{0}</ul>'.format(
+  $('#disqus_proxy_thread > .comment-list').html(
     commentLists.map(function (props) {
       return '<li>{0}</li>'.format(renderComment(props));
     }).join('')
-  ));
+  );
 }
 
 function getAvatar(author) {
