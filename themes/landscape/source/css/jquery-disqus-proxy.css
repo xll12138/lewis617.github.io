@@ -1,47 +1,37 @@
-.comment-box {
-    width: 85%;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.comment-box .row {
-    padding-bottom: 5px;
+#comments{
+  padding: 20px 10%;
 }
 
 .comment-box input,
 .comment-box textarea {
     padding: 5px;
     border: 1px solid #ddd;
+    margin-bottom: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.author-row::after {
+.author-row::after,
+.action-row::after {
     content: '';
     display: block;
     clear: both;
 }
 
 .author-row input[name="author_name"] {
-    width: 48%;
+    width: 49%;
     float: left;
 }
 
 .author-row input[name="author_email"] {
-    width: 48%;
+    width: 49%;
     float: right;
 }
 
 .message-row textarea[name="message"] {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
     width: 100%;
-}
-
-.action-row::after {
-    content: '';
-    display: block;
-    clear: both;
 }
 
 .notification .error {
@@ -56,9 +46,8 @@
     float: right;
 }
 
-#disqus_proxy_thread ul {
-    width: 85%;
-    margin: 0 auto;
+#disqus_proxy_thread ul.post-reply {
+    margin-left: 60px;
 }
 
 .comment-item {
@@ -123,8 +112,19 @@
 }
 
 @media screen and (max-width: 500px) {
-    #disqus_proxy_thread ul,
+    .comment-box {
+        margin: 0 0px;
+    }
+    #disqus_proxy_thread ul.comment-list {
+        margin: 0 0px;
+    }
     #disqus_proxy_thread ul.post-reply {
-        margin-left: 10px;
+        margin-left: 0px;
+    }
+    .author-row input[name=author_name],
+    .author-row input[name=author_email] {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
     }
 }
