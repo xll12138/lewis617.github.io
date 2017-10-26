@@ -1,14 +1,9 @@
 <section id="comments">
+  <div id="disqus_thread"></div>
   <div id="disqus_proxy_thread"></div>
 </section>
-<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-<script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
-<script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
-<script src="//cdn.bootcss.com/babel-polyfill/7.0.0-beta.2/polyfill.min.js"></script>
-<script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
 <script>
-  window.disqusProxy={
+  window.disqusProxy = {
     shortname: 'lewis617s-blog',
     username: 'lewis617',
     server: 'disqus-proxy.herokuapp.com',
@@ -20,6 +15,4 @@
     this.page.url = window.location.href;
     this.page.identifier = window.disqusProxy.identifier;
   };
-</script>`
-<script src="/js/hexo-disqus-proxy-primary.js?t=201710251111" async></script>
-<!-- <script src="http://localhost:8080/lib/hexo-disqus-proxy-primary.js"></script> -->
+</script>

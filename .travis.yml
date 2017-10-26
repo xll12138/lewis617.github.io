@@ -9,7 +9,7 @@ cache:
   directories:
     - node_modules
 script:
-  - hexo generate
+  - gulp build
   - hexo deploy
 before_install:
   - openssl aes-256-cbc -K $encrypted_2ce5281af250_key -iv $encrypted_2ce5281af250_iv
