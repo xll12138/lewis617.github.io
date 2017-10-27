@@ -40,5 +40,8 @@
 </article>
 
 <% if (!index && post.comments){ %>
-  <%- partial('comments') %>
+  <section id="comments">
+    <div id="disqus_thread"></div>
+    <div id="disqus_proxy_thread"></div>
+  </section>
 <% } %>
