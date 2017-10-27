@@ -8,15 +8,6 @@ String.prototype.format = String.prototype.f = function () {
   return s;
 };
 
-window.disqusProxy = {
-  shortname: 'lewis617s-blog',
-  username: 'lewis617',
-  server: 'disqus-proxy2.herokuapp.com',
-  port: 80,
-  adminAvatar: '//ws4.sinaimg.cn/mw690/83900b4egy1fkuw5hqw8vj202s02ygm1.jpg',
-  identifier: window.location.pathname.slice(1),
-};
-
 var disqusProxyIsLoading = false;
 // 尝试加载 disqus，不行就加载 disqus-proxy
 function tryToLoadDisqus(loadDisqusProxy) {
