@@ -95,7 +95,10 @@ function bingSubmitToCommentBox() {
         working = false;
         $('#submit').val('发表');
         if (res.code === 0) {
-          $('.notification').html('<span class="success">发表成功，请等待审核。</span>')
+          $('.notification').html('<span class="success">发表成功，请等待审核。</span>');
+          $('input[name="author_name"]').val('');
+          $('input[name="author_email"]').val('');
+          $('textarea[name="message"]').val('');
         } else {
           $('.notification').html('<span class="error">发表失败</span>')
         }
