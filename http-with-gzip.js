@@ -12,6 +12,7 @@ var zlib = require('zlib');
 var http = require('http');
 var path = require('path');
 var fs = require('fs');
+var mime = require('mime');
 
 http.createServer(function(request, response) {
 
@@ -42,8 +43,9 @@ http.createServer(function(request, response) {
 					response.end();
 				}
 				else {
-					var raw = fs.createReadStream(filePath);
-
+          var raw = fs.createReadStream(filePath);
+          
+          response.setHeader("Content-Type", mime.getType(filePath));
 					if (acceptEncoding.match(/\bdeflate\b/)) {
 						response.writeHead(200, { 'content-encoding': 'deflate' });
 						raw.pipe(zlib.createDeflate()).pipe(response);
