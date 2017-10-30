@@ -13,7 +13,6 @@ var disqusProxyIsLoading = false;
 function tryToLoadDisqus(loadDisqusProxy) {
   var disqusLoaded = false;
   var s = document.createElement('script');
-  console.log(window.disqusProxy)
   var shortname = window.disqusProxy.shortname;
   $('#disqus_thread').text('正在尝试加载 disqus ……');
   s.src = 'https://' + shortname + '.disqus.com/embed.js';
