@@ -13,6 +13,7 @@ var disqusProxyIsLoading = false;
 function tryToLoadDisqus(loadDisqusProxy) {
   var disqusLoaded = false;
   var s = document.createElement('script');
+  console.log(window.disqusProxy)
   var shortname = window.disqusProxy.shortname;
   $('#disqus_thread').text('正在尝试加载 disqus ……');
   s.src = 'https://' + shortname + '.disqus.com/embed.js';
@@ -31,8 +32,6 @@ function tryToLoadDisqus(loadDisqusProxy) {
 
   document.body.appendChild(s)
 }
-
-tryToLoadDisqus(loadDisqusProxy)
 
 function loadDisqusProxy() {
   if (disqusProxyIsLoading) return;
@@ -208,3 +207,5 @@ function renderComment(props) {
         {6}\
       </div>'.format(avatar, name, admin, replyTo, date, message, ul);
 }
+
+if (window.disqusProxy) { tryToLoadDisqus(loadDisqusProxy) };
