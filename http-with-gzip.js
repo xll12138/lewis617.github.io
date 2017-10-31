@@ -1,8 +1,3 @@
-//
-// Simple static HTTP server that uses gzip compression (if client accepts gzip encoding)
-// by Richard Dancsi, www.wimagguc.com
-//
-
 var DOCUMENT_ROOT = './public';
 var DIRECTORY_INDEX = 'index.html';
 
@@ -14,37 +9,41 @@ var path = require('path');
 var fs = require('fs');
 var mime = require('mime');
 
-http.createServer(function (request, response) {
-  if (request.url.indexOf('?') > -1) {
-    request.url = request.url.substr(0, request.url.indexOf('?'));
+http.createServer(function (req, res) {
+  if (req.url.indexOf('?') > -1) {
+    req.url = req.url.substr(0, req.url.indexOf('?'));
   }
-  var filePath = DOCUMENT_ROOT + request.url;
-  if (!fs.existsSync(filePath)) {
-    response.writeHead(404);
-    response.end();
+  var filePath = DOCUMENT_ROOT + req.url;
+
+  if (req.headers['host'] === 'liuyiqi.cn') {
+    res.writeHead(301, { 'Location': 'http://www.liuyiqi.cn' + req.url });
+    res.end();
+  } else if (!fs.existsSync(filePath)) {
+    res.writeHead(404);
+    res.end();
   } else {
     if (fs.statSync(filePath).isDirectory()) {
       filePath = path.join(filePath, DIRECTORY_INDEX);
     }
-    var acceptEncoding = request.headers['accept-encoding'] || '';
+    var acceptEncoding = req.headers['accept-encoding'] || '';
     fs.readFile(filePath, function (error, content) {
       if (error) {
-        response.writeHead(500);
-        response.end();
+        res.writeHead(500);
+        res.end();
       }
       else {
         var raw = fs.createReadStream(filePath);
 
-        response.setHeader("Content-Type", mime.getType(filePath));
+        res.setHeader("Content-Type", mime.getType(filePath));
         if (acceptEncoding.match(/\bdeflate\b/)) {
-          response.writeHead(200, { 'content-encoding': 'deflate' });
-          raw.pipe(zlib.createDeflate()).pipe(response);
+          res.writeHead(200, { 'content-encoding': 'deflate' });
+          raw.pipe(zlib.createDeflate()).pipe(res);
         } else if (acceptEncoding.match(/\bgzip\b/)) {
-          response.writeHead(200, { 'content-encoding': 'gzip' });
-          raw.pipe(zlib.createGzip()).pipe(response);
+          res.writeHead(200, { 'content-encoding': 'gzip' });
+          raw.pipe(zlib.createGzip()).pipe(res);
         } else {
-          response.writeHead(200, {});
-          raw.pipe(response);
+          res.writeHead(200, {});
+          raw.pipe(res);
         }
       }
     });
