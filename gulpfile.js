@@ -8,80 +8,101 @@ var gutil = require('gulp-util')
 var del = require('del');
 var runSequence = require('run-sequence');
 var Hexo = require('hexo');
+var request = require('request');
+var fs = require("fs");
 
 
-gulp.task('clean', function() {
-    return del(['public/**/*']);
+gulp.task('clean', function () {
+  return del(['public/**/*']);
 });
 
 // generate html with 'hexo generate'
 var hexo = new Hexo(process.cwd(), {});
-gulp.task('generate', function(cb) {
-    hexo.init().then(function() {
-        return hexo.call('generate', {
-            watch: false
-        });
-    }).then(function() {
-        return hexo.exit();
-    }).then(function() {
-        return cb()
-    }).catch(function(err) {
-        console.log(err);
-        hexo.exit(err);
-        return cb(err);
-    })
+gulp.task('generate', function (cb) {
+  hexo.init().then(function () {
+    return hexo.call('generate', {
+      watch: false
+    });
+  }).then(function () {
+    return hexo.exit();
+  }).then(function () {
+    return cb()
+  }).catch(function (err) {
+    console.log(err);
+    hexo.exit(err);
+    return cb(err);
+  })
 })
 
-gulp.task('minify-css', function() {
-    return gulp.src('./public/**/*.css')
-        .pipe(minifycss({
-            compatibility: 'ie8'
-        }))
-        .pipe(gulp.dest('./public'));
-});
+gulp.task('bd-zz-send', function (cb) {
+  var data = fs.readFileSync('public/sitemap.xml');
+  var array = data.toString().match(/http:\/\/www.liuyiqi.cn\/\d*\/\d*\/\d*\/[\w-]*\//g)
+  var body = array.join('\n');
 
-gulp.task('minify-html', function() {
-    return gulp.src('./public/**/*.html')
-        .pipe(htmlclean())
-        .pipe(htmlmin({
-            removeComments: true,
-            minifyJS: true,
-            minifyCSS: true,
-            minifyURLs: true,
-        }))
-        .pipe(gulp.dest('./public'))
-});
-
-gulp.task('minify-js', function() {
-    return gulp.src('./public/**/*.js')
-        .pipe(uglify())
-        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-        .pipe(gulp.dest('./public'));
-});
-
-gulp.task('minify-img', function() {
-    return gulp.src('./public/images/**/*.*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('./public/images'))
+  request.post(
+    {
+      url: 'http://data.zz.baidu.com/urls?site=www.liuyiqi.cn&token=iXikmQ5JiHNvr7tz',
+      headers: {
+        'Content-Type': 'text/plain'
+      },
+      body: body
+    }, function (error, response, body) {
+      console.log(body);
+      return cb();
+    }
+  );
 })
 
-gulp.task('minify-img-aggressive', function() {
-    return gulp.src('./public/images/**/*.*')
-        .pipe(imagemin(
-        [imagemin.gifsicle({'optimizationLevel': 3}), 
-        imagemin.jpegtran({'progressive': true}), 
-        imagemin.optipng({'optimizationLevel': 7}), 
-        imagemin.svgo()],
-        {'verbose': true}))
-        .pipe(gulp.dest('./public/images'))
-})
-
-gulp.task('compress', function(cb) {
-    runSequence(['minify-html', 'minify-css', 'minify-js', 'minify-img-aggressive'], cb);
+gulp.task('minify-css', function () {
+  return gulp.src('./public/**/*.css')
+    .pipe(minifycss({
+      compatibility: 'ie8'
+    }))
+    .pipe(gulp.dest('./public'));
 });
 
-gulp.task('build', function(cb) {
-    runSequence('clean', 'generate', 'compress', cb)
+gulp.task('minify-html', function () {
+  return gulp.src('./public/**/*.html')
+    .pipe(htmlclean())
+    .pipe(htmlmin({
+      removeComments: true,
+      minifyJS: true,
+      minifyCSS: true,
+      minifyURLs: true,
+    }))
+    .pipe(gulp.dest('./public'))
+});
+
+gulp.task('minify-js', function () {
+  return gulp.src('./public/**/*.js')
+    .pipe(uglify())
+    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+    .pipe(gulp.dest('./public'));
+});
+
+gulp.task('minify-img', function () {
+  return gulp.src('./public/images/**/*.*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./public/images'))
+})
+
+gulp.task('minify-img-aggressive', function () {
+  return gulp.src('./public/images/**/*.*')
+    .pipe(imagemin(
+      [imagemin.gifsicle({ 'optimizationLevel': 3 }),
+      imagemin.jpegtran({ 'progressive': true }),
+      imagemin.optipng({ 'optimizationLevel': 7 }),
+      imagemin.svgo()],
+      { 'verbose': true }))
+    .pipe(gulp.dest('./public/images'))
+})
+
+gulp.task('compress', function (cb) {
+  runSequence(['minify-html', 'minify-css', 'minify-js', 'minify-img-aggressive'], cb);
+});
+
+gulp.task('build', function (cb) {
+  runSequence('clean', 'generate', 'bd-zz-send', 'compress', cb)
 });
 
 gulp.task('default', ['build'])
