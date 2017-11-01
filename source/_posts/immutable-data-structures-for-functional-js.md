@@ -1,7 +1,7 @@
 ---
 title: Anjana Vakil：函数式 JS 中的不可变数据结构（译）
 date: 2017-10-22 17:32:00
-tags: [JSConf, 函数式编程, 不可变数据结构, 数据结构与算法, 纯函数, Trie 树, Mori, Immutable.js, Clojure]
+tags: [技术讲座, 函数式编程, 不可变数据结构, 数据结构与算法, 纯函数, Trie 树, Mori, Immutable.js, Clojure]
 ---
 
 本文翻译整理自 YouTube 视频：

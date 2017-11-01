@@ -1,7 +1,7 @@
 ---
 title: "TypeScript: Angular 2 的秘密武器（译）"
 date: 2016-12-24 03:24:00
-tags: [TypeScript, Angular2]
+tags: [技术讲座, TypeScript, Angular2]
 ---
 
 本文整理自Dan Wahlin在ng-conf上的talk。原视频地址：
