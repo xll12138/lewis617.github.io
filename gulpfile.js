@@ -35,8 +35,27 @@ gulp.task('generate', function (cb) {
 })
 
 gulp.task('bd-zz-send', function (cb) {
-  var data = fs.readFileSync('public/sitemap.xml');
-  var array = data.toString().match(/http:\/\/www.liuyiqi.cn\/\d*\/\d*\/\d*\/[\w-]*\//g)
+  var walk = function (dir) {
+    var results = []
+    var list = fs.readdirSync(dir)
+    list.forEach(function (file) {
+      file = dir + '/' + file
+      var stat = fs.statSync(file)
+      if (stat && stat.isDirectory()) {
+        results = results.concat(walk(file))
+      } else {
+        results.push(file)
+      }
+    })
+    return results
+  }
+  var array = walk('public')
+    .filter(file => file.indexOf('index.html') !== -1)
+    .map(file => {
+      return file
+        .replace(/^public/, 'http://www.liuyiqi.cn')
+        .replace(/index.html$/, '')
+    });
   var body = array.join('\n');
 
   request.post(
