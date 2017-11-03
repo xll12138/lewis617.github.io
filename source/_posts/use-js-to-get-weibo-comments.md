@@ -1,7 +1,7 @@
 ---
 title: 使用 JavaScript 批量获取微博评论
 date: 2017-11-03 10:36:00
-tags: [实用的 JavaScript, 正则表达式]
+tags: [practical-js, 正则表达式]
 ---
 
 今天，我们要讲的是如何用 JavaScript 批量获取微博评论。如果你想备份或者转移某个微博页面的评论内容，那么本博客对你而言，将会非常实用。
