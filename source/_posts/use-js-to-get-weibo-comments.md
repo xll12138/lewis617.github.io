@@ -8,7 +8,7 @@ tags: [practical-js, 正则表达式]
 
 你可以在这里获取源代码：
 
-<https://github.com/lewis617/practical-node/blob/master/weiboBackup.js>
+<https://github.com/lewis617/practical-node/blob/master/src/weiboBackup.js>
 
 <!--more-->
 

@@ -6,7 +6,7 @@ tags: [DOM, 单元测试]
 
 前几天写了一篇博客：[《使用 JavaScript 批量获取微博评论》](http://www.liuyiqi.cn/2017/11/03/use-js-to-get-weibo-comments/)。今天我们来学习如何测试我们之前编写的代码。从本质上来说，我们今天要学习的是如何测试 DOM 操作类的 JS 代码。你可以在这里获取测试代码：
 
-<https://github.com/lewis617/practical-js/blob/master/weiboBackup.test.js>
+<https://github.com/lewis617/practical-js/blob/master/src/weiboBackup.test.js>
 
 <!--more-->
 
@@ -50,9 +50,11 @@ var textArray = nodeArray.map(function (node) {
 console.log(textArray.join('\n'));
 ```
 
-为了方便测试，我们在底部添加一行代码，将其导出，方便测试：
+为了方便测试，我们在底部添加一行代码，将其导出，方便测试。另外，为了让测试报告更纯净，我们把 console 注释掉：
 
 ```js
+// console.log(textArray.join('\n'));
+
 // 本行代码用于单元测试，请不要拷贝到浏览器的console中运行
 module.exports = textArray;
 ```
@@ -164,11 +166,6 @@ npm test
  PASS  ./weiboBackup.test.js
   ✓ getweiboBackup (27ms)
 
-  console.log weiboBackup.js:22
-    Geo橙子：在过一阵子是不是要翻成英文，走出国门了
-    dev_zk：现在好了[太开心][太开心]
-    dev_zk：哈哈
-
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
@@ -212,11 +209,6 @@ expect(textArray).toEqual([]);
           at new Promise (<anonymous>)
           at <anonymous>
       at process._tickCallback (internal/process/next_tick.js:188:7)
-
-  console.log weiboBackup.js:22
-    Geo橙子：在过一阵子是不是要翻成英文，走出国门了
-    dev_zk：现在好了[太开心][太开心]
-    dev_zk：哈哈
 
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total

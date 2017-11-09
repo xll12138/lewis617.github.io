@@ -1,15 +1,9 @@
 ---
-title: 使用 Node 爬取英文听力及字幕
+title: 使用 superagent+cheerio 写爬虫
 date: 2017-04-24 19:57:00
 tags: [practical-js, Node, 爬虫, superagent, cheerio, 字符编码, 正则表达式]
 ---
-本文将会讲解如何使用 Node 爬取~~人人听力网的~~音频以及字幕文件。如果你想批量下载点英语听力来练习，那么这个教程对你而言将会非常实用。你可以直接从这里获取源代码：
-
-https://github.com/lewis617/practical-js/blob/master/rrting.js
-
-> 警告：人人听力网宕了，所以上述脚本已经不能用了，但是本博客的爬虫知识点依然适用，请学习知识，灵活运用。
-
-除此之外，阅读本文，你还会学习到这些知识点：
+本文将会讲解如何使用 superagent+cheerio 写爬虫。阅读本文，你会学习到这些知识点：
 
 - 如何使用 superagent 获取页面内容
 - 如何使用 superagent 获取 JS 文件的内容
@@ -22,7 +16,7 @@ https://github.com/lewis617/practical-js/blob/master/rrting.js
 
 ## 使用 superagent 获取页面内容
 
-superagent+cheerio 是 Node 爬虫的经典组合。superagent 是一个发起 Ajax 请求的工具。我们使用它来请求各种网络资源。比如，我们想批量爬取人人听力网的音频文件和字幕，我们就必须先找到音频文件和字幕的 URl，想找到 URL 就必须先获取记录这些 URL 的页面，想获取页面内容，那么首先就应该使用 superagent 把页面给请求下来。基本的请求代码如下：
+superagent+cheerio 是 Node 爬虫的经典组合。superagent 是一个发起 Ajax 请求的工具。我们使用它来请求各种网络资源。比如，我们想批量爬取一些文件，我们就必须先找到文件的 URl，想找到 URL 就必须先获取记录这些 URL 的页面，想获取页面内容，那么首先就应该使用 superagent 把页面给请求下来。基本的请求代码如下：
 
 ```js
  request
@@ -40,7 +34,7 @@ superagent+cheerio 是 Node 爬虫的经典组合。superagent 是一个发起 A
 使用 superagent 获取页面内容非常简单，但是当我请求完页面后发现，音频和字幕的 URL 不在页面上，而是通过 JS 动态渲染到页面上的，我的爬虫无法和 JS 通信，这该怎么办呢？其实非常简单，既然 URL 信息在 JS 文件中，那么我们直接获取 JS 文件，并使用 eval 方法解析不就行了？所以，我们来使用 superagent 获取 JS 文件的内容。与获取页面内容的方法不同，获取 JS 文件，需要加个 `.buffer(true)` ：
 
 ```js
-request.get(mainOrigin + partData.pathname + 'mp3para.js')
+request.get('https://raw.githubusercontent.com/sindresorhus/negative-zero/master/index.js')
     .buffer(true)
     .end(function (err, res) {
       ...
@@ -56,10 +50,11 @@ request.get(mainOrigin + partData.pathname + 'mp3para.js')
 前面两节介绍了使用 superagent 获取页面和 JS 文件，那么如何使用 superagent 下载保存文件到硬盘上呢？这里需要配合使用 Node 的 `fs.createWriteStream` 方法，代码如下：
 
 ```js
-function download(url, localPath) {
+function download(url, localPath, cb) {
     var stream = fs.createWriteStream(localPath);
     stream.on('finish', function () {
         console.log('The download of ' + localPath + ' is complete!');
+        cb();
     });
     request.get(url).pipe(stream);
 }
@@ -72,13 +67,13 @@ function download(url, localPath) {
 在第一节，我们介绍了使用 superagent 获取页面内容，但是页面内容太多，我们想高效提取有用信息，该如何做呢？在浏览器中，我们通常使用 jQuery 来高效操作 DOM，在 Node 爬虫中，我们可以使用 cheerio 来模拟 jQuery 的操作方法。cheerio 的基本用法如下：
 
 ```js
-onst cheerio = require('cheerio')
-const $ = cheerio.load('<h2 class="title">Hello world</h2>')
+var cheerio = require('cheerio')
+var $ = cheerio.load('<h2 class="title">Hello world</h2>')
 
 $('h2.title').text('Hello there!')
 $('h2').addClass('welcome')
 
-$.html()
+return $.html()
 //=> <h2 class="title welcome">Hello there!</h2>
 ```
 
@@ -91,7 +86,7 @@ https://github.com/cheeriojs/cheerio
 
 ## 正确设置字符编码来避免乱码
 
-在获取页面内容，并提取里面的中文信息时，我遇到了中文乱码。这是因为页面的 chartset 设置了`gb2312` 的原因，那么想要正确解析设置 `gb2312` 编码的页面，就必须使用这个编码来解析。值得高兴的是，superagent 为我们提供了相关的插件来实现：
+在获取页面内容，并提取里面的中文信息时，偶尔会遇到中文乱码。这是因为页面的 chartset 设置了`gb2312` 的原因，那么想要正确解析设置 `gb2312` 编码的页面，就必须使用这个编码来解析。值得高兴的是，superagent 为我们提供了相关的插件来实现：
 
 https://github.com/magicdawn/superagent-charset
 
@@ -112,7 +107,7 @@ request.get(mainOrigin + mainPathname)
 
 ## 使用正则表达式去除字符串中的多余信息
 
-最后，我们来讲一下如何使用使用正则表达式去除字符串中的多余信息。在下载音频以及字幕时，可能需要处理一些中文名称作为将来的文件名或目录名。页面中的中文名称往往不是我们想要的，那么如何处理名称中的多余信息呢？使用正则表达式就可以做到！比如：
+最后，我们来讲一下如何使用使用正则表达式去除字符串中的多余信息。在下载文件时，可能需要处理一些中文名称作为将来的文件名或目录名。页面中的中文名称往往不是我们想要的，那么如何处理名称中的多余信息呢？使用正则表达式就可以做到！比如：
 
 如果你想将 `'听电影学英语之海上钢琴师'`变为`'海上钢琴师'`，那么你可以这么做：
 
@@ -148,9 +143,7 @@ var str = '听电影学英语之海上钢琴师'.replace(/听电影(MP3)?学英�
 
 ## 总结
 
-上面介绍了爬取音频及字幕文件需要用到的各种技术，本文不打算对业务进行过多叙述。只要掌握了上述方法，就可以轻松读懂爬虫代码，最后还是给出源代码地址吧，如果你没写过爬虫，就赶快试试吧！
-
-https://github.com/lewis617/practical-js/blob/master/rrting.js
+上面介绍了 superagent+cheerio 写爬虫需要用到的各种技术，本文不打算对业务进行过多叙述。只要掌握了上述方法，就可以轻松读懂爬虫代码，如果你没写过爬虫，就赶快试试吧！
 
 ## 教程示例代码及目录
 
