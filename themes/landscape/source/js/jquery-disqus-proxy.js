@@ -43,7 +43,7 @@ function loadDisqusProxy() {
     renderCommentBox(res.response[0].id);
     bingSubmitToCommentBox()
     loadComments(function (res) {
-      renderComments(res.response);
+      renderComments(res);
     })
   })
 }
@@ -114,7 +114,12 @@ function loadComments(cb) {
     + window.disqusProxy.port.toString() + '/api/getComments';
   $('#disqus_proxy_thread').append('<ul class="comment-list"><li>正在加载评论……</li></ul>');
   $.get(url + '?' + query)
-    .success(cb)
+    .success(function (res) {
+      cb(res.response || []);
+    })
+    .error(function (jqXHR, textStatus, errorThrown) {
+      $('.comment-list').html('<li>网络错误：' + errorThrown + '</li>');
+    });
 }
 
 function renderComments(comments) {
@@ -150,7 +155,7 @@ function renderComments(comments) {
   $('#disqus_proxy_thread > .comment-list').html(
     commentLists.map(function (props) {
       return '<li>{0}</li>'.format(renderComment(props));
-    }).join('')
+    }).join('') || '<li>暂无评论，快来抢沙发！</li>'
   );
 }
 
