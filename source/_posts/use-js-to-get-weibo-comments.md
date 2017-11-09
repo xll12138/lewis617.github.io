@@ -26,13 +26,15 @@ tags: [practical-js, 正则表达式]
 var nodeArray = Array.from(document.querySelectorAll('.list_con .WB_text'));
 
 var textArray = nodeArray.map(function (node) {
-  return Array.from(node.childNodes).map(function(childNode){
+  return Array.from(node.childNodes).map(function (childNode) {
+    var value;
     // 文字的情况
-    if(childNode.nodeName==='#text') return childNode.nodeValue.replace(/(\s+$)|(^\s+)/g, '');
+    if (childNode.nodeName === '#text') value = childNode.nodeValue;
     // 图片表情的情况
-    else if(childNode.nodeName === 'IMG') return childNode.alt;
+    else if (childNode.nodeName === 'IMG') value = childNode.alt;
     // 链接的情况
-    else if(childNode.nodeName === 'A') return childNode.lastChild.nodeValue;
+    else if (childNode.nodeName === 'A') value = childNode.lastChild.nodeValue;
+    return value.replace(/(\s+$)|(^\s+)/g, '');
   }).join('');
 });
 
@@ -74,13 +76,15 @@ var nodeArray = Array.from(document.querySelectorAll('.list_con .WB_text'));
 
 ```js
 var textArray = nodeArray.map(function (node) {
-  return Array.from(node.childNodes).map(function(childNode){
+  return Array.from(node.childNodes).map(function (childNode) {
+    var value;
     // 文字的情况
-    if(childNode.nodeName==='#text') return childNode.nodeValue.replace(/(\s+$)|(^\s+)/g, '');
+    if (childNode.nodeName === '#text') value = childNode.nodeValue;
     // 图片表情的情况
-    else if(childNode.nodeName === 'IMG') return childNode.alt;
+    else if (childNode.nodeName === 'IMG') value = childNode.alt;
     // 链接的情况
-    else if(childNode.nodeName === 'A') return childNode.lastChild.nodeValue;
+    else if (childNode.nodeName === 'A') value = childNode.lastChild.nodeValue;
+    return value.replace(/(\s+$)|(^\s+)/g, '');
   }).join('');
 });
 ```
