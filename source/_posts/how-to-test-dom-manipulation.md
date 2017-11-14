@@ -1,7 +1,7 @@
 ---
 title: 如何测试 DOM 操作类的 JS 代码
 date: 2017-11-09 11:05:00
-tags: [DOM, 单元测试]
+tags: [DOM, 单元测试, 测试]
 ---
 
 前几天写了一篇博客：[《使用 JavaScript 批量获取微博评论》](http://www.liuyiqi.cn/2017/11/03/use-js-to-get-weibo-comments/)。今天我们来学习如何测试我们之前编写的代码。从本质上来说，我们今天要学习的是如何测试 DOM 操作类的 JS 代码。你可以在这里获取测试代码：
