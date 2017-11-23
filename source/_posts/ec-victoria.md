@@ -27,4 +27,3 @@ In some classes, due to the tedious courses, my classmates and I often had a fre
 There was one thing came up in my mind when I first saw this triangle. That is stay in the middle and never go deep into one of the three corners.
 
 How to balance? It’s quite simple to answer. Being good at time management.
----
