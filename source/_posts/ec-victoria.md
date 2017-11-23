@@ -10,6 +10,8 @@ date: 2017-11-23 19:11:00
 
 I didn’t know it until I get this topic. I just want to say that everyone had a right to make mistakes. We should express our concern instead of being mean to her.
 
+<!--more-->
+
 ## Never sleep in school for more than three classes
 
 > Recently, there was a picture named “Never sleep in school for more than three classes” which was widely spread on the internet. The picture is fairly funny. But after your laughter, do u recall something happened in your senior school? Do u miss your classmates, your teacher or the days fulfilled of pure happiness？Just share the thoughts with us.
