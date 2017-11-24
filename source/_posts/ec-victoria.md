@@ -12,6 +12,8 @@ I didn’t know it until I get this topic. I just want to say that everyone had 
 
 I'm very happy to see the other girls being supportive and kind towards the fallen angel.They even slowen the pace and they rocked by cheering people and cheering Ming Xi up.
 
+<!--more-->
+
 ## Never sleep in school for more than three classes
 
 > Recently, there was a picture named “Never sleep in school for more than three classes” which was widely spread on the internet. The picture is fairly funny. But after your laughter, do u recall something happened in your senior school? Do u miss your classmates, your teacher or the days fulfilled of pure happiness？Just share the thoughts with us.
@@ -24,7 +26,7 @@ In the evening, I and my roommates called the most beatiful girl in my class an
 
 ## Several conflicts in our college life
 
-![](http://mmbiz.qpic.cn/mmbiz_jpg/8EqgicIBULMFyBIcu6FbicCtPmm2Gv3mXXvS9uVOxH1FTCAiaDU3t6GCEvP7pO1FEtws9rlbnUFWa1icebVoowia2PQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![](https://ws1.sinaimg.cn/mw690/83900b4egy1flsyi9x8cpj20en0bkwfq.jpg)
 
 > This is an interesting drawing which describes several conflicts in our college life. It seemed that a tangible vicious spiral shut us in. How do u schedule your time? Can you balance these three things?
 
