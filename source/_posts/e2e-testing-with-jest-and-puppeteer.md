@@ -6,7 +6,7 @@ tags: [Jest, Puppeteer, 测试, 端对端测试, 黑盒测试]
 
 今天我们要讲的是如何使用 Jest 与 Puppeteer 来进行端对端测试（e2e testing）。
 
-<--more--!>
+<!--more-->
 
 ## 端对端测试 vs. 单元测试
 
