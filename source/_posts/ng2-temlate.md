@@ -70,7 +70,7 @@ app/app.html
 <input type="text" [(ngModel)]="firstName" />
 ```
 
-使用单向绑定加事绑定可以，使用`[(ngModel)]`也可以！这样你再改变`input`的值，所有绑定`firstName`的值都会跟着变化！
+使用单向绑定加事件绑定可以，使用`[(ngModel)]`也可以！这样你再改变`input`的值，所有绑定`firstName`的值都会跟着变化！
 
 ng2的双向数据绑定没有用"脏检查"，而是用了zone.js。这是个什么库呢？
 
