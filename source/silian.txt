@@ -31,3 +31,4 @@ http://www.liuyiqi.cn/2017/03/13/javascript-datastructures-algorithms-catalog
 http://www.liuyiqi.cn/2016/12/31/swf-to-mp4/?utm_source=tuicool&utm_medium=referral
 http://www.liuyiqi.cn/books-tree/
 http://www.liuyiqi.cn/2017/04/24/node-spider-rrting/
+http://www.liuyiqi.cn/donate/
