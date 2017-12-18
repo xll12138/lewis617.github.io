@@ -68,3 +68,7 @@ karma start
 ## Jasmine的语法你怎么不用？
 
 那些describe的语法当然可以用，这个例子只是为了教学，所以尽量避免干扰因素。
+
+## 更多测试文章：
+
+<http://www.liuyiqi.cn/tags/%E6%B5%8B%E8%AF%95/>

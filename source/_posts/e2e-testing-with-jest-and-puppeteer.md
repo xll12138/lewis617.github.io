@@ -1,7 +1,7 @@
 ---
 title: 使用 Jest 与 Puppeteer 来进行端对端测试
 date: 2017-12-05 10:07:00
-tags: [Jest, Puppeteer, 测试, 端对端测试, 黑盒测试]
+tags: [Jest, Puppeteer, 测试, 端对端测试, 黑盒测试, e2e]
 ---
 
 今天我们要讲的是如何使用 Jest 与 Puppeteer 来进行端对端测试（e2e testing）。
@@ -105,3 +105,7 @@ Ran all test suites.
 <https://github.com/lewis617/fe-test/tree/master/puppeteer-demo>
 
 至此，使用 Jest 与 Puppeteer 来进行端对端测试的基本用法就讲完了。下篇博文我们将会集中讲解常用 Puppeteer 功能，比如模拟用户输入、执行 JavaScript 脚本、获取某个 DOM 节点中的文本等。
+
+## 更多测试文章：
+
+<http://www.liuyiqi.cn/tags/%E6%B5%8B%E8%AF%95/>

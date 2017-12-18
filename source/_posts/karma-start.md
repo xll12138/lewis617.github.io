@@ -79,3 +79,7 @@ karma start karma.conf.js
 效果：
 
 ![](https://ws1.sinaimg.cn/mw690/83900b4egw1f9yh3rxlt3j20mf0dltan.jpg)
+
+## 更多测试文章：
+
+<http://www.liuyiqi.cn/tags/%E6%B5%8B%E8%AF%95/>
