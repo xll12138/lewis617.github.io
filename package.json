@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "publish": "gulp && hexo deploy",
-    "heroku-postbuild": "gulp build"
+    "heroku-postbuild": "gulp"
   },
   "hexo": {
     "version": "3.3.9"
