@@ -13,7 +13,7 @@ http.createServer(function (req, res) {
   if (req.url.indexOf('?') > -1) {
     req.url = req.url.substr(0, req.url.indexOf('?'));
   }
-  var filePath = DOCUMENT_ROOT + req.url;
+  var filePath = DOCUMENT_ROOT + decodeURIComponent(req.url);
 
   if (req.headers['host'] === 'liuyiqi.cn') {
     res.writeHead(301, { 'Location': 'http://www.liuyiqi.cn' + req.url });
