@@ -15,7 +15,7 @@ GitHub：<https://github.com/lewis617>
 
 书籍著作：<http://www.liuyiqi.cn/2016/11/20/r2-book>
 
-演奏录音：<http://music.163.com/#/artist?id=12277229>
+演奏录音：<http://i.xiami.com/liuyiqi>
 
 <iframe frameborder="no" border="0"style="margin-left: -10px;" width="260" height=86 src="//music.163.com/outchain/player?type=2&id=508976312&auto=0&height=66"></iframe>
 
