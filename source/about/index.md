@@ -17,7 +17,7 @@ GitHub：<https://github.com/lewis617>
 
 演奏录音：<http://i.xiami.com/liuyiqi>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=1&id=38248979&auto=1&height=430"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=1&id=38248979&auto=0&height=430"></iframe>
 
 阿里18周年年会演出视频：https://www.toutiao.com/i6463378499792011790/
 
