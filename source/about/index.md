@@ -17,14 +17,6 @@ GitHub：<https://github.com/lewis617>
 
 演奏录音：<http://i.xiami.com/liuyiqi>
 
-<iframe frameborder="no" border="0"style="margin-left: -10px;" width="260" height=86 src="//music.163.com/outchain/player?type=2&id=508976312&auto=0&height=66"></iframe>
-
-<iframe frameborder="no" border="0"style="margin-left: -10px;" width="260" height=86 src="//music.163.com/outchain/player?type=2&id=479613273&auto=0&height=66"></iframe>
-
-<iframe frameborder="no" border="0"style="margin-left: -10px;" width="260" height=86 src="//music.163.com/outchain/player?type=2&id=502105796&auto=0&height=66"></iframe>
-
-<iframe frameborder="no" border="0"style="margin-left: -10px;" width="260" height=86 src="//music.163.com/outchain/player?type=2&id=508976342&auto=0&height=66"></iframe>
-
 阿里18周年年会演出视频：https://www.toutiao.com/i6463378499792011790/
 
 <video src="http://gslb.miaopai.com/stream/uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P~JWQ__.mp4?ssig=84141dc84266c28777411493382d24ee&time_stamp=1506800755090&cookie_id=&vend=1&os=3&partner=1&platform=2&cookie_id=&refer=miaopai&scid=uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P%7EJWQ__" controls poster="http://bsyimg4.cdn.krcom.cn/stream/uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P~JWQ___l988_4.jpg" preload="none"></video>
