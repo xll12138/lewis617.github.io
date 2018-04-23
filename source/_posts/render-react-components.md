@@ -66,6 +66,8 @@ $ rrc dev
 
 上面动图中真实小例子可以在[这里](https://github.com/lewis617/render-react-components/tree/master/examples/dead-simple)找到。
 
+本工具的 Github 地址： <https://github.com/lewis617/render-react-components>，欢迎 start、提 issue 和 pull request。
+
 ## 教程示例代码及目录
 
 示例代码：<https://github.com/lewis617/react-redux-tutorial>
