@@ -24,7 +24,7 @@ tags: [React, render-react-components, Roadhog, create-react-app, 测试, 单元
 
 ## render-react-components 是什么？
 
-render-react-components（简称 rrc） 是一个包含 `init`、`dev` 两个命令的命令行工具，他基于 [roadhog](https://github.com/sorrycc/roadhog) 实现, 但是添加了 `init` 命令来递归找出当前项目中所有的 React 组件，并为其创建 demo 页面。
+render-react-components（简称 rrc） 是一个命令行工具，可以递归找出当前项目中所有的 React 组件（仅限于 src 目录下的所有组件），并为它们创建相互隔离的 demo 页面。
 
 ## 快速开始
 
@@ -34,13 +34,20 @@ render-react-components（简称 rrc） 是一个包含 `init`、`dev` 两个命
 ## 本地或者全局安装
 $ npm i render-react-components -g
 
-## 为项目中所有的 React 组件创建 demo 页面
+## 为项目中所有的 React 组件，创建 demo 页面
 $ rrc init
 
-## 本地开发调试这些 demo 页面
+## 如果你只想给部分组件创建 demo 页面，可以使用 filter 参数，输入组件路径的关键词即可
+$ rrc init --filter=Component1
+## 或者简写
+$ rrc init -f=Component1
+
+## 本地开发，支持代码热加载
 $ rrc dev
 
-```
+## 删除了 rrc init 创建的所有文件
+$ rrc clean
+
 
 以下动图，演示了如何使用这个工具，先后做了这几件事：
 
@@ -60,7 +67,7 @@ $ rrc dev
 
 ## 修改渲染组件的 webpack 配置
 
-虽然在大多数情况下，你都不用操心 webpack 配置，但如果你实在想修改渲染组件的 webpack 配置，那么你可以直接在根目录下的 `.rrc.js` 中修改，具体配置和 roadhog 的 `.webpackrc.js` 是一模一样的的，可以在[这里](https://github.com/sorrycc/roadhog/blob/master/README_zh-cn.md#%E9%85%8D%E7%BD%AE)参考。
+虽然在大多数情况下，你都不用操心 webpack 配置，但如果你实在想修改渲染组件的 webpack 配置，那么你可以直接在根目录下的 `.rrc.js` 中修改，具体配置可以在[这里](https://github.com/lewis617/render-react-components/blob/master/README_zh-cn.md#%E9%85%8D%E7%BD%AE)参考。
 
 ## 真实小例子
 
