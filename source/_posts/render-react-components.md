@@ -46,7 +46,7 @@ $ rrc dev
 
 - 运行 `find . -name *.js` （`find` 命令和本工具无关，只是为了对比展示文件的变化）列出原始项目中的 js。
 - 运行 `rrc init`，为项目中所有的 React 组件创建 demo 页面。再次运行 `find . -name *.js` 发现多了一些文件。
-- 运行 `rrc dev` ，自动弹出一个页面，我们发现每个组件都可以展示了。
+- 运行 `rrc dev` ，自动弹出一个页面，我们发现每个组件都可以展示了。并且，修改代码，页面会自动更新，非常方便。
 
 ![](https://img.alicdn.com/tfs/TB1VPzQnHGYBuNjy0FoXXciBFXa-894-444.gif)
 
