@@ -1,7 +1,7 @@
 ---
 title: 使用 render-react-components 来单独渲染每个 React 组件
 date: 2018-04-13 17:56:00
-tags: [React, render-react-components, Roadhog, create-react-app, 测试, 单元测试]
+tags: [React, render-react-components, 测试, 单元测试]
 ---
 
 今天，我们要讲的是如何使用 render-react-components 来单独渲染每个 React 组件。
