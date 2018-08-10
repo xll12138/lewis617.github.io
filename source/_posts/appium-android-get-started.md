@@ -10,14 +10,6 @@ tags: [测试, 自动化测试, Appium, Android]
 
 <!--more-->
 
-## 安装 Appium 
-
-安装 Appium 有两种方式，NPM 和 桌面程序安装包，我们这次先选择前者：
-
-```sh
-npm install -g appium
-```
-
 ## 配置 Android 的自动化驱动环境
 
 Appium 进行自动化的原理是：发送命令到各自系统对应的自动化驱动，来对相应的系统上的 App 进行自动化。这篇文章讲的是 Android 自动化，对应驱动的名字叫 UiAutomator2。为了让驱动正常工作，我们要配置 UiAutomator2 的环境：
@@ -92,7 +84,15 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 source ~/.bash_profile
 ```
 
-至此，测试环境就搭建好了！
+至此，驱动环境就搭建好了！
+
+## 安装 Appium 
+
+安装 Appium 有两种方式，NPM 和 桌面程序安装包，我们这次先选择前者：
+
+```sh
+npm install -g appium
+```
 
 ## 编写简单测试脚本
 
