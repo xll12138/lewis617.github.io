@@ -21,4 +21,4 @@ GitHub：<https://github.com/lewis617>
 
 阿里18周年年会演出视频：http://www.miaopai.com/show/uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P~JWQ__.htm
 
-<video src="http://gslb.miaopai.com/stream/uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P~JWQ__.mp4?ssig=84141dc84266c28777411493382d24ee&time_stamp=1506800755090&cookie_id=&vend=1&os=3&partner=1&platform=2&cookie_id=&refer=miaopai&scid=uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P%7EJWQ__" controls poster="http://bsyimg4.cdn.krcom.cn/stream/uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P~JWQ___l988_4.jpg" preload="none"></video>
+<video src="https://gslb.miaopai.com/stream/uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P~JWQ__.mp4?ssig=5d6028719aca48456a32d02f2426cd7b&time_stamp=1539229377690&cookie_id=&vend=1&os=3&partner=1&platform=2&cookie_id=&refer=miaopai&scid=uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P%7EJWQ__" controls poster="http://imgaliyuncdn.miaopai.com/stream/uk8PpHEYyV3jaQgK3DyfLw2KiQwTdTGj5P~JWQ___la21_4.jpg" preload="none"></video>
