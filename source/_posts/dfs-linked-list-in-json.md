@@ -18,42 +18,7 @@ tags: [数据结构与算法, LeetCode]
 
 ![enter image description here](https://ws1.sinaimg.cn/mw690/83900b4egy1fcvp988h6bj20bu08vmxg)
 
-DFS 可谓是 LeetCode 中考察最多的知识点了，另外由于动态规划算法可以和 DFS 算法相互转换（就像是所有的递归都可以用“栈”来改写一样），所以 DFS 的题目简直不能更多。那么让我们先看下 DFS 算法题吧！
-
-题目：
-
-```
-给一个二叉树，找到它的最大深度。最大深度是指根节点到最远的叶子节点的长度。
-```
-
-代码：
-
-```python
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution(object):
-    def maxDepth(self, root):
-        """
-        :type root: TreeNode
-        :rtype: int
-        """
-        def dfs(n, l):
-            if not n:
-                return l 
-            left=dfs(n.left, l+1)
-            right=dfs(n.right, l+1)
-            return max(left,right)
-        return dfs(root, 0)
-```
-
-在上述代码中， `dfs` 就是一个使用了深度优先搜索算法的函数。先访问孩子节点（`n.left` 和 `n.right`），然后进行递归。这道题非常简单，不再过多赘述，有兴趣的同学可以去 LeetCode 做一下这道题：
-
-https://leetcode.com/problems/maximum-depth-of-binary-tree/
+DFS 可谓是 LeetCode 中考察最多的知识点了，另外由于动态规划算法可以和 DFS 算法相互转换（就像是所有的递归都可以用“栈”来改写一样），所以 DFS 的题目简直不能更多。
 
 ## 使用深度优先搜索打印 JSON
 
@@ -76,51 +41,27 @@ dfs(json);
 
 ![kECv8A.png](https://s2.ax1x.com/2019/01/23/kECv8A.png)
 
-可以发现 JSON 中每个节点都被遍历到了。然后你只需要更改 `dfs` 函数的参数，就可以渲染 JSON 树中的任意一项了，也可以渲染表单项来编辑它们。
+可以发现 JSON 中每个节点都被遍历到了。
+
+## DFS 用于构建无限递归表单
+
+只需要更改上述 `dfs` 函数的参数，就可以渲染 JSON 树中的任意一项了，也可以渲染表单项来编辑它们。比如之前做的递归表单组件：
+
+![image.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/9d7c702a9e3e240b4945ed53a7c5070f.png)
 
 ## 链表指针简介
 
-**链表**（Linked list）是一种常见的基础数据结构，是一种[线性表](https://zh.wikipedia.org/wiki/%E7%BA%BF%E6%80%A7%E8%A1%A8 "线性表")，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的[指针](https://zh.wikipedia.org/wiki/%E6%8C%87%E6%A8%99_(%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8) "指针 (计算机科学)")(Pointer)。
+**链表**（Linked list）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的指针。
 
-链表遍历及操作也是 LeetCode 考察非常多的题目，我们来看一道简单的吧！
+链表遍历及操作也是 LeetCode 考察非常多的题目。通常我们会定义一个变量作为指针，然后在循环里让它遍历链表的多个 `next`。比如：
 
-题目：
+```js
+let p = linkedList;
+// 某个循环中
+p = p.next;
 
 ```
-反转一个单链表。
 
-例子：
-
-Input: 1->2->3->4->5->NULL
-Output: 5->4->3->2->1->NULL
-```
-
-代码：
-
-```python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution(object):
-    def reverseList(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
-        p1,p2=None,head
-        while p2:
-            p2.next,p1,p2=p1,p2,p2.next
-        return p1
-```
-
-上述代码中，`p1`、`p2` 就是指针。两个指针都遍历了链表，但`p2` 比 `p1` 快一步，并在每一步把 `next` 指向 `p1`。最后，`p1` 就是原链表的反转版本。
-
-题目地址：
-
-https://leetcode.com/problems/reverse-linked-list/ 
 
 ## 使用链表指针获取 JSON 中的叶子节点的值
 
@@ -136,6 +77,16 @@ console.log(point);
 ```
 
 上述代码中，`json` 是我们要查找的 JSON 对象，`path` 是叶子节点的路径，`point` 是指针，通过遍历，`point` 最后指向了指定的叶子节点的值。
+
+## 使用链表指针构造 immutibility-helper 所需要的数据结构
+
+另外，由于 React Redux 的风行，不可变数据结构在前端用的非常多，有个不可变数据工具包叫 immutibility-helper ，它经常用到这样的结构来“不可变”地改变数据：
+
+```js
+update(obj, {a: {b: {c: {$set: 1}}}});
+```
+
+所以，还可以通过指针来将路径与它所需要的结构进行互转。
 
 ## 结语
 
