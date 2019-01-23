@@ -16,7 +16,7 @@ tags: [数据结构与算法, LeetCode]
 
 深度优先搜索（Depth-First-Search，DFS）是一种用于遍历或搜索树或者图的算法。顾名思义，它的搜索的规则是深度优先：先访问根结点，如果有孩子节点（或者邻居节点）就优先访问孩子节点，并对孩子节点也进行上述递归访问。
 
-![enter image description here](https://ws1.sinaimg.cn/mw690/83900b4egy1fcvp988h6bj20bu08vmxg)
+![dfs](https://ws1.sinaimg.cn/mw690/83900b4egy1fcvp988h6bj20bu08vmxg)
 
 DFS 可谓是 LeetCode 中考察最多的知识点了，另外由于动态规划算法可以和 DFS 算法相互转换（就像是所有的递归都可以用“栈”来改写一样），所以 DFS 的题目简直不能更多。
 
@@ -39,7 +39,7 @@ dfs(json);
 
 结果如下：
 
-![kECv8A.png](https://s2.ax1x.com/2019/01/23/kECv8A.png)
+![打印 JSON](https://s2.ax1x.com/2019/01/23/kECv8A.png)
 
 可以发现 JSON 中每个节点都被遍历到了。
 
@@ -47,7 +47,7 @@ dfs(json);
 
 只需要更改上述 `dfs` 函数的参数，就可以渲染 JSON 树中的任意一项了，也可以渲染表单项来编辑它们。比如之前做的递归表单组件：
 
-![image.png](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/9d7c702a9e3e240b4945ed53a7c5070f.png)
+![递归表单](http://ata2-img.cn-hangzhou.img-pub.aliyun-inc.com/9d7c702a9e3e240b4945ed53a7c5070f.png)
 
 ## 链表指针简介
 
