@@ -51,18 +51,23 @@ tags: [JS 调试]
 手动终止只是减少杀死浏览器进程重启的成本，我们最好还能用代码来熔断一些死循环。下面是熔断函数：
 
 ```js
-var loopBreaker = (function() {
-  var count = 0;
-  var startTime;
-  return function() {
-    startTime || (startTime = Date.now());
+const loopBreaker = (function () {
+  let count = 0;
+  let startTime;
+  return function () {
+    startTime = startTime || (startTime = Date.now());
     count += 1;
+    // 更改阈值为你想要的，这里是 10000
     if (count > 10000 && (Date.now() - startTime > 1000)) {
       throw new Error("Loop Broken!");
     }
+    // 一秒后清空
+    setTimeout(() => { count = 0; startTime = null; }, 1000);
   };
 }());
 ```
+
+上述函数中 `count` 是循环执行次数，`startTime` 是首次执行函数的时间。如果循环超过 10000 次，且循环时间超过 1000 毫秒，那么就熔断。
 
 使用方法：
 
@@ -73,7 +78,7 @@ for (var i = 0; i < 1000000; i--) {
 }
 ```
 
-还可以改写这个函数以支持更多的功能，如：日志格式、熔断阈值等。
+还可以改写这个函数以支持更多的功能，如：日志格式、熔断阈值等，快去试试吧！
 
 ## 结语
 
